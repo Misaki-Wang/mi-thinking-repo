@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-07T07:09:49+00:00",
+  "english_source_policy": "YouTube English captions; no ASR on transport failures",
+  "translation_policy": "Full translation requires video permission evidence. If permitted: Codex; at most two concurrent jobs; retain English technical terms.",
+  "publication_policy": "Full transcript export requires per-session video rights evidence; original study summaries may be public.",
+  "counts": {
+    "sessions": 29,
+    "instructional": 24,
+    "videos": 13,
+    "duration_ms": 54888000,
+    "english_blocks": 1089,
+    "translated_blocks": 0,
+    "english_ready": 13,
+    "codex_complete": 0,
+    "legacy_codex_complete": 1,
+    "translation_paused_permission_needed": 13,
+    "public_transcripts": 0,
+    "slides_only": 10,
+    "sources_missing": 1
+  },
+  "sessions": [
+    {
+      "session_id": "w01-1",
+      "title": "Course introduction",
+      "video_url": "https://youtu.be/Xm2crsD5ngA?si=tC351Sp1iXomB7p-",
+      "instructional": true,
+      "video_id": "Xm2crsD5ngA",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4269000,
+      "english_blocks": 83,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:55:38+00:00",
+        "video_id": "Xm2crsD5ngA",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/Xm2crsD5ngA",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "ca3d88c08fd02af1b4401f55008f96b95d8e6a3387c66ed50c35056d1205edf1",
+          "bytes": 75586
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "8eda85287cce9ef2bc2e0da90757cf526503f38e49a7553d9adfbadd2b2f55cb",
+          "bytes": 11757
+        },
+        "transcript.bilingual.md": {
+          "sha256": "a1aa541142a0c8cc30fb69e1f98b98d4a5486d8a236feb90f5d73e89d0653731",
+          "bytes": 82669
+        }
+      }
+    },
+    {
+      "session_id": "w01-2",
+      "title": "Multimodal datasets",
+      "video_url": "https://youtu.be/zlTCAER4z9A?si=NwmrRx9Xrcx3el7t",
+      "instructional": true,
+      "video_id": "zlTCAER4z9A",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4596000,
+      "english_blocks": 87,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:55:45+00:00",
+        "video_id": "zlTCAER4z9A",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/zlTCAER4z9A",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "7a8eae3e42bad501293ab6a686b0397e0ae9eb9e15233569fa2b3391646111ad",
+          "bytes": 79870
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "c66d503a48cd56dad638caa87b591a7746c9d45623b63cdaba23d91909f9946b",
+          "bytes": 12324
+        },
+        "transcript.bilingual.md": {
+          "sha256": "f3af5b67333ef1068915bbc5e5da40a3324e04aaee7a56300e4087618c0634b4",
+          "bytes": 87293
+        }
+      }
+    },
+    {
+      "session_id": "w02-1",
+      "title": "AI tutorial",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w02-2",
+      "title": "Data and heterogeneity",
+      "video_url": "https://youtu.be/CH2_US07OdA?si=HJWc6IYG3s_VcywV",
+      "instructional": true,
+      "video_id": "CH2_US07OdA",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4741000,
+      "english_blocks": 91,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:55:52+00:00",
+        "video_id": "CH2_US07OdA",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/CH2_US07OdA",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "423283a7795a8df67e98c831ebb2ecd079ce92142f81d9c235bc98b553256104",
+          "bytes": 83477
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "df0c7094a59facc29bae509a246553ebc3f38c81e6fc2d38c2a899a1e96e63c3",
+          "bytes": 12874
+        },
+        "transcript.bilingual.md": {
+          "sha256": "a085cc3fd4c2207792d48f0a06341cc22fd96aadb29a0fe790d3dcfbb0153080",
+          "bytes": 91240
+        }
+      }
+    },
+    {
+      "session_id": "w03-1",
+      "title": "No class, shifted President's day",
+      "video_url": null,
+      "instructional": false,
+      "status": "not_instructional",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w03-2",
+      "title": "Multimodal fusion",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w04-1",
+      "title": "More multimodal fusion",
+      "video_url": "https://youtu.be/0SOieOIe4HI?si=6BQZMH0OWOeLDaaR",
+      "instructional": true,
+      "video_id": "0SOieOIe4HI",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 2101000,
+      "english_blocks": 40,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:00+00:00",
+        "video_id": "0SOieOIe4HI",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/0SOieOIe4HI",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "b2e47d1c4b8d19beb3f8f30e71504a9f578d07e213570a8e33fa21980bbf9b6e",
+          "bytes": 35798
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "2cbbc4a5f149be83c5a28f939f6972dea0fef464bc394453e89674010c2f98dc",
+          "bytes": 5837
+        },
+        "transcript.bilingual.md": {
+          "sha256": "ce184170df1361d8c44519445834abbc817967f5eb0001137a9908539a39ef99",
+          "bytes": 39226
+        }
+      }
+    },
+    {
+      "session_id": "w04-2",
+      "title": "Multimodal alignment",
+      "video_url": "https://youtu.be/u-H43tRgYJg?si=AYQizgQHpf1Smlk1",
+      "instructional": true,
+      "video_id": "u-H43tRgYJg",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4984000,
+      "english_blocks": 103,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:09+00:00",
+        "video_id": "u-H43tRgYJg",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/u-H43tRgYJg",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "4fa4f0bb3ed2af0a47b18cdc92db9f91fd9e2f8e8578079f605000b924ad7068",
+          "bytes": 80604
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "b59cb3fd1f75c738e2469a4bd55e7eb622f4885e400cc70d71abe3f7b9bb4e08",
+          "bytes": 14526
+        },
+        "transcript.bilingual.md": {
+          "sha256": "2849c64e50bca6e7c789a4129a902cbe1999849cb4f05b543c8e34ffd244cbcb",
+          "bytes": 89387
+        }
+      }
+    },
+    {
+      "session_id": "w05-1",
+      "title": "Large multimodal models",
+      "video_url": "https://youtu.be/H9nvkyTsrnI?si=tjASlXudKbRcUefh",
+      "instructional": true,
+      "video_id": "H9nvkyTsrnI",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4226000,
+      "english_blocks": 84,
+      "translated_blocks": 0,
+      "translation_provider": "codex",
+      "legacy_codex_complete": true,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:19+00:00",
+        "video_id": "H9nvkyTsrnI",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/H9nvkyTsrnI",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "95cc8dbb6feeeea77cd7383f5a9a4e3a51875614c9ed60d94f6837cb21510969",
+          "bytes": 69197
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "78e2b512bf6de37ebae95469657f2ded5d3dc4895286c5bc13ed7e4a44a083c4",
+          "bytes": 61998
+        },
+        "transcript.bilingual.md": {
+          "sha256": "4dc1e191912de778e6830209a17392bcfede2d4b47f4a64328e62b86a79ec681",
+          "bytes": 126470
+        }
+      }
+    },
+    {
+      "session_id": "w05-2",
+      "title": "Multimodal LLMs tutorial",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w06-1",
+      "title": "Multimodal generation",
+      "video_url": "https://youtu.be/KlHIR7lT-mo?si=su5lIX08m-BvMcA1",
+      "instructional": true,
+      "video_id": "KlHIR7lT-mo",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4634000,
+      "english_blocks": 91,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:21+00:00",
+        "video_id": "KlHIR7lT-mo",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/KlHIR7lT-mo",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "173d286d22edd326ea635ae42fb0e281a4775c40187c5efc782886c6fabf33ca",
+          "bytes": 76390
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "fa382a484739b446da1f799064efcc466acf9eb51a2d969126c964ab412cacc3",
+          "bytes": 12866
+        },
+        "transcript.bilingual.md": {
+          "sha256": "fceb4a8895eeaee14559e859d7d2af2f1c852019d6ea86386cc6665acb64246d",
+          "bytes": 84153
+        }
+      }
+    },
+    {
+      "session_id": "w06-2",
+      "title": "Modern generative AI",
+      "video_url": "https://youtu.be/LGBQ0c_4HBA?si=y2ilL_6QdadmambK",
+      "instructional": true,
+      "video_id": "LGBQ0c_4HBA",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4523000,
+      "english_blocks": 91,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:29+00:00",
+        "video_id": "LGBQ0c_4HBA",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/LGBQ0c_4HBA",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "1b55b4d8f8a2529069ef3b7b00a4766b63da8299612f50fe34d4689860a54240",
+          "bytes": 75882
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "c143bd7ac784cac571ad8ee08eb7f6aac21bd9e828b6a24a9caadb467b482980",
+          "bytes": 12862
+        },
+        "transcript.bilingual.md": {
+          "sha256": "e781b4ab146777e54f2b7d367450d33ddd1fa760959fd41f71618427b865188e",
+          "bytes": 83645
+        }
+      }
+    },
+    {
+      "session_id": "w07-1",
+      "title": "Midterm review",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w07-2",
+      "title": "In-class midterm",
+      "video_url": null,
+      "instructional": false,
+      "status": "not_instructional",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w08-1",
+      "title": "Spring Break – No lectures",
+      "video_url": null,
+      "instructional": false,
+      "status": "not_instructional",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w08-2",
+      "title": "Spring Break – No lectures",
+      "video_url": null,
+      "instructional": false,
+      "status": "not_instructional",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w09-1",
+      "title": "Multimodal reasoning",
+      "video_url": "https://youtu.be/Vhe_bX8mV2s?si=V65452DBEHXaEWbW",
+      "instructional": true,
+      "video_id": "Vhe_bX8mV2s",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4655000,
+      "english_blocks": 94,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:37+00:00",
+        "video_id": "Vhe_bX8mV2s",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/Vhe_bX8mV2s",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "e8a57bc3313f02d2adb34d790dacb954f11d2dc383369bd4385221b4550b6df5",
+          "bytes": 76807
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "b845a02ce90ca932d27cec54be27859d400745665cabacb00874e6ebde294315",
+          "bytes": 13282
+        },
+        "transcript.bilingual.md": {
+          "sha256": "2d775247d11a35d487ed6511164ad58f93706f71ff35f17e5719cc62d640a0d9",
+          "bytes": 84825
+        }
+      }
+    },
+    {
+      "session_id": "w09-2",
+      "title": "Explainable reasoning",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w10-1",
+      "title": "Multimodal interaction",
+      "video_url": "https://youtu.be/Sk_TYpA6DWA?si=xI7BVwWyEQb31Wg8",
+      "instructional": true,
+      "video_id": "Sk_TYpA6DWA",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4449000,
+      "english_blocks": 89,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:46+00:00",
+        "video_id": "Sk_TYpA6DWA",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/Sk_TYpA6DWA",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "ab55bc01d891ff3575924cb137073249e4b53624d33f39e13e202181288e635a",
+          "bytes": 73426
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "ea1b6f631e7da3f23ae9dd1b753ebc4236c8f87db1741774e1ca7d4c26603c22",
+          "bytes": 12590
+        },
+        "transcript.bilingual.md": {
+          "sha256": "f68b3bfdb8a2a83b34797801aa4272c51a5cc8401f4bd3db389384a715a36bad",
+          "bytes": 81019
+        }
+      }
+    },
+    {
+      "session_id": "w10-2",
+      "title": "Cross-modal transfer",
+      "video_url": "https://youtu.be/IDaMEG_zY6A?si=nfHVm8rBMwi5zljP",
+      "instructional": true,
+      "video_id": "IDaMEG_zY6A",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4117000,
+      "english_blocks": 83,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:56:59+00:00",
+        "video_id": "IDaMEG_zY6A",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/IDaMEG_zY6A",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "0935a4ff6be00bbdfcfc7ca3a42c795c2b2723ecffe3be957e0868068f78f76c",
+          "bytes": 66439
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "ea82c1d40ddc642ea8328027b04c4bc0cf19909eff98f4855a42ea1c3043333c",
+          "bytes": 11758
+        },
+        "transcript.bilingual.md": {
+          "sha256": "bc45e4585e84b26f385767bd42e92950b1cf95e033f2b367619ee1d549b59a86",
+          "bytes": 73522
+        }
+      }
+    },
+    {
+      "session_id": "w11-1",
+      "title": "Multimodal & manufacturing",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w11-2",
+      "title": "Multimodal & design",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w12-1",
+      "title": "Prescriptive modeling",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w12-2",
+      "title": "Agents tutorial",
+      "video_url": null,
+      "instructional": true,
+      "status": "sources_missing",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w13-1",
+      "title": "Multimodal & cities",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w13-2",
+      "title": "Multimodal & transportation",
+      "video_url": null,
+      "instructional": true,
+      "status": "slides_only",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    },
+    {
+      "session_id": "w14-1",
+      "title": "Self-evolving AI",
+      "video_url": "https://youtu.be/FhcHTSjvuKk?si=gJGiKJrwO3FYakcE",
+      "instructional": true,
+      "video_id": "FhcHTSjvuKk",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 4569000,
+      "english_blocks": 94,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:57:10+00:00",
+        "video_id": "FhcHTSjvuKk",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/FhcHTSjvuKk",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "3188fb783256c7cd84ac663a305fb85fc92972d693f1c833f7c0d169529a5d1d",
+          "bytes": 74044
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "50d7fe498bf732bfcc0df06e5e3992e510939924f69b41353caf5cc7baf10d07",
+          "bytes": 13271
+        },
+        "transcript.bilingual.md": {
+          "sha256": "2447e1f0efaac3822c2d40c42fdc0917493ac2a46c6b09e1d7ec7587995fffc9",
+          "bytes": 82062
+        }
+      }
+    },
+    {
+      "session_id": "w14-2",
+      "title": "AI for new senses",
+      "video_url": "https://youtu.be/UJra8aMCHXg?si=c_jwf59wZGplm9zA",
+      "instructional": true,
+      "video_id": "UJra8aMCHXg",
+      "status": "english_ready",
+      "source_kind": "automatic",
+      "duration_ms": 3024000,
+      "english_blocks": 59,
+      "translated_blocks": 0,
+      "translation_provider": "none",
+      "legacy_codex_complete": false,
+      "full_translation_status": "paused_permission_needed",
+      "terminology_policy": null,
+      "public_transcripts": false,
+      "publication_status": "withheld_pending_video_license",
+      "license_observation": {
+        "checked_at": "2026-09-07T06:57:20+00:00",
+        "video_id": "UJra8aMCHXg",
+        "source": "yt-dlp video metadata license field",
+        "license": null,
+        "probe_exit_code": 0,
+        "note": "A missing license is not evidence of a permissive license."
+      },
+      "error": null,
+      "local_work_dir": ".work/transcripts/UJra8aMCHXg",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "15da7c28b87db05a130712faa82a5b2858706fec42c494ef785fd477c92dbd39",
+          "bytes": 51235
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "ef904180c6293742c8ac58bec85a82fcfcfa48ec08eb76a0dfacf350412c5965",
+          "bytes": 8444
+        },
+        "transcript.bilingual.md": {
+          "sha256": "7962833387e0bfc2617f62d8f70da9dc95b4d7ce205c80a8c8a56f8dd4655d3a",
+          "bytes": 56278
+        }
+      }
+    },
+    {
+      "session_id": "w15-1",
+      "title": "Project presentations",
+      "video_url": null,
+      "instructional": false,
+      "status": "not_instructional",
+      "english_blocks": 0,
+      "translated_blocks": 0,
+      "public_transcripts": false
+    }
+  ]
+}
