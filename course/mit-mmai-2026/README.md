@@ -2,7 +2,7 @@
 
 [官方课程表](https://mit-mi.github.io/mmai-course/spring2026/schedule/) · [Paul Liang 视频频道](https://www.youtube.com/@paulliang279/videos) · 归档日期：2026-09-07
 
-先打开 [GUIDANCE · 全课学习路线](GUIDANCE.md)。阅读中遇到术语可查 [TERMS](TERMS.md)，原始资源的错链、缺失与版本差异见 [SOURCES](SOURCES.md)。
+先打开 [GUIDANCE · 全课学习路线](GUIDANCE.md)。13 讲、1,089 段完整讲稿见 [中文 / English / 双语目录](TRANSCRIPTS.md)。阅读中遇到术语可查 [TERMS](TERMS.md)，原始资源的错链、缺失与版本差异见 [SOURCES](SOURCES.md)，讲稿对照规则见 [翻译说明](TRANSLATION.md)。
 
 ## 课程导航
 

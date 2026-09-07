@@ -139,7 +139,7 @@ def probe_license(python: Path, video_id: str) -> None:
         f"https://www.youtube.com/watch?v={video_id}",
     ]
     try:
-        result = subprocess.run(
+        result = subprocess.run(  # Validated video ID, argv, and no shell.
             command, capture_output=True, text=True, timeout=180, check=False
         )
         license_value = None
@@ -232,7 +232,7 @@ def run_stage(python: Path, video_id: str, stage: str) -> dict:
         log.write(f"\n--- {started} ---\n")
         log.flush()
         try:
-            result = subprocess.run(
+            result = subprocess.run(  # Validated video ID, argv, and no shell.
                 command,
                 stdout=log,
                 stderr=subprocess.STDOUT,
@@ -273,7 +273,9 @@ def build_status(sessions: list[dict]) -> dict:
         if not session.get("video_url"):
             if not session.get("instructional", True):
                 source_status = "not_instructional"
-            elif session.get("slides_status") == "acquired" and session.get("slides_url"):
+            elif session.get("slides_status") == "acquired" and session.get(
+                "slides_url"
+            ):
                 source_status = "slides_only"
             else:
                 source_status = "sources_missing"
@@ -311,6 +313,18 @@ def build_status(sessions: list[dict]) -> dict:
                 for filename in ARTIFACTS
             )
         )
+        permission_present = session.get("full_translation_allowed") is True and bool(
+            session.get("rights_evidence")
+        )
+        translation_run = read_json(directory / "translate-run.json", {})
+        if translated_valid:
+            translation_status = "complete"
+        elif permission_present and translation_run.get("status") == "running":
+            translation_status = "in_progress"
+        elif permission_present:
+            translation_status = "allowed"
+        else:
+            translation_status = "paused_permission_needed"
         entry.update(
             video_id=video_id,
             status="complete_local"
@@ -334,13 +348,13 @@ def build_status(sessions: list[dict]) -> dict:
                 and manifest.get("translation_provider") == "codex"
                 and manifest.get("translated_blocks") == manifest.get("total_blocks")
             ),
-            full_translation_status="allowed"
-            if session.get("full_translation_allowed") is True
-            and session.get("rights_evidence")
-            else "paused_permission_needed",
+            full_translation_status=translation_status,
+            rights_evidence=session.get("rights_evidence"),
             terminology_policy=TRANSLATION_POLICY if policy_current else None,
             public_transcripts=exported,
-            publication_status="allowed"
+            publication_status="exported"
+            if exported
+            else "allowed_pending_export"
             if publication_allowed
             else "withheld_pending_video_license",
             license_observation=read_json(directory / "license-observation.json", {}),
@@ -361,7 +375,7 @@ def build_status(sessions: list[dict]) -> dict:
         "schema_version": 1,
         "updated_at": now(),
         "english_source_policy": "YouTube English captions; no ASR on transport failures",
-        "translation_policy": "Full translation requires video permission evidence. If permitted: Codex; at most two concurrent jobs; retain English technical terms.",
+        "translation_policy": "Full translation requires video permission evidence. If permitted: Codex; at most two jobs per scheduler invocation, with cross-process per-video locks; retain English technical terms.",
         "publication_policy": "Full transcript export requires per-session video rights evidence; original study summaries may be public.",
         "counts": {
             "sessions": len(records),
@@ -426,20 +440,20 @@ def main() -> int:
     )
     args = parser.parse_args()
     if args.stage in {"translate", "all"}:
-        check = subprocess.run(
+        check = subprocess.run(  # Explicit local interpreter, fixed program.
             [
                 str(args.python),
                 "-c",
-                "from ytlearn.translation.core import PROMPT_VERSION; print(PROMPT_VERSION)",
+                "from ytlearn.translation.core import PROMPT_VERSION; from ytlearn.pipeline import PIPELINE_LOCK_VERSION; print(PROMPT_VERSION + ':' + str(PIPELINE_LOCK_VERSION))",
             ],
             capture_output=True,
             text=True,
             timeout=30,
             check=False,
         )
-        if check.returncode or check.stdout.strip() != TRANSLATION_POLICY:
+        if check.returncode or check.stdout.strip() != TRANSLATION_POLICY + ":1":
             parser.error(
-                f"The ytlearn interpreter must provide translation prompt {TRANSLATION_POLICY}; update the local toolchain before translating."
+                f"The ytlearn interpreter must provide translation prompt {TRANSLATION_POLICY} and cross-process video locks; update the local toolchain before translating."
             )
     sessions = read_json(args.catalog)["sessions"]
     for session in sessions:
@@ -513,6 +527,23 @@ def main() -> int:
             for filename in ARTIFACTS:
                 shutil.copy2(source / filename, destination / filename)
     refresh()
+    selected = [
+        item
+        for item in build_status(sessions)["sessions"]
+        if item.get("video_id") in candidates
+    ]
+    if args.stage in {"translate", "all"} and any(
+        item["full_translation_status"] != "complete" for item in selected
+    ):
+        return 2
+    if args.stage in {"export", "all"} and any(
+        not item["public_transcripts"] for item in selected
+    ):
+        return 2
+    if args.stage == "english" and any(
+        item["status"] not in {"english_ready", "complete_local"} for item in selected
+    ):
+        return 2
     return 0
 
 

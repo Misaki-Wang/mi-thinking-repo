@@ -9,10 +9,12 @@
 
 ## 当前归档
 
-[MIT Modeling: MultiModal AI · Spring 2026](course/mit-mmai-2026/README.md)：24 个教学单元的入口、23 份可获取教学材料的原创预览、逐讲 Readings guidance、全课学习路线与中英术语表。唯一缺失的 Agents tutorial 保留明确的资料缺口与准备建议。
+[MIT Modeling: MultiModal AI · Spring 2026](course/mit-mmai-2026/README.md)：24 个教学单元的入口、23 份可获取教学材料的原创预览、逐讲 Readings guidance、全课学习路线与中英术语表。13 个公开视频的 1,089 段已全部完成中文翻译，提供 39 份英文、中文和双语 Markdown。唯一缺失的 Agents tutorial 保留明确的资料缺口与准备建议。
 
 - [先读 GUIDANCE](course/mit-mmai-2026/GUIDANCE.md)
+- [全部讲稿 · 中文 / English / 双语](course/mit-mmai-2026/TRANSCRIPTS.md)
 - [专业术语 TERMS](course/mit-mmai-2026/TERMS.md)
+- [全文讲稿与翻译说明](course/mit-mmai-2026/TRANSLATION.md)
 - [来源、勘误与完整性](course/mit-mmai-2026/SOURCES.md)
 
 ## 更新与预览
@@ -37,4 +39,4 @@ python3 -m http.server 8000 --directory .site-preview
 
 学习笔记保留原始出处、页码或视频时间位置，并区分讲义内容、视频内容与个人学习建议。模型名、算法名、数据集、公式符号保留英文；核心术语按 [TERMS](course/mit-mmai-2026/TERMS.md) 统一。
 
-公开仓库包含原创学习摘要与 guidance。下载的完整字幕、PDF、notebook 和处理中间文件放在本地忽略目录 `.work/`；完整中文逐字译稿与公开再分发仍待内容授权确认，不算作本次已完成的公开内容。具体状态见课程来源页。
+公开仓库包含原创学习摘要、guidance，以及经维护者确认授权后整理的英文、中文和双语讲稿。讲稿按段落与时间戳对应；专业英文术语保留。原始字幕文件、PDF、notebook 和运行中间文件保存在本地忽略目录 `.work/`，逐讲完成情况见网站与 [来源记录](course/mit-mmai-2026/SOURCES.md)。

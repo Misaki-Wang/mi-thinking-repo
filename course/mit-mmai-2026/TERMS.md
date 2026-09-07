@@ -12,6 +12,7 @@
 | multimodal fusion | 多模态融合（fusion） | 汇合多种输入来构建联合表示或预测 |
 | early / late fusion | 早期 / 后期融合 | 在特征级或决策级进行组合 |
 | cross-modal interaction | 跨模态交互 | 联合使用带来的依赖，不只是把向量拼接 |
+| quantification | 定量分析 / 量化分析（quantification） | 本课对异质性、交互与学习过程的刻画，不等于低比特数值量化 |
 | redundancy / uniqueness / synergy | 冗余 / 独有信息 / 协同信息 | 都需要指定目标任务或随机变量 |
 | alignment | 对齐（alignment） | 本课通常指跨模态对应；不自动等于人类偏好 alignment |
 | grounding | grounding（与感知或环境证据建立对应） | 不统一替换成泛化的“理解” |
@@ -32,7 +33,7 @@
 | prefix tuning | 前缀调优（prefix tuning） | 输入侧连续表示与模型权重更新不同 |
 | instruction tuning / SFT | 指令微调 / 监督微调（SFT） | 训练数据和监督目标应明确 |
 | LoRA | 低秩适配（LoRA） | 低秩权重增量；不等于量化 |
-| quantization | 量化（quantization） | 权重量化与 visual token 的向量量化不同 |
+| quantization | 数值量化（quantization） | 权重量化与 visual token 的向量量化不同，也与本课的 quantification 区分 |
 | MoE | 混合专家（Mixture of Experts, MoE） | 总参数与每个 token 激活参数不同 |
 | autoregressive | 自回归（autoregressive） | 按条件链式分解逐步生成 |
 | latent variable | 潜变量（latent variable） | 未观测变量不必天然对应人类语义 |

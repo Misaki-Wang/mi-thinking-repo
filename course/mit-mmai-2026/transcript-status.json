@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-07T07:09:49+00:00",
+  "updated_at": "2026-09-07T08:09:44+00:00",
   "english_source_policy": "YouTube English captions; no ASR on transport failures",
-  "translation_policy": "Full translation requires video permission evidence. If permitted: Codex; at most two concurrent jobs; retain English technical terms.",
+  "translation_policy": "Full translation requires video permission evidence. If permitted: Codex; at most two jobs per scheduler invocation, with cross-process per-video locks; retain English technical terms.",
   "publication_policy": "Full transcript export requires per-session video rights evidence; original study summaries may be public.",
   "counts": {
     "sessions": 29,
@@ -10,12 +10,12 @@
     "videos": 13,
     "duration_ms": 54888000,
     "english_blocks": 1089,
-    "translated_blocks": 0,
+    "translated_blocks": 1089,
     "english_ready": 13,
-    "codex_complete": 0,
-    "legacy_codex_complete": 1,
-    "translation_paused_permission_needed": 13,
-    "public_transcripts": 0,
+    "codex_complete": 13,
+    "legacy_codex_complete": 0,
+    "translation_paused_permission_needed": 0,
+    "public_transcripts": 13,
     "slides_only": 10,
     "sources_missing": 1
   },
@@ -26,17 +26,24 @@
       "video_url": "https://youtu.be/Xm2crsD5ngA?si=tC351Sp1iXomB7p-",
       "instructional": true,
       "video_id": "Xm2crsD5ngA",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4269000,
       "english_blocks": 83,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 83,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:55:38+00:00",
         "video_id": "Xm2crsD5ngA",
@@ -49,16 +56,16 @@
       "local_work_dir": ".work/transcripts/Xm2crsD5ngA",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "ca3d88c08fd02af1b4401f55008f96b95d8e6a3387c66ed50c35056d1205edf1",
-          "bytes": 75586
+          "sha256": "8337628607d606c4f5df2b3ce57236dba90532ceee589a13d991778386f72ff3",
+          "bytes": 75579
         },
         "transcript.zh-CN.md": {
-          "sha256": "8eda85287cce9ef2bc2e0da90757cf526503f38e49a7553d9adfbadd2b2f55cb",
-          "bytes": 11757
+          "sha256": "a83c5df1fa702ea1f7936c0b8a8fa19c2f2603559805626065a930732cc55b5b",
+          "bytes": 67537
         },
         "transcript.bilingual.md": {
-          "sha256": "a1aa541142a0c8cc30fb69e1f98b98d4a5486d8a236feb90f5d73e89d0653731",
-          "bytes": 82669
+          "sha256": "ef17d0853d8fba7b3b9ab94cb52f2a8ed0993319061211c6a56a7cf8b4e7350e",
+          "bytes": 138449
         }
       }
     },
@@ -68,17 +75,24 @@
       "video_url": "https://youtu.be/zlTCAER4z9A?si=NwmrRx9Xrcx3el7t",
       "instructional": true,
       "video_id": "zlTCAER4z9A",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4596000,
       "english_blocks": 87,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 87,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:55:45+00:00",
         "video_id": "zlTCAER4z9A",
@@ -91,16 +105,16 @@
       "local_work_dir": ".work/transcripts/zlTCAER4z9A",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "7a8eae3e42bad501293ab6a686b0397e0ae9eb9e15233569fa2b3391646111ad",
-          "bytes": 79870
+          "sha256": "cfc8e363b2d3356ba15d143a349fd6ec34c3902b1132dc435481da4f9a65e0cd",
+          "bytes": 79863
         },
         "transcript.zh-CN.md": {
-          "sha256": "c66d503a48cd56dad638caa87b591a7746c9d45623b63cdaba23d91909f9946b",
-          "bytes": 12324
+          "sha256": "db8f55f18d79d678c61760f6756fb72e6e7aed828f9392962c21c0735a02616e",
+          "bytes": 73903
         },
         "transcript.bilingual.md": {
-          "sha256": "f3af5b67333ef1068915bbc5e5da40a3324e04aaee7a56300e4087618c0634b4",
-          "bytes": 87293
+          "sha256": "b7087d95fcaf9fdb341c9f70926429062fa4f7342f95c0cd345a0f7f79f1e7bb",
+          "bytes": 148872
         }
       }
     },
@@ -120,17 +134,24 @@
       "video_url": "https://youtu.be/CH2_US07OdA?si=HJWc6IYG3s_VcywV",
       "instructional": true,
       "video_id": "CH2_US07OdA",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4741000,
       "english_blocks": 91,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 91,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:55:52+00:00",
         "video_id": "CH2_US07OdA",
@@ -143,16 +164,16 @@
       "local_work_dir": ".work/transcripts/CH2_US07OdA",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "423283a7795a8df67e98c831ebb2ecd079ce92142f81d9c235bc98b553256104",
-          "bytes": 83477
+          "sha256": "cb7ab8406503ae27fc3ece66a6cb3decba4c96a2a5a38e7c06c04fa6b7cf4b03",
+          "bytes": 83470
         },
         "transcript.zh-CN.md": {
-          "sha256": "df0c7094a59facc29bae509a246553ebc3f38c81e6fc2d38c2a899a1e96e63c3",
-          "bytes": 12874
+          "sha256": "ef1d0f0b6f6c05a70345fb87486fe95e844bbbfd373997f7b2137c65b081e901",
+          "bytes": 78634
         },
         "transcript.bilingual.md": {
-          "sha256": "a085cc3fd4c2207792d48f0a06341cc22fd96aadb29a0fe790d3dcfbb0153080",
-          "bytes": 91240
+          "sha256": "baeba3666e330adbcd578f808180d50b43ec8e90b40b4d98a05cf837bf8b8f63",
+          "bytes": 157000
         }
       }
     },
@@ -182,17 +203,24 @@
       "video_url": "https://youtu.be/0SOieOIe4HI?si=6BQZMH0OWOeLDaaR",
       "instructional": true,
       "video_id": "0SOieOIe4HI",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 2101000,
       "english_blocks": 40,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 40,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:00+00:00",
         "video_id": "0SOieOIe4HI",
@@ -205,16 +233,16 @@
       "local_work_dir": ".work/transcripts/0SOieOIe4HI",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "b2e47d1c4b8d19beb3f8f30e71504a9f578d07e213570a8e33fa21980bbf9b6e",
-          "bytes": 35798
+          "sha256": "52b45faf9c07782b11b4509364790a5caf334d31df87bf5757e9697ba6a34662",
+          "bytes": 35791
         },
         "transcript.zh-CN.md": {
-          "sha256": "2cbbc4a5f149be83c5a28f939f6972dea0fef464bc394453e89674010c2f98dc",
-          "bytes": 5837
+          "sha256": "afe7cfc31964fa0e7481e10e420870654874364600e35fffef3071666a5d8e84",
+          "bytes": 34890
         },
         "transcript.bilingual.md": {
-          "sha256": "ce184170df1361d8c44519445834abbc817967f5eb0001137a9908539a39ef99",
-          "bytes": 39226
+          "sha256": "a23216ffbddcb58549fcdbe53a481c03e1e35f74739f2461dec762ad231c682c",
+          "bytes": 68279
         }
       }
     },
@@ -224,17 +252,24 @@
       "video_url": "https://youtu.be/u-H43tRgYJg?si=AYQizgQHpf1Smlk1",
       "instructional": true,
       "video_id": "u-H43tRgYJg",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4984000,
       "english_blocks": 103,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 103,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:09+00:00",
         "video_id": "u-H43tRgYJg",
@@ -247,16 +282,16 @@
       "local_work_dir": ".work/transcripts/u-H43tRgYJg",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "4fa4f0bb3ed2af0a47b18cdc92db9f91fd9e2f8e8578079f605000b924ad7068",
-          "bytes": 80604
+          "sha256": "7d9ff856f5e66ebe4368829f6d5e4a9cddea2bc8dac985be2c47115ede67cbfa",
+          "bytes": 80599
         },
         "transcript.zh-CN.md": {
-          "sha256": "b59cb3fd1f75c738e2469a4bd55e7eb622f4885e400cc70d71abe3f7b9bb4e08",
-          "bytes": 14526
+          "sha256": "c6da3a7697209e6f2a4087357ac7be962a52eeebda234c32a907258268e46f9c",
+          "bytes": 77434
         },
         "transcript.bilingual.md": {
-          "sha256": "2849c64e50bca6e7c789a4129a902cbe1999849cb4f05b543c8e34ffd244cbcb",
-          "bytes": 89387
+          "sha256": "dfeb09df3100a594d1c7c46400792eeb49903fc908a857f0a9b1f81e64bf09b7",
+          "bytes": 152295
         }
       }
     },
@@ -266,17 +301,24 @@
       "video_url": "https://youtu.be/H9nvkyTsrnI?si=tjASlXudKbRcUefh",
       "instructional": true,
       "video_id": "H9nvkyTsrnI",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4226000,
       "english_blocks": 84,
-      "translated_blocks": 0,
+      "translated_blocks": 84,
       "translation_provider": "codex",
-      "legacy_codex_complete": true,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "legacy_codex_complete": false,
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:19+00:00",
         "video_id": "H9nvkyTsrnI",
@@ -289,16 +331,16 @@
       "local_work_dir": ".work/transcripts/H9nvkyTsrnI",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "95cc8dbb6feeeea77cd7383f5a9a4e3a51875614c9ed60d94f6837cb21510969",
+          "sha256": "805d04cf2d5c71da3384445dd9365922ff5e3efc112faca0f9037432e39826a1",
           "bytes": 69197
         },
         "transcript.zh-CN.md": {
-          "sha256": "78e2b512bf6de37ebae95469657f2ded5d3dc4895286c5bc13ed7e4a44a083c4",
-          "bytes": 61998
+          "sha256": "113a62444ba112a1f5bae18026d9c63e19b224801683fbd5e9d78310a504cee6",
+          "bytes": 65594
         },
         "transcript.bilingual.md": {
-          "sha256": "4dc1e191912de778e6830209a17392bcfede2d4b47f4a64328e62b86a79ec681",
-          "bytes": 126470
+          "sha256": "666b85e76bd51b45e974141194094a078b38e5845470a787e9555cf501456033",
+          "bytes": 130066
         }
       }
     },
@@ -318,17 +360,24 @@
       "video_url": "https://youtu.be/KlHIR7lT-mo?si=su5lIX08m-BvMcA1",
       "instructional": true,
       "video_id": "KlHIR7lT-mo",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4634000,
       "english_blocks": 91,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 91,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:21+00:00",
         "video_id": "KlHIR7lT-mo",
@@ -341,16 +390,16 @@
       "local_work_dir": ".work/transcripts/KlHIR7lT-mo",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "173d286d22edd326ea635ae42fb0e281a4775c40187c5efc782886c6fabf33ca",
-          "bytes": 76390
+          "sha256": "b925bf600d83005ef39ab648a174042b1eae3ba1d3324acb37ffd8d786fee149",
+          "bytes": 76383
         },
         "transcript.zh-CN.md": {
-          "sha256": "fa382a484739b446da1f799064efcc466acf9eb51a2d969126c964ab412cacc3",
-          "bytes": 12866
+          "sha256": "ded3f03bef0cf660b5fc1b888b4542e683e85f268dac8c3fffb3314b63daedf0",
+          "bytes": 76838
         },
         "transcript.bilingual.md": {
-          "sha256": "fceb4a8895eeaee14559e859d7d2af2f1c852019d6ea86386cc6665acb64246d",
-          "bytes": 84153
+          "sha256": "893b25c985f3440d0068b4685bac53850477a4a8512f7a449c497da9d611bbda",
+          "bytes": 148125
         }
       }
     },
@@ -360,17 +409,24 @@
       "video_url": "https://youtu.be/LGBQ0c_4HBA?si=y2ilL_6QdadmambK",
       "instructional": true,
       "video_id": "LGBQ0c_4HBA",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4523000,
       "english_blocks": 91,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 91,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:29+00:00",
         "video_id": "LGBQ0c_4HBA",
@@ -383,16 +439,16 @@
       "local_work_dir": ".work/transcripts/LGBQ0c_4HBA",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "1b55b4d8f8a2529069ef3b7b00a4766b63da8299612f50fe34d4689860a54240",
-          "bytes": 75882
+          "sha256": "08914fd8f8bd7f3e686b8bd63868e3a432ed2acfe7dbef19fcf0dd42afe3f5e1",
+          "bytes": 75875
         },
         "transcript.zh-CN.md": {
-          "sha256": "c143bd7ac784cac571ad8ee08eb7f6aac21bd9e828b6a24a9caadb467b482980",
-          "bytes": 12862
+          "sha256": "9975223e37703bc1f4dfc66103990f69a2f57e9d6d6292dd32bec758e2d0181a",
+          "bytes": 75095
         },
         "transcript.bilingual.md": {
-          "sha256": "e781b4ab146777e54f2b7d367450d33ddd1fa760959fd41f71618427b865188e",
-          "bytes": 83645
+          "sha256": "b563a069a3376fba257b1fd921e9262be9d66cf100f0f46afb62fe2f9b2e14f4",
+          "bytes": 145878
         }
       }
     },
@@ -442,17 +498,24 @@
       "video_url": "https://youtu.be/Vhe_bX8mV2s?si=V65452DBEHXaEWbW",
       "instructional": true,
       "video_id": "Vhe_bX8mV2s",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4655000,
       "english_blocks": 94,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 94,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:37+00:00",
         "video_id": "Vhe_bX8mV2s",
@@ -465,16 +528,16 @@
       "local_work_dir": ".work/transcripts/Vhe_bX8mV2s",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "e8a57bc3313f02d2adb34d790dacb954f11d2dc383369bd4385221b4550b6df5",
-          "bytes": 76807
+          "sha256": "f67f073e6b9873430345a8c9cea95fa8c78598cdb2b189d1b03b5e4b1489458d",
+          "bytes": 76800
         },
         "transcript.zh-CN.md": {
-          "sha256": "b845a02ce90ca932d27cec54be27859d400745665cabacb00874e6ebde294315",
-          "bytes": 13282
+          "sha256": "ae315699150500ebaad9d99b026cfe610b69b132420471ada2ca331cd70f7c4a",
+          "bytes": 73516
         },
         "transcript.bilingual.md": {
-          "sha256": "2d775247d11a35d487ed6511164ad58f93706f71ff35f17e5719cc62d640a0d9",
-          "bytes": 84825
+          "sha256": "68cb993f7e44f844b1a5cc06bc6dc06f88365d03ace9f6d81dc8d9a4bf66f614",
+          "bytes": 145059
         }
       }
     },
@@ -494,17 +557,24 @@
       "video_url": "https://youtu.be/Sk_TYpA6DWA?si=xI7BVwWyEQb31Wg8",
       "instructional": true,
       "video_id": "Sk_TYpA6DWA",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4449000,
       "english_blocks": 89,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 89,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:46+00:00",
         "video_id": "Sk_TYpA6DWA",
@@ -517,16 +587,16 @@
       "local_work_dir": ".work/transcripts/Sk_TYpA6DWA",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "ab55bc01d891ff3575924cb137073249e4b53624d33f39e13e202181288e635a",
-          "bytes": 73426
+          "sha256": "ea6c32dd6e23528481371057523d525d133ee824351c36efe3c6ee32b26c741c",
+          "bytes": 73419
         },
         "transcript.zh-CN.md": {
-          "sha256": "ea1b6f631e7da3f23ae9dd1b753ebc4236c8f87db1741774e1ca7d4c26603c22",
-          "bytes": 12590
+          "sha256": "054b69a54122ee91516867a81fff240c1f40915f3eaa80c27115311b224a899c",
+          "bytes": 71754
         },
         "transcript.bilingual.md": {
-          "sha256": "f68b3bfdb8a2a83b34797801aa4272c51a5cc8401f4bd3db389384a715a36bad",
-          "bytes": 81019
+          "sha256": "5ae977ed53efed64d886084d43a3679b621f4845312227a5fcda69e00d2e8f30",
+          "bytes": 140183
         }
       }
     },
@@ -536,17 +606,24 @@
       "video_url": "https://youtu.be/IDaMEG_zY6A?si=nfHVm8rBMwi5zljP",
       "instructional": true,
       "video_id": "IDaMEG_zY6A",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4117000,
       "english_blocks": 83,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 83,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:56:59+00:00",
         "video_id": "IDaMEG_zY6A",
@@ -559,16 +636,16 @@
       "local_work_dir": ".work/transcripts/IDaMEG_zY6A",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "0935a4ff6be00bbdfcfc7ca3a42c795c2b2723ecffe3be957e0868068f78f76c",
-          "bytes": 66439
+          "sha256": "3fa7c6562dd1c62c1ec54e2cfcaf8dda98a1935643a9898feb7be6f7415fc7b0",
+          "bytes": 66432
         },
         "transcript.zh-CN.md": {
-          "sha256": "ea82c1d40ddc642ea8328027b04c4bc0cf19909eff98f4855a42ea1c3043333c",
-          "bytes": 11758
+          "sha256": "a0593d411d8d640a4533c2479276fe8f0a3d28c6321182533f76710b4fe50e98",
+          "bytes": 63327
         },
         "transcript.bilingual.md": {
-          "sha256": "bc45e4585e84b26f385767bd42e92950b1cf95e033f2b367619ee1d549b59a86",
-          "bytes": 73522
+          "sha256": "f87b67e3df3e783a9cf15d11066e4626e5139f56619c498fc5e716cb5c4123bb",
+          "bytes": 125091
         }
       }
     },
@@ -638,17 +715,24 @@
       "video_url": "https://youtu.be/FhcHTSjvuKk?si=gJGiKJrwO3FYakcE",
       "instructional": true,
       "video_id": "FhcHTSjvuKk",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 4569000,
       "english_blocks": 94,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 94,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:57:10+00:00",
         "video_id": "FhcHTSjvuKk",
@@ -661,16 +745,16 @@
       "local_work_dir": ".work/transcripts/FhcHTSjvuKk",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "3188fb783256c7cd84ac663a305fb85fc92972d693f1c833f7c0d169529a5d1d",
-          "bytes": 74044
+          "sha256": "2d741eb770982799c56b8ebadf091f6892e175c4af3a395e140f8ebeead24fff",
+          "bytes": 74037
         },
         "transcript.zh-CN.md": {
-          "sha256": "50d7fe498bf732bfcc0df06e5e3992e510939924f69b41353caf5cc7baf10d07",
-          "bytes": 13271
+          "sha256": "7f8151fc34318ef0a2b7539dc65563fc5bb3a2002344511d81d09a539c8e158a",
+          "bytes": 68043
         },
         "transcript.bilingual.md": {
-          "sha256": "2447e1f0efaac3822c2d40c42fdc0917493ac2a46c6b09e1d7ec7587995fffc9",
-          "bytes": 82062
+          "sha256": "3304593e5d91acd610b57aeaae5f3552b4b28004069331e869281eb02ddbd033",
+          "bytes": 136834
         }
       }
     },
@@ -680,17 +764,24 @@
       "video_url": "https://youtu.be/UJra8aMCHXg?si=c_jwf59wZGplm9zA",
       "instructional": true,
       "video_id": "UJra8aMCHXg",
-      "status": "english_ready",
+      "status": "complete_local",
       "source_kind": "automatic",
       "duration_ms": 3024000,
       "english_blocks": 59,
-      "translated_blocks": 0,
-      "translation_provider": "none",
+      "translated_blocks": 59,
+      "translation_provider": "codex",
       "legacy_codex_complete": false,
-      "full_translation_status": "paused_permission_needed",
-      "terminology_policy": null,
-      "public_transcripts": false,
-      "publication_status": "withheld_pending_video_license",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-07",
+        "statement": "已获得授权，继续进行翻译直到完成",
+        "scope": "User confirms permission for the requested full course transcription, Chinese translation, and publication in the requested GitHub study archive.",
+        "verification_note": "Permission is based on the user statement; no Creative Commons license is asserted and YouTube license metadata remains unchanged."
+      },
+      "terminology_policy": "translate-v2-technical-terms",
+      "public_transcripts": true,
+      "publication_status": "exported",
       "license_observation": {
         "checked_at": "2026-09-07T06:57:20+00:00",
         "video_id": "UJra8aMCHXg",
@@ -703,16 +794,16 @@
       "local_work_dir": ".work/transcripts/UJra8aMCHXg",
       "artifacts": {
         "transcript.en.md": {
-          "sha256": "15da7c28b87db05a130712faa82a5b2858706fec42c494ef785fd477c92dbd39",
-          "bytes": 51235
+          "sha256": "1836e4def0d79865d5e98557591b39e6b09310e1566089e6b93deff91bd294ed",
+          "bytes": 51228
         },
         "transcript.zh-CN.md": {
-          "sha256": "ef904180c6293742c8ac58bec85a82fcfcfa48ec08eb76a0dfacf350412c5965",
-          "bytes": 8444
+          "sha256": "291add952ec704280bbc33f08781f98ccba1e99f75c28afb0a4e7ce6ae8913f4",
+          "bytes": 46039
         },
         "transcript.bilingual.md": {
-          "sha256": "7962833387e0bfc2617f62d8f70da9dc95b4d7ce205c80a8c8a56f8dd4655d3a",
-          "bytes": 56278
+          "sha256": "8c78065bba5c9ebe7935c25d24992175625b96bedaa975958cddd4840ff93f40",
+          "bytes": 93873
         }
       }
     },

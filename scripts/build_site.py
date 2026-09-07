@@ -20,7 +20,15 @@ DOCUMENT_NAMES = {
     "transcript.zh-CN.md": "中文讲稿",
     "transcript.bilingual.md": "双语讲稿",
     "GUIDANCE.md": "学习指南",
+    "TRANSCRIPTS.md": "讲稿目录",
+    "TRANSLATION.md": "翻译说明",
+    "TERMS.md": "专业术语",
 }
+TRANSCRIPT_FORMATS = (
+    ("transcript.en.md", "英文"),
+    ("transcript.zh-CN.md", "中文"),
+    ("transcript.bilingual.md", "双语"),
+)
 
 
 def esc(value: object) -> str:
@@ -100,6 +108,19 @@ class Markdown:
                     output.append("<code>" + esc(text[i + 1:end]) + "</code>")
                     i = end + 1
                     continue
+            if text[i] == "$":
+                marker = "$$" if text.startswith("$$", i) else "$"
+                end = text.find(marker, i + len(marker))
+                if end != -1:
+                    output.append(esc(text[i:end + len(marker)]))
+                    i = end + len(marker)
+                    continue
+            if text[i] == "&":
+                entity = re.match(r"&(?:#[xX][0-9a-fA-F]{1,8}|#[0-9]{1,8}|[A-Za-z][A-Za-z0-9]{1,31});", text[i:])
+                if entity:
+                    output.append(esc(html.unescape(entity.group())))
+                    i += len(entity.group())
+                    continue
             image = text.startswith("![", i)
             if text[i] == "[" or image:
                 start = i + (2 if image else 1)
@@ -123,9 +144,14 @@ class Markdown:
                         i = end
                         continue
             matched = False
-            for marker, tag in (("**", "strong"), ("__", "strong"), ("~~", "del"), ("*", "em")):
+            for marker, tag in (("**", "strong"), ("__", "strong"), ("~~", "del"), ("*", "em"), ("_", "em")):
                 if text.startswith(marker, i):
+                    if marker.startswith("_") and ((i and (text[i - 1].isalnum() or text[i - 1] == "_")) or i + len(marker) == len(text) or text[i + len(marker)].isspace()):
+                        continue
                     end = text.find(marker, i + len(marker))
+                    if marker.startswith("_"):
+                        while end != -1 and (text[end - 1].isspace() or (end + len(marker) < len(text) and (text[end + len(marker)].isalnum() or text[end + len(marker)] == "_"))):
+                            end = text.find(marker, end + len(marker))
                     if end > i + len(marker):
                         content = self.inline(text[i + len(marker):end], depth + 1)
                         output.append(f"<{tag}>{content}</{tag}>")
@@ -322,6 +348,10 @@ class Site:
     def session_path(self, course: str, session: dict, name: str = "preview.md") -> PurePosixPath:
         return PurePosixPath("course", course, str(session["id"]), name)
 
+    def transcript_paths(self, course: str, session: dict) -> list[tuple[PurePosixPath, str]]:
+        return [(self.session_path(course, session, name), label) for name, label in TRANSCRIPT_FORMATS
+                if self.has(self.session_path(course, session, name))]
+
     def session_link(self, course: str, session: dict) -> str:
         for name in ("preview.md", "readings.md", "README.md"):
             path = self.session_path(course, session, name)
@@ -366,6 +396,9 @@ class Site:
         links = [f'<a class="sidebar-overview" href="{self.url(page_path(overview))}">← 课程总览</a>']
         if self.has(guidance):
             links.append(f'<a class="sidebar-guide {"active" if current == guidance else ""}" href="{self.url(page_path(guidance))}">◈ 学习指南</a>')
+        transcript_index = PurePosixPath("course", course, "TRANSCRIPTS.md")
+        if self.has(transcript_index):
+            links.append(f'<a class="sidebar-guide {"active" if current == transcript_index else ""}" href="{self.url(page_path(transcript_index))}">◈ 全部讲稿</a>')
         for session in catalog.get("sessions", []):
             if not session.get("instructional", True):
                 continue
@@ -384,7 +417,13 @@ class Site:
             video = bool(session.get("video_url"))
             slides = bool(session.get("slides_url")) and session.get("slides_status") not in {"unavailable", "missing", "failed"}
             available = self.has(self.session_path(course, session))
-            transcript = self.has(self.session_path(course, session, "transcript.en.md"))
+            transcripts = self.transcript_paths(course, session)
+            transcript_links = ""
+            if transcripts:
+                transcript_links = '<nav class="transcript-links" aria-label="本章讲稿">' + "".join(
+                    f'<a href="{self.url(page_path(path))}">{label}讲稿 ↗</a>' for path, label in reversed(transcripts)
+                ) + "</nav>"
+            transcript_status = " / ".join(label for _, label in transcripts) + "讲稿已归档" if transcripts else ""
             label = "视频 + Slides" if video and slides else "视频" if video else "Slides" if slides else "来源待补充"
             tags = "".join(f"<span>{esc(topic)}</span>" for topic in topics[:3])
             searchable = " ".join([str(session.get("title", "")), str(session["id"]), *map(str, topics)])
@@ -394,7 +433,7 @@ class Site:
 <div class="card-meta"><span>{esc(str(session['id']).upper())} <span class="meta-dot">·</span> {esc(session.get('date', ''))}</span><span class="source-badge {'badge-video' if video else ''}">{label}</span></div>
 <h3><a href="{self.session_link(course, session)}">{esc(session['title'])}</a></h3><div class="topic-tags">{tags}</div>
 <div class="card-bottom"><a class="preview-link" href="{self.session_link(course, session)}">{'学习准备' if available and not (video or slides) else '开始预览' if available else '查看资料状态'} <span>→</span></a>{reading_link}</div>
-<span class="transcript-status">{'英文讲稿已归档' if transcript else '资料待补充 · 学习准备' if not (video or slides) else '按公开资料整理' if available else '资料状态见课程记录'}</span></article>''')
+{transcript_links}<span class="transcript-status">{transcript_status or ('资料待补充 · 学习准备' if not (video or slides) else '按公开资料整理' if available else '资料状态见课程记录')}</span></article>''')
         return "".join(cards)
 
     def course_landing(self, course: str, intro: str = "") -> str:
@@ -403,8 +442,18 @@ class Site:
         videos = sum(bool(s.get("video_url")) for s in sessions)
         previews = sum(self.has(self.session_path(course, s)) for s in sessions)
         readings = sum(self.has(self.session_path(course, s, "readings.md")) for s in sessions)
+        transcript_counts = [(label, sum(self.has(self.session_path(course, s, filename)) for s in sessions))
+                             for filename, label in TRANSCRIPT_FORMATS]
+        transcript_summary = ""
+        if any(count for _, count in transcript_counts):
+            transcript_summary = '<p class="transcript-summary">已公开讲稿：' + " · ".join(
+                f"{label} {count} 讲" for label, count in transcript_counts
+            ) + "</p>"
         guidance = PurePosixPath("course", course, "GUIDANCE.md")
         action = f'<a class="button" href="{self.url(page_path(guidance))}">从学习指南开始 <span>→</span></a>' if self.has(guidance) else ""
+        transcript_index = PurePosixPath("course", course, "TRANSCRIPTS.md")
+        if self.has(transcript_index):
+            action += f'<a class="quiet-link" href="{self.url(page_path(transcript_index))}">全部讲稿 →</a>'
         source = safe_link(str(catalog.get("source_url", "")), PurePosixPath("README.md"), self.base)
         source_link = f'<a class="quiet-link" href="{esc(source)}">官方课程 ↗</a>' if source else ""
         description = catalog.get("reader_description") or catalog.get("description_zh") or "围绕多模态数据、融合、对齐、生成、推理与交互，结合课堂材料与论文，建立一条可回看的学习路径。"
@@ -412,6 +461,7 @@ class Site:
         return f'''<div class="breadcrumb"><a href="{self.url('course/index.html')}">Course</a><span>/</span><span>课程归档</span></div>
 <section class="course-hero"><div class="hero-copy"><p class="eyebrow">COURSE NOTEBOOK <span> / </span> SPRING 2026</p><h1>{esc(catalog.get('title', course))}</h1><p class="hero-description">{esc(description)}</p><div class="hero-actions">{action}{source_link}</div></div><div class="course-emblem" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span>m<span>×</span>m</span><small>CONNECT THE MODALITIES</small></div></section>
 <div class="course-stats"><div><strong>{len(sessions):02d}</strong><span>学习章节</span></div><div><strong>{previews:02d}</strong><span>章节入口</span></div><div><strong>{videos:02d}</strong><span>公开视频</span></div><div><strong>{readings:02d}</strong><span>阅读指引</span></div></div>
+{transcript_summary}
 <section class="library-section" aria-labelledby="chapters-heading"><div class="section-heading"><div><p class="eyebrow">THE LEARNING PATH</p><h2 id="chapters-heading">从一个问题，到下一层理解。</h2></div><p>预览 → Slides / Video → Readings → 自己的笔记</p></div>
 <div class="library-toolbar"><label class="filter-input"><span>⌕</span><input id="lesson-filter" type="search" placeholder="筛选章节、主题…" aria-label="筛选课程章节"></label><div class="filter-buttons" aria-label="课程资料类型"><button class="selected" data-filter="all" aria-pressed="true">全部</button><button data-filter="video" aria-pressed="false">有视频</button><button data-filter="slides" aria-pressed="false">仅 Slides</button></div><span id="lesson-count" aria-live="polite">{len(sessions)} 个章节</span></div>
 <div class="lesson-grid">{self.cards(course)}</div><p id="filter-empty" class="empty-message" hidden>没有匹配的章节，试试另一个关键词。</p></section>{details}'''
@@ -419,6 +469,11 @@ class Site:
     def document(self, source: PurePosixPath, markdown: str) -> None:
         renderer = Markdown(source, self.base)
         rendered = renderer.render(markdown)
+        if source.name.startswith("transcript."):
+            header, divider, body = rendered.partition("<h2")
+            if divider:
+                header = re.sub(r"<ul>.*?</ul>", lambda match: '<details class="transcript-metadata"><summary>讲稿来源与处理信息</summary>' + match.group() + "</details>", header, count=1, flags=re.S)
+                rendered = header + divider + body
         heading = next((text for level, text, _ in renderer.headings if level == 1), source.stem)
         section = source.parts[0] if len(source.parts) > 1 else "home"
         course = source.parts[1] if section == "course" and len(source.parts) > 2 else None
@@ -452,7 +507,8 @@ class Site:
             if course:
                 breadcrumbs += f'<span>/</span><a href="{self.url(PurePosixPath("course", course, "index.html"))}">MMAI 2026</a>'
             breadcrumbs += f'<span>/</span><span>{esc(DOCUMENT_NAMES.get(source.name, "笔记"))}</span></div>'
-            body = breadcrumbs + tabs + '<div class="document-tools">' + "".join(source_links) + '</div><article class="prose">' + rendered + "</article>"
+            article_class = "prose transcript-prose" if source.name.startswith("transcript.") else "prose"
+            body = breadcrumbs + tabs + '<div class="document-tools">' + "".join(source_links) + f'</div><article class="{article_class}">' + rendered + "</article>"
             toc_links = "".join(f'<a class="toc-level-{level}" href="#{quote(slug)}">{esc(text)}</a>' for level, text, slug in renderer.headings if 2 <= level <= 3)
             toc = f'<aside class="toc" aria-label="本页目录"><p>ON THIS PAGE</p>{toc_links}</aside>' if toc_links and course else ""
             page = self.shell(heading, body, section, self.sidebar(course, source) if course in self.catalogs else "", toc)

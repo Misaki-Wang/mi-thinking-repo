@@ -37,6 +37,23 @@ class MarkdownTests(unittest.TestCase):
         self.assertIn("<strong>focus</strong>", result)
         self.assertIn("<code>a &lt; b</code>", result)
 
+    def test_text_entities_are_decoded_once_and_remain_inert(self):
+        result = self.render("&gt;&gt; Speaker &amp; guest. &#62; &#x3e; &lt;script&gt;unsafe()&lt;/script&gt; &amp;lt;script&amp;gt;")
+        self.assertIn("&gt;&gt; Speaker &amp; guest.", result)
+        self.assertNotIn("&amp;gt;&amp;gt; Speaker", result)
+        self.assertIn("&lt;script&gt;unsafe()&lt;/script&gt;", result)
+        self.assertNotIn("<script>", result)
+        self.assertIn("&amp;lt;script&amp;gt;", result)
+
+    def test_underscore_emphasis_preserves_identifiers_math_and_code(self):
+        result = self.render(r"_Bilingual transcript · 双语讲稿_ __bold__ foo_bar_baz x_i + y_j $x_i + \alpha_j$ $_i_ + x_{j}$ `_code_ &gt;`" + "\n\n```text\n_emphasis_ &gt;\n```")
+        self.assertIn("<em>Bilingual transcript · 双语讲稿</em>", result)
+        self.assertIn("<strong>bold</strong>", result)
+        self.assertIn("foo_bar_baz x_i + y_j", result)
+        self.assertIn(r"$x_i + \alpha_j$ $_i_ + x_{j}$", result)
+        self.assertIn("<code>_code_ &amp;gt;</code>", result)
+        self.assertIn('_emphasis_ &amp;gt;', result)
+
     def test_tables_nested_lists_code_and_duplicate_headings(self):
         result = self.render('# T\n\n## 核心概念\n\n## 核心概念\n\n| Name | Value |\n| --- | --- |\n| **A** | 1 |\n\n- parent\n  - child\n- second\n\n```html\n<script>unsafe()</script>\n```')
         self.assertIn('id="核心概念"', result)
@@ -170,6 +187,71 @@ class BuildTests(unittest.TestCase):
         _, output = self.build()
         self.assertFalse((output / "course/demo/w01-1/transcript.en.html").exists())
         self.assertFalse((output / "markdown/course/demo/w01-1/transcript.en.md").exists())
+
+    def test_transcript_cards_tabs_and_counts_follow_allowed_existing_files(self):
+        self.write("course/demo/transcript-status.json", json.dumps({"sessions": [{"session_id": "w01-1", "public_transcripts": True}]}))
+        self.write("course/demo/w01-1/transcript.en.md", "# English transcript\n\nComplete English text.")
+        _, output = self.build()
+        course = (output / "course/demo/index.html").read_text()
+        self.assertIn("英文 1 讲 · 中文 0 讲 · 双语 0 讲", course)
+        self.assertIn("英文讲稿已归档", course)
+        self.assertNotIn("transcript.bilingual.html", course)
+        self.assertNotIn("transcript.zh-CN.html", course)
+
+        self.write("course/demo/w01-1/transcript.zh-CN.md", "# 中文讲稿\n\n完整的中文译文。")
+        self.write("course/demo/w01-1/transcript.bilingual.md", "# 双语讲稿\n\nComplete English text.\n\n完整的中文译文。")
+        _, output = self.build()
+        course = (output / "course/demo/index.html").read_text()
+        self.assertIn("英文 1 讲 · 中文 1 讲 · 双语 1 讲", course)
+        for name, label in site.TRANSCRIPT_FORMATS:
+            target = f'/notebook/course/demo/w01-1/{name[:-3]}.html'
+            self.assertIn(f'href="{target}">{label}讲稿 ↗', course)
+            page = (output / f"course/demo/w01-1/{name[:-3]}.html").read_text()
+            tabs = page.split('<nav class="document-tabs"', 1)[1].split("</nav>", 1)[0]
+            for tab_name, tab_label in site.TRANSCRIPT_FORMATS:
+                self.assertIn(tab_name[:-3] + ".html", tabs)
+                self.assertIn(tab_label + "讲稿", tabs)
+            self.assertIn('class="prose transcript-prose"', page)
+        self.assertEqual(site.validate_links(output, "/notebook/"), [])
+
+        self.write("course/demo/transcript-status.json", json.dumps({"sessions": [{"session_id": "w01-1", "public_transcripts": False}]}))
+        _, output = self.build()
+        course = (output / "course/demo/index.html").read_text()
+        preview = (output / "course/demo/w01-1/preview.html").read_text()
+        self.assertNotIn("已公开讲稿", course)
+        for name, _ in site.TRANSCRIPT_FORMATS:
+            self.assertNotIn(name[:-3] + ".html", course)
+            self.assertNotIn(name[:-3] + ".html", preview)
+
+    def test_long_transcript_is_fully_searchable_and_html_escaped(self):
+        content = "English and 中文 multimodal details. " * 4000 + "末尾的独特检索词 <script>unsafe()</script>"
+        self.write("course/demo/w01-1/transcript.bilingual.md", "# 双语讲稿\n\n" + content)
+        self.write("course/demo/transcript-status.json", json.dumps({"sessions": [{"session_id": "w01-1", "public_transcripts": True}]}))
+        _, output = self.build()
+        index = json.loads((output / "search-index.json").read_text())
+        transcript = next(item for item in index if item["kind"] == "双语讲稿")
+        self.assertGreater(len(transcript["text"]), 100000)
+        self.assertIn("末尾的独特检索词", transcript["text"])
+        page = (output / "course/demo/w01-1/transcript.bilingual.html").read_text()
+        self.assertNotIn("<script>unsafe()", page)
+        self.assertIn("&lt;script&gt;unsafe()&lt;/script&gt;", page)
+
+    def test_transcript_metadata_is_collapsed_without_changing_markdown_or_notes(self):
+        content = "# Transcript\n\n_Bilingual transcript · 双语讲稿_\n\n- Channel: Teacher\n- Source: [Video](https://example.com/video)\n- Status: complete\n\n## Transcript · 讲稿\n\n&gt;&gt; First aligned passage."
+        self.write("course/demo/w01-1/transcript.bilingual.md", content)
+        self.write("course/demo/w01-1/readings.md", content)
+        self.write("course/demo/transcript-status.json", json.dumps({"sessions": [{"session_id": "w01-1", "public_transcripts": True}]}))
+        _, output = self.build()
+        page = (output / "course/demo/w01-1/transcript.bilingual.html").read_text()
+        self.assertIn('<details class="transcript-metadata"><summary>讲稿来源与处理信息</summary>', page)
+        self.assertNotIn('<details class="transcript-metadata" open', page)
+        metadata = page.split('<details class="transcript-metadata">', 1)[1].split("</details>", 1)[0]
+        self.assertIn("Channel: Teacher", metadata)
+        self.assertNotIn("First aligned passage", metadata)
+        self.assertIn("&gt;&gt; First aligned passage", page)
+        self.assertNotIn("&amp;gt;", page)
+        self.assertNotIn('class="transcript-metadata"', (output / "course/demo/w01-1/readings.html").read_text())
+        self.assertEqual((output / "markdown/course/demo/w01-1/transcript.bilingual.md").read_text(), content)
 
     def test_blog_auto_listing_empty_paper_and_no_fake_posts(self):
         self.write("blog/first-thought.md", "# 一个真实的问题\n\nPersonal observation.")
