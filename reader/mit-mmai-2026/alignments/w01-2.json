@@ -1,0 +1,6188 @@
+{
+  "schema_version": 1,
+  "session_id": "w01-2",
+  "deck_ids": [
+    "w01-2"
+  ],
+  "method": {
+    "id": "lexical-sequence-v1",
+    "description": "TF-IDF word/term-bigram cosine retrieval with optional unmatched paragraphs, monotonic slide-order context, and coarse source-linked preview topic hints; no proportional time mapping.",
+    "topic_hints": [
+      {
+        "start_seconds": 283,
+        "start_page": 3
+      },
+      {
+        "start_seconds": 558,
+        "start_page": 7
+      },
+      {
+        "start_seconds": 2867,
+        "start_page": 28
+      },
+      {
+        "start_seconds": 3620,
+        "start_page": 37
+      }
+    ],
+    "topic_hint_tolerance_seconds": 90,
+    "confidence_note": "Estimated and weak are qualitative evidence labels, not calibrated probabilities or verified video timestamps.",
+    "synchronization_note": "Only non-null slide_id associations drive automatic synchronization; candidate pages are suggestions for manual inspection.",
+    "limits": [
+      "A paragraph may span multiple slides.",
+      "Image-only, duplicate builds, questions, and unlectured pages can be unmatched.",
+      "Monotonic content order may leave revisited pages unmatched."
+    ]
+  },
+  "provenance": {
+    "transcript_path": ".work/transcripts/zlTCAER4z9A/data/blocks.en.json",
+    "transcript_sha256": "bdff2e5811e259757cd175820b20413eaa3349d31e67869f6666ab6256dedf73",
+    "video_url": "https://youtu.be/zlTCAER4z9A?si=NwmrRx9Xrcx3el7t",
+    "english_markdown_path": "course/mit-mmai-2026/w01-2/transcript.en.md",
+    "english_markdown_sha256": "cfc8e363b2d3356ba15d143a349fd6ec34c3902b1132dc435481da4f9a65e0cd",
+    "catalog_sha256": "388d554bca0c00036eddf4e1e3998707bb8a2e06ed33bb5b04b22d1f64150217",
+    "slides": [
+      {
+        "deck_id": "w01-2",
+        "path": ".work/sources/w01-2/slides-pages.json",
+        "sha256": "993f656576734ac2f09cfdde4bfbf8dc2796c07a8b00d3ad274ffdb28d78c5ef",
+        "source_url": "https://mit-mi.github.io/mmai-course/spring2026/schedule/lec1.2 - data.pdf"
+      }
+    ],
+    "preview_path": "course/mit-mmai-2026/w01-2/preview.md",
+    "preview_sha256": "c292744143df467277baa91428a2c5fdd58a60829d56a86eb667a7a9108635af",
+    "script_sha256": "2566062a3c210abc439af443dc55cd07fbd7a41b67eddef12b6eb9e125560a12"
+  },
+  "summary": {
+    "unmatched": 32,
+    "estimated": 31,
+    "weak": 24,
+    "total_blocks": 87,
+    "total_slides": 70,
+    "associated_slides": 35,
+    "recap_blocks": 0
+  },
+  "blocks": [
+    {
+      "block_id": "b000001",
+      "start_ms": 0,
+      "end_ms": 7560,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": []
+    },
+    {
+      "block_id": "b000002",
+      "start_ms": 12639,
+      "end_ms": 68080,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p002",
+          "score": 0.2466,
+          "evidence_terms": [
+            "find",
+            "project",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p001",
+          "score": 0.173,
+          "evidence_terms": [
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.144,
+          "evidence_terms": [
+            "homework",
+            "find",
+            "project",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1292,
+          "evidence_terms": [
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000003",
+      "start_ms": 68080,
+      "end_ms": 117920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p002",
+          "score": 0.3608,
+          "evidence_terms": [
+            "mingle",
+            "advice",
+            "teammate",
+            "find",
+            "project",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p059",
+          "score": 0.081,
+          "evidence_terms": [
+            "recording",
+            "home"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.076,
+          "evidence_terms": [
+            "semester",
+            "during",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000004",
+      "start_ms": 117920,
+      "end_ms": 172879,
+      "slide_id": "w01-2-p003",
+      "score": 0.3316,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "observation",
+        "initial",
+        "literature",
+        "review",
+        "scientific",
+        "idea",
+        "process",
+        "data",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.3316,
+          "evidence_terms": [
+            "observation",
+            "initial",
+            "literature",
+            "review",
+            "scientific",
+            "idea",
+            "process",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.2284,
+          "evidence_terms": [
+            "interest",
+            "basic",
+            "preference",
+            "week",
+            "form",
+            "find",
+            "process",
+            "project",
+            "data"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.1681,
+          "evidence_terms": [
+            "initial",
+            "week",
+            "literature",
+            "review",
+            "idea",
+            "project",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p010",
+          "score": 0.1307,
+          "evidence_terms": [
+            "intuition",
+            "tell",
+            "usually",
+            "answer",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000005",
+      "start_ms": 172879,
+      "end_ms": 228239,
+      "slide_id": "w01-2-p003",
+      "score": 0.3016,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "initial",
+        "hypothesis",
+        "literature",
+        "review",
+        "experiment",
+        "idea",
+        "data",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.3016,
+          "evidence_terms": [
+            "initial",
+            "hypothesis",
+            "literature",
+            "review",
+            "experiment",
+            "idea",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p007",
+          "score": 0.256,
+          "evidence_terms": [
+            "result",
+            "several",
+            "hypothesis",
+            "hypothese",
+            "answer",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p010",
+          "score": 0.2415,
+          "evidence_terms": [
+            "intuition",
+            "usually",
+            "hypothesis",
+            "hypothese",
+            "answer",
+            "experiment",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.1869,
+          "evidence_terms": [
+            "art",
+            "state",
+            "experiment",
+            "idea",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000006",
+      "start_ms": 228239,
+      "end_ms": 283199,
+      "slide_id": "w01-2-p003",
+      "score": 0.5339,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "conclusion",
+        "observation",
+        "initial",
+        "method",
+        "hypothesis",
+        "literature",
+        "report",
+        "review",
+        "scientific",
+        "experiment",
+        "idea",
+        "process"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.5339,
+          "evidence_terms": [
+            "conclusion",
+            "observation",
+            "initial",
+            "method",
+            "hypothesis",
+            "literature",
+            "report",
+            "review",
+            "scientific",
+            "experiment",
+            "idea",
+            "process"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.3388,
+          "evidence_terms": [
+            "proposal",
+            "art",
+            "during",
+            "final",
+            "method",
+            "midterm",
+            "state",
+            "report",
+            "experiment",
+            "idea",
+            "ways",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.2419,
+          "evidence_terms": [
+            "coming",
+            "final",
+            "initial",
+            "midterm",
+            "literature",
+            "report",
+            "review",
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p008",
+          "score": 0.1392,
+          "evidence_terms": [
+            "scientific",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000007",
+      "start_ms": 283199,
+      "end_ms": 336800,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.2885,
+          "evidence_terms": [
+            "improve",
+            "art",
+            "discovery",
+            "state",
+            "bottom",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p004",
+          "score": 0.1051,
+          "evidence_terms": [
+            "incremental",
+            "discovery",
+            "bottom"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1022,
+          "evidence_terms": [
+            "domain",
+            "art",
+            "start",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.0801,
+          "evidence_terms": [
+            "building",
+            "start",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000008",
+      "start_ms": 336800,
+      "end_ms": 393120,
+      "slide_id": "w01-2-p004",
+      "score": 0.4125,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "bigger",
+        "disconnected",
+        "favor",
+        "leap",
+        "preclude",
+        "reality",
+        "discovery",
+        "larger",
+        "progress",
+        "bottom",
+        "idea",
+        "top"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p004",
+          "score": 0.4125,
+          "evidence_terms": [
+            "bigger",
+            "disconnected",
+            "favor",
+            "leap",
+            "preclude",
+            "reality",
+            "discovery",
+            "larger",
+            "progress",
+            "bottom",
+            "idea",
+            "top"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.1268,
+          "evidence_terms": [
+            "discovery",
+            "bottom",
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p008",
+          "score": 0.1143,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p009",
+          "score": 0.0953,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000009",
+      "start_ms": 393120,
+      "end_ms": 447680,
+      "slide_id": "w01-2-p005",
+      "score": 0.4487,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "proposal",
+        "art",
+        "discovery",
+        "enable",
+        "existing",
+        "homework",
+        "method",
+        "midterm",
+        "state",
+        "assignment",
+        "identify",
+        "report"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.4487,
+          "evidence_terms": [
+            "proposal",
+            "art",
+            "discovery",
+            "enable",
+            "existing",
+            "homework",
+            "method",
+            "midterm",
+            "state",
+            "assignment",
+            "identify",
+            "report"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1468,
+          "evidence_terms": [
+            "method",
+            "literature",
+            "report",
+            "review",
+            "process",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.0902,
+          "evidence_terms": [
+            "midterm",
+            "assignment",
+            "literature",
+            "report",
+            "review"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.0763,
+          "evidence_terms": [
+            "homework",
+            "assignment",
+            "process",
+            "data"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000010",
+      "start_ms": 447680,
+      "end_ms": 500319,
+      "slide_id": "w01-2-p005",
+      "score": 0.6659,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "evolve",
+        "improve",
+        "propose",
+        "semester",
+        "successe",
+        "art",
+        "discovery",
+        "existing",
+        "failure",
+        "final",
+        "homework",
+        "method"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.6659,
+          "evidence_terms": [
+            "evolve",
+            "improve",
+            "propose",
+            "semester",
+            "successe",
+            "art",
+            "discovery",
+            "existing",
+            "failure",
+            "final",
+            "homework",
+            "method"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.1308,
+          "evidence_terms": [
+            "final",
+            "midterm",
+            "assignment",
+            "report",
+            "idea",
+            "project",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1261,
+          "evidence_terms": [
+            "llm",
+            "start",
+            "project",
+            "reasoning",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1102,
+          "evidence_terms": [
+            "method",
+            "report",
+            "idea",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000011",
+      "start_ms": 500319,
+      "end_ms": 558279,
+      "slide_id": "w01-2-p006",
+      "score": 0.3677,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "brainstorming",
+        "office",
+        "tas",
+        "design",
+        "next",
+        "week",
+        "literature",
+        "review",
+        "hour",
+        "idea",
+        "top",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.3677,
+          "evidence_terms": [
+            "brainstorming",
+            "office",
+            "tas",
+            "design",
+            "next",
+            "week",
+            "literature",
+            "review",
+            "hour",
+            "idea",
+            "top",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p004",
+          "score": 0.1921,
+          "evidence_terms": [
+            "design",
+            "discovery",
+            "bottom",
+            "idea",
+            "top",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.158,
+          "evidence_terms": [
+            "discovery",
+            "method",
+            "bottom",
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1448,
+          "evidence_terms": [
+            "method",
+            "literature",
+            "review",
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000012",
+      "start_ms": 558480,
+      "end_ms": 614800,
+      "slide_id": "w01-2-p007",
+      "score": 0.5512,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "draft",
+        "easier",
+        "explicit",
+        "falsifiable",
+        "regarding",
+        "several",
+        "hypothesis",
+        "hypothese",
+        "answer",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p007",
+          "score": 0.5512,
+          "evidence_terms": [
+            "draft",
+            "easier",
+            "explicit",
+            "falsifiable",
+            "regarding",
+            "several",
+            "hypothesis",
+            "hypothese",
+            "answer",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p010",
+          "score": 0.2734,
+          "evidence_terms": [
+            "usually",
+            "hypothesis",
+            "hypothese",
+            "answer",
+            "experiment",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p008",
+          "score": 0.2073,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p009",
+          "score": 0.173,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000013",
+      "start_ms": 614800,
+      "end_ms": 671200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p065",
+          "score": 0.2613,
+          "evidence_terms": [
+            "paper",
+            "read",
+            "recent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1715,
+          "evidence_terms": [
+            "aligning",
+            "content",
+            "large",
+            "text",
+            "data",
+            "image",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.1011,
+          "evidence_terms": [
+            "answer",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p008",
+          "score": 0.0881,
+          "evidence_terms": [
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000014",
+      "start_ms": 671200,
+      "end_ms": 727680,
+      "slide_id": "w01-2-p007",
+      "score": 0.1403,
+      "confidence": "weak",
+      "evidence_terms": [
+        "certain",
+        "hypothesis",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p069",
+          "score": 0.1535,
+          "evidence_terms": [
+            "become",
+            "feature",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p007",
+          "score": 0.1403,
+          "evidence_terms": [
+            "certain",
+            "hypothesis",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1369,
+          "evidence_terms": [
+            "alignment",
+            "data",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p016",
+          "score": 0.0947,
+          "evidence_terms": [
+            "size"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000015",
+      "start_ms": 727680,
+      "end_ms": 783760,
+      "slide_id": "w01-2-p010",
+      "score": 0.1521,
+      "confidence": "weak",
+      "evidence_terms": [
+        "confirm",
+        "hypothesis",
+        "answer",
+        "experiment",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p009",
+          "score": 0.1705,
+          "evidence_terms": [
+            "best",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p061",
+          "score": 0.1552,
+          "evidence_terms": [
+            "directly",
+            "precise",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p010",
+          "score": 0.1521,
+          "evidence_terms": [
+            "confirm",
+            "hypothesis",
+            "answer",
+            "experiment",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p007",
+          "score": 0.1341,
+          "evidence_terms": [
+            "hypothesis",
+            "answer",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000016",
+      "start_ms": 783760,
+      "end_ms": 841920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.1619,
+          "evidence_terms": [
+            "case",
+            "art",
+            "method",
+            "state",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1381,
+          "evidence_terms": [
+            "method",
+            "hypothesis",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1236,
+          "evidence_terms": [
+            "goal",
+            "possible",
+            "various",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1088,
+          "evidence_terms": [
+            "learning",
+            "data",
+            "model",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000017",
+      "start_ms": 841920,
+      "end_ms": 895160,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.1904,
+          "evidence_terms": [
+            "answering",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p008",
+          "score": 0.1585,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p009",
+          "score": 0.1323,
+          "evidence_terms": [
+            "hypothese",
+            "research"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p051",
+          "score": 0.1312,
+          "evidence_terms": [
+            "answer"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000018",
+      "start_ms": 895360,
+      "end_ms": 952320,
+      "slide_id": "w01-2-p011",
+      "score": 0.2001,
+      "confidence": "weak",
+      "evidence_terms": [
+        "birth",
+        "content",
+        "audio",
+        "emotion",
+        "visual",
+        "task",
+        "multimodal",
+        "research"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.2001,
+          "evidence_terms": [
+            "birth",
+            "content",
+            "audio",
+            "emotion",
+            "visual",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p001",
+          "score": 0.1394,
+          "evidence_terms": [
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p002",
+          "score": 0.1255,
+          "evidence_terms": [
+            "project",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p019",
+          "score": 0.1134,
+          "evidence_terms": [
+            "key",
+            "data"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000019",
+      "start_ms": 952320,
+      "end_ms": 1009360,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w01-2-p011",
+        "w01-2-p012"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.2224,
+          "evidence_terms": [
+            "captioning",
+            "video",
+            "image",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.2028,
+          "evidence_terms": [
+            "captioning",
+            "audio",
+            "video",
+            "image",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1889,
+          "evidence_terms": [
+            "application",
+            "core",
+            "modality",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1844,
+          "evidence_terms": [
+            "retrieve",
+            "captioning",
+            "audio",
+            "text",
+            "data",
+            "image",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000020",
+      "start_ms": 1009360,
+      "end_ms": 1066880,
+      "slide_id": "w01-2-p013",
+      "score": 0.355,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "application",
+        "core",
+        "alignment",
+        "fusion",
+        "foundation",
+        "intelligent",
+        "socially",
+        "interactive",
+        "modality",
+        "agent",
+        "human",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.355,
+          "evidence_terms": [
+            "application",
+            "core",
+            "alignment",
+            "fusion",
+            "foundation",
+            "intelligent",
+            "socially",
+            "interactive",
+            "modality",
+            "agent",
+            "human",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.2138,
+          "evidence_terms": [
+            "loop",
+            "intelligent",
+            "socially",
+            "action",
+            "interactive",
+            "environment",
+            "world",
+            "agent",
+            "human",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1708,
+          "evidence_terms": [
+            "physical",
+            "building",
+            "action",
+            "system",
+            "world",
+            "human",
+            "reasoning",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p047",
+          "score": 0.1356,
+          "evidence_terms": [
+            "understand",
+            "building",
+            "intelligent",
+            "socially",
+            "human",
+            "reasoning",
+            "model",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000021",
+      "start_ms": 1066880,
+      "end_ms": 1125039,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.1373,
+          "evidence_terms": [
+            "reading",
+            "object",
+            "person",
+            "video",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1313,
+          "evidence_terms": [
+            "modality",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.126,
+          "evidence_terms": [
+            "ethic",
+            "safety",
+            "modality",
+            "task",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1135,
+          "evidence_terms": [
+            "sensing",
+            "modality",
+            "system",
+            "project",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000022",
+      "start_ms": 1125039,
+      "end_ms": 1156039,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p067",
+          "score": 0.4739,
+          "evidence_terms": [
+            "resource"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.271,
+          "evidence_terms": [
+            "transfer",
+            "modality",
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1001,
+          "evidence_terms": [
+            "information",
+            "modality",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p001",
+          "score": 0.0858,
+          "evidence_terms": [
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000023",
+      "start_ms": 1157919,
+      "end_ms": 1214320,
+      "slide_id": "w01-2-p015",
+      "score": 0.3992,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "city",
+        "concern",
+        "eeg",
+        "invasiveness",
+        "privacy",
+        "efficiency",
+        "information",
+        "physiological",
+        "sensing",
+        "signal",
+        "environment",
+        "modality"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.3992,
+          "evidence_terms": [
+            "city",
+            "concern",
+            "eeg",
+            "invasiveness",
+            "privacy",
+            "efficiency",
+            "information",
+            "physiological",
+            "sensing",
+            "signal",
+            "environment",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1542,
+          "evidence_terms": [
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1355,
+          "evidence_terms": [
+            "sensing",
+            "understanding",
+            "world",
+            "motivation",
+            "language",
+            "project",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.102,
+          "evidence_terms": [
+            "digital",
+            "term",
+            "environment",
+            "world",
+            "motivation",
+            "language",
+            "project",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000024",
+      "start_ms": 1214320,
+      "end_ms": 1271440,
+      "slide_id": "w01-2-p015",
+      "score": 0.4546,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "city",
+        "climate",
+        "creative",
+        "domain",
+        "engineering",
+        "music",
+        "smell",
+        "taste",
+        "unimodal",
+        "art",
+        "efficiency",
+        "sensing"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.4546,
+          "evidence_terms": [
+            "city",
+            "climate",
+            "creative",
+            "domain",
+            "engineering",
+            "music",
+            "smell",
+            "taste",
+            "unimodal",
+            "art",
+            "efficiency",
+            "sensing"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1689,
+          "evidence_terms": [
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1082,
+          "evidence_terms": [
+            "application",
+            "modality",
+            "human",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p063",
+          "score": 0.1037,
+          "evidence_terms": [
+            "beyond",
+            "type",
+            "modality",
+            "challenge",
+            "human",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000025",
+      "start_ms": 1271440,
+      "end_ms": 1328720,
+      "slide_id": "w01-2-p015",
+      "score": 0.1923,
+      "confidence": "weak",
+      "evidence_terms": [
+        "brain",
+        "domain",
+        "eeg",
+        "physiological",
+        "sensing",
+        "speech",
+        "environment",
+        "modality",
+        "world",
+        "data",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1923,
+          "evidence_terms": [
+            "brain",
+            "domain",
+            "eeg",
+            "physiological",
+            "sensing",
+            "speech",
+            "environment",
+            "modality",
+            "world",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p067",
+          "score": 0.1488,
+          "evidence_terms": [
+            "resource"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.145,
+          "evidence_terms": [
+            "physical",
+            "sensing",
+            "building",
+            "understanding",
+            "world",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.137,
+          "evidence_terms": [
+            "touch",
+            "world",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000026",
+      "start_ms": 1328720,
+      "end_ms": 1384480,
+      "slide_id": "w01-2-p015",
+      "score": 0.2037,
+      "confidence": "weak",
+      "evidence_terms": [
+        "domain",
+        "eeg",
+        "physiological",
+        "sensing",
+        "modality",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.2037,
+          "evidence_terms": [
+            "domain",
+            "eeg",
+            "physiological",
+            "sensing",
+            "modality",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p067",
+          "score": 0.1663,
+          "evidence_terms": [
+            "resource"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p048",
+          "score": 0.1474,
+          "evidence_terms": [
+            "include",
+            "physiological",
+            "video",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.1421,
+          "evidence_terms": [
+            "open",
+            "source",
+            "data"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000027",
+      "start_ms": 1384480,
+      "end_ms": 1442000,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p028",
+          "score": 0.1258,
+          "evidence_terms": [
+            "collected",
+            "contain",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p001",
+          "score": 0.1201,
+          "evidence_terms": [
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.1103,
+          "evidence_terms": [
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1011,
+          "evidence_terms": [
+            "brain",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000028",
+      "start_ms": 1442000,
+      "end_ms": 1499360,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.16,
+          "evidence_terms": [
+            "homework",
+            "form",
+            "project",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p017",
+          "score": 0.1549,
+          "evidence_terms": [
+            "mimic"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1525,
+          "evidence_terms": [
+            "sery",
+            "tabular",
+            "start",
+            "project",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p048",
+          "score": 0.1522,
+          "evidence_terms": [
+            "include",
+            "recognition",
+            "text",
+            "data"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000029",
+      "start_ms": 1499360,
+      "end_ms": 1556080,
+      "slide_id": "w01-2-p015",
+      "score": 0.1656,
+      "confidence": "weak",
+      "evidence_terms": [
+        "smell",
+        "sensing",
+        "environment",
+        "world",
+        "start",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1656,
+          "evidence_terms": [
+            "smell",
+            "sensing",
+            "environment",
+            "world",
+            "start",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p048",
+          "score": 0.1181,
+          "evidence_terms": [
+            "include",
+            "reading",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p019",
+          "score": 0.1116,
+          "evidence_terms": [
+            "substance",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.0919,
+          "evidence_terms": [
+            "reading"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000030",
+      "start_ms": 1556080,
+      "end_ms": 1592679,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p019",
+          "score": 0.219,
+          "evidence_terms": [
+            "substance"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.1099,
+          "evidence_terms": [
+            "reading"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.0948,
+          "evidence_terms": [
+            "people",
+            "multiple"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000031",
+      "start_ms": 1595200,
+      "end_ms": 1651440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.3237,
+          "evidence_terms": [
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.121,
+          "evidence_terms": [
+            "heterogeneous",
+            "sery",
+            "ways",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p066",
+          "score": 0.1191,
+          "evidence_terms": [
+            "repeat",
+            "multiple",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1173,
+          "evidence_terms": [
+            "information",
+            "modality",
+            "ways",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000032",
+      "start_ms": 1651440,
+      "end_ms": 1709200,
+      "slide_id": "w01-2-p015",
+      "score": 0.148,
+      "confidence": "weak",
+      "evidence_terms": [
+        "smell",
+        "information",
+        "signal",
+        "modality",
+        "ways",
+        "data",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.2057,
+          "evidence_terms": [
+            "deep",
+            "sery",
+            "learning",
+            "analysis",
+            "signal",
+            "ways",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.148,
+          "evidence_terms": [
+            "smell",
+            "information",
+            "signal",
+            "modality",
+            "ways",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1351,
+          "evidence_terms": [
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.0704,
+          "evidence_terms": [
+            "signal",
+            "large",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000033",
+      "start_ms": 1709200,
+      "end_ms": 1765679,
+      "slide_id": "w01-2-p015",
+      "score": 0.134,
+      "confidence": "weak",
+      "evidence_terms": [
+        "smell",
+        "sensing",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.134,
+          "evidence_terms": [
+            "smell",
+            "sensing",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.0851,
+          "evidence_terms": [
+            "sensor",
+            "knowledge",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p068",
+          "score": 0.0722,
+          "evidence_terms": [
+            "group"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000034",
+      "start_ms": 1765679,
+      "end_ms": 1802840,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.121,
+          "evidence_terms": [
+            "link",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1167,
+          "evidence_terms": [
+            "smell",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p044",
+          "score": 0.0852,
+          "evidence_terms": [
+            "photo",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.0817,
+          "evidence_terms": [
+            "set",
+            "online"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000035",
+      "start_ms": 1806320,
+      "end_ms": 1863360,
+      "slide_id": "w01-2-p020",
+      "score": 0.2904,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "hand",
+        "touch",
+        "large",
+        "vision",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.2904,
+          "evidence_terms": [
+            "hand",
+            "touch",
+            "large",
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1015,
+          "evidence_terms": [
+            "sensor",
+            "various",
+            "large",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.0885,
+          "evidence_terms": [
+            "smell",
+            "tactile",
+            "data",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.0804,
+          "evidence_terms": [
+            "seeing",
+            "large",
+            "vision",
+            "data",
+            "model",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000036",
+      "start_ms": 1863360,
+      "end_ms": 1921120,
+      "slide_id": "w01-2-p020",
+      "score": 0.4318,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "hand",
+        "pose",
+        "touch",
+        "egocentric",
+        "large",
+        "scale",
+        "world",
+        "vision",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.4318,
+          "evidence_terms": [
+            "hand",
+            "pose",
+            "touch",
+            "egocentric",
+            "large",
+            "scale",
+            "world",
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p059",
+          "score": 0.1327,
+          "evidence_terms": [
+            "egocentric",
+            "person",
+            "environment",
+            "large",
+            "scale",
+            "vision"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1302,
+          "evidence_terms": [
+            "tactile",
+            "sensing",
+            "environment",
+            "world",
+            "start",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1108,
+          "evidence_terms": [
+            "people",
+            "multiple",
+            "person"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000037",
+      "start_ms": 1921120,
+      "end_ms": 1977200,
+      "slide_id": "w01-2-p020",
+      "score": 0.2432,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "haptic",
+        "touch",
+        "world",
+        "vision",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.2432,
+          "evidence_terms": [
+            "haptic",
+            "touch",
+            "world",
+            "vision",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1908,
+          "evidence_terms": [
+            "domain",
+            "engineering",
+            "information",
+            "sensing",
+            "system",
+            "world",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1562,
+          "evidence_terms": [
+            "physical",
+            "sensing",
+            "system",
+            "world",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1198,
+          "evidence_terms": [
+            "build",
+            "force",
+            "manufacturing",
+            "process",
+            "system",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000038",
+      "start_ms": 1977200,
+      "end_ms": 2031760,
+      "slide_id": "w01-2-p021",
+      "score": 0.1745,
+      "confidence": "weak",
+      "evidence_terms": [
+        "maintenance",
+        "repair",
+        "required",
+        "machine",
+        "manufacturing",
+        "state",
+        "event",
+        "system",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p021",
+          "score": 0.1745,
+          "evidence_terms": [
+            "maintenance",
+            "repair",
+            "required",
+            "machine",
+            "manufacturing",
+            "state",
+            "event",
+            "system",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1691,
+          "evidence_terms": [
+            "smell",
+            "sensing",
+            "system",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1216,
+          "evidence_terms": [
+            "machine",
+            "manufacturing",
+            "process",
+            "system",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.0826,
+          "evidence_terms": [
+            "coming",
+            "process",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000039",
+      "start_ms": 2031760,
+      "end_ms": 2089320,
+      "slide_id": "w01-2-p022",
+      "score": 0.2572,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "accelerometer",
+        "acoustic",
+        "build",
+        "dynamometer",
+        "force",
+        "measurement",
+        "microphone",
+        "processe",
+        "sensor",
+        "manufacturing",
+        "signal",
+        "system"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.2572,
+          "evidence_terms": [
+            "accelerometer",
+            "acoustic",
+            "build",
+            "dynamometer",
+            "force",
+            "measurement",
+            "microphone",
+            "processe",
+            "sensor",
+            "manufacturing",
+            "signal",
+            "system"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1505,
+          "evidence_terms": [
+            "domain",
+            "sensing",
+            "signal",
+            "system",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.1,
+          "evidence_terms": [
+            "instructor",
+            "tas",
+            "next"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p038",
+          "score": 0.088,
+          "evidence_terms": [
+            "identify",
+            "system"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000040",
+      "start_ms": 2093520,
+      "end_ms": 2149200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1563,
+          "evidence_terms": [
+            "domain",
+            "limited",
+            "music",
+            "speech",
+            "system",
+            "start",
+            "project",
+            "data",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.1331,
+          "evidence_terms": [
+            "speech",
+            "audio",
+            "vision",
+            "video",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p019",
+          "score": 0.1304,
+          "evidence_terms": [
+            "key",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.1094,
+          "evidence_terms": [
+            "case",
+            "existing",
+            "method",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000041",
+      "start_ms": 2149200,
+      "end_ms": 2206079,
+      "slide_id": "w01-2-p023",
+      "score": 0.3986,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "bridging",
+        "connect",
+        "continuous",
+        "deep",
+        "heterogeneous",
+        "integrate",
+        "tokenization",
+        "discrete",
+        "learning",
+        "temporal",
+        "spatial",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.3986,
+          "evidence_terms": [
+            "bridging",
+            "connect",
+            "continuous",
+            "deep",
+            "heterogeneous",
+            "integrate",
+            "tokenization",
+            "discrete",
+            "learning",
+            "temporal",
+            "spatial",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.16,
+          "evidence_terms": [
+            "word",
+            "vision",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p061",
+          "score": 0.1084,
+          "evidence_terms": [
+            "vision",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.0815,
+          "evidence_terms": [
+            "next",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000042",
+      "start_ms": 2206079,
+      "end_ms": 2261040,
+      "slide_id": "w01-2-p023",
+      "score": 0.5183,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "continuous",
+        "deep",
+        "sery",
+        "tabular",
+        "tokenizing",
+        "alignment",
+        "discrete",
+        "fusion",
+        "learning",
+        "temporal",
+        "without",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.5183,
+          "evidence_terms": [
+            "continuous",
+            "deep",
+            "sery",
+            "tabular",
+            "tokenizing",
+            "alignment",
+            "discrete",
+            "fusion",
+            "learning",
+            "temporal",
+            "without",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1513,
+          "evidence_terms": [
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1501,
+          "evidence_terms": [
+            "alignment",
+            "fusion",
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1089,
+          "evidence_terms": [
+            "build",
+            "real",
+            "system",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000043",
+      "start_ms": 2261040,
+      "end_ms": 2317599,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.2355,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p061",
+          "score": 0.2124,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1972,
+          "evidence_terms": [
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.165,
+          "evidence_terms": [
+            "building",
+            "language",
+            "reasoning",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000044",
+      "start_ms": 2317599,
+      "end_ms": 2375040,
+      "slide_id": "w01-2-p023",
+      "score": 0.1833,
+      "confidence": "weak",
+      "evidence_terms": [
+        "sery",
+        "alignment",
+        "fusion",
+        "start",
+        "data",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.195,
+          "evidence_terms": [
+            "touch",
+            "robotic",
+            "large",
+            "scale",
+            "vision",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1833,
+          "evidence_terms": [
+            "sery",
+            "alignment",
+            "fusion",
+            "start",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1322,
+          "evidence_terms": [
+            "application",
+            "alignment",
+            "fusion",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1036,
+          "evidence_terms": [
+            "domain",
+            "start",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000045",
+      "start_ms": 2375040,
+      "end_ms": 2431599,
+      "slide_id": "w01-2-p023",
+      "score": 0.1394,
+      "confidence": "weak",
+      "evidence_terms": [
+        "sery",
+        "fusion",
+        "benchmark",
+        "data",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.1768,
+          "evidence_terms": [
+            "test",
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.174,
+          "evidence_terms": [
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1394,
+          "evidence_terms": [
+            "sery",
+            "fusion",
+            "benchmark",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.125,
+          "evidence_terms": [
+            "application",
+            "fusion",
+            "modality"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000046",
+      "start_ms": 2431599,
+      "end_ms": 2487520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1352,
+          "evidence_terms": [
+            "method",
+            "experiment",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1237,
+          "evidence_terms": [
+            "perception",
+            "run",
+            "system",
+            "project",
+            "reasoning",
+            "task",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1103,
+          "evidence_terms": [
+            "fusion",
+            "analysis",
+            "project",
+            "data",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1042,
+          "evidence_terms": [
+            "fusion",
+            "reasoning",
+            "task",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000047",
+      "start_ms": 2487520,
+      "end_ms": 2543920,
+      "slide_id": "w01-2-p027",
+      "score": 0.1773,
+      "confidence": "weak",
+      "evidence_terms": [
+        "reason",
+        "compositional",
+        "fine",
+        "llm",
+        "challenge",
+        "reasoning",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.2035,
+          "evidence_terms": [
+            "people",
+            "synthesizing",
+            "information",
+            "multiple",
+            "language",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.1942,
+          "evidence_terms": [
+            "require",
+            "step",
+            "modality",
+            "reasoning",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1773,
+          "evidence_terms": [
+            "reason",
+            "compositional",
+            "fine",
+            "llm",
+            "challenge",
+            "reasoning",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p014",
+          "score": 0.1598,
+          "evidence_terms": [
+            "modality",
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000048",
+      "start_ms": 2543920,
+      "end_ms": 2600800,
+      "slide_id": "w01-2-p028",
+      "score": 0.2311,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "coco",
+        "common",
+        "microsoft",
+        "description",
+        "object",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p028",
+          "score": 0.2311,
+          "evidence_terms": [
+            "coco",
+            "common",
+            "microsoft",
+            "description",
+            "object",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1785,
+          "evidence_terms": [
+            "neuro",
+            "symbolic",
+            "start",
+            "reasoning",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p032",
+          "score": 0.1104,
+          "evidence_terms": [
+            "reasoning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1081,
+          "evidence_terms": [
+            "seeing",
+            "large",
+            "start",
+            "data",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000049",
+      "start_ms": 2600800,
+      "end_ms": 2655839,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.2349,
+          "evidence_terms": [
+            "captioning",
+            "video",
+            "language",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.1701,
+          "evidence_terms": [
+            "captioning",
+            "audio",
+            "video",
+            "language",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1626,
+          "evidence_terms": [
+            "captioning",
+            "audio",
+            "ways",
+            "human",
+            "data",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1401,
+          "evidence_terms": [
+            "people",
+            "form",
+            "person",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000050",
+      "start_ms": 2655839,
+      "end_ms": 2712880,
+      "slide_id": "w01-2-p029",
+      "score": 0.3441,
+      "confidence": "weak",
+      "evidence_terms": [
+        "vqa",
+        "answering",
+        "answer",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.3441,
+          "evidence_terms": [
+            "vqa",
+            "answering",
+            "answer",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.2062,
+          "evidence_terms": [
+            "answering",
+            "captioning",
+            "vision",
+            "video",
+            "language",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.1496,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.1292,
+          "evidence_terms": [
+            "captioning",
+            "vision",
+            "video",
+            "language",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000051",
+      "start_ms": 2712880,
+      "end_ms": 2753079,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.1391,
+          "evidence_terms": [
+            "require",
+            "annotated",
+            "understanding",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.1106,
+          "evidence_terms": [
+            "temporal",
+            "object",
+            "video",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p058",
+          "score": 0.0978,
+          "evidence_terms": [
+            "longer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p030",
+          "score": 0.0977,
+          "evidence_terms": [
+            "compositional",
+            "video"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000052",
+      "start_ms": 2755440,
+      "end_ms": 2811200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p047",
+          "score": 0.1211,
+          "evidence_terms": [
+            "artificial",
+            "understand",
+            "start",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p016",
+          "score": 0.0936,
+          "evidence_terms": [
+            "size"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.0825,
+          "evidence_terms": [
+            "require",
+            "understanding",
+            "top"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.0804,
+          "evidence_terms": [
+            "generate",
+            "generation",
+            "start",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000053",
+      "start_ms": 2811200,
+      "end_ms": 2867680,
+      "slide_id": "w01-2-p032",
+      "score": 0.3199,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "nlvr2",
+        "cornell",
+        "nlvr",
+        "visual",
+        "reasoning",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p032",
+          "score": 0.3199,
+          "evidence_terms": [
+            "nlvr2",
+            "cornell",
+            "nlvr",
+            "visual",
+            "reasoning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p031",
+          "score": 0.2811,
+          "evidence_terms": [
+            "cornell",
+            "nlvr",
+            "natural",
+            "visual",
+            "language",
+            "reasoning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.2097,
+          "evidence_terms": [
+            "compositionality",
+            "test",
+            "language",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p052",
+          "score": 0.1292,
+          "evidence_terms": [
+            "object",
+            "language",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000054",
+      "start_ms": 2867680,
+      "end_ms": 2925680,
+      "slide_id": "w01-2-p033",
+      "score": 0.1745,
+      "confidence": "weak",
+      "evidence_terms": [
+        "word",
+        "order",
+        "image",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p031",
+          "score": 0.2074,
+          "evidence_terms": [
+            "false",
+            "true",
+            "reasoning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.1745,
+          "evidence_terms": [
+            "word",
+            "order",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p028",
+          "score": 0.1414,
+          "evidence_terms": [
+            "contain",
+            "least",
+            "word",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.1234,
+          "evidence_terms": [
+            "answer",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000055",
+      "start_ms": 2925680,
+      "end_ms": 2984599,
+      "slide_id": "w01-2-p033",
+      "score": 0.2594,
+      "confidence": "weak",
+      "evidence_terms": [
+        "compositionality",
+        "test",
+        "image",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.2594,
+          "evidence_terms": [
+            "compositionality",
+            "test",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1733,
+          "evidence_terms": [
+            "generate",
+            "generation",
+            "challenge",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p028",
+          "score": 0.1636,
+          "evidence_terms": [
+            "common",
+            "object",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.1163,
+          "evidence_terms": [
+            "generation",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000056",
+      "start_ms": 2985920,
+      "end_ms": 3043200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p051",
+          "score": 0.1801,
+          "evidence_terms": [
+            "around",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p007",
+          "score": 0.1331,
+          "evidence_terms": [
+            "certain",
+            "explicit",
+            "answer",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p028",
+          "score": 0.0944,
+          "evidence_terms": [
+            "detection",
+            "object"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p038",
+          "score": 0.0867,
+          "evidence_terms": [
+            "answer",
+            "system"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000057",
+      "start_ms": 3043200,
+      "end_ms": 3098400,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1817,
+          "evidence_terms": [
+            "neuro",
+            "symbolic",
+            "compositional",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p042",
+          "score": 0.1343,
+          "evidence_terms": [
+            "benchmark"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p043",
+          "score": 0.1278,
+          "evidence_terms": [
+            "benchmark"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.0997,
+          "evidence_terms": [
+            "people",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000058",
+      "start_ms": 3098400,
+      "end_ms": 3128920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.1643,
+          "evidence_terms": [
+            "idea",
+            "process",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p004",
+          "score": 0.1608,
+          "evidence_terms": [
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p005",
+          "score": 0.1377,
+          "evidence_terms": [
+            "idea",
+            "research"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.1337,
+          "evidence_terms": [
+            "idea",
+            "project",
+            "research"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000059",
+      "start_ms": 3137040,
+      "end_ms": 3182920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p033",
+          "score": 0.1541,
+          "evidence_terms": [
+            "test",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.1512,
+          "evidence_terms": [
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1417,
+          "evidence_terms": [
+            "fine",
+            "start",
+            "reasoning",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p061",
+          "score": 0.139,
+          "evidence_terms": [
+            "trained",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000060",
+      "start_ms": 3183920,
+      "end_ms": 3241839,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1581,
+          "evidence_terms": [
+            "world",
+            "challenge",
+            "start",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p015",
+          "score": 0.1205,
+          "evidence_terms": [
+            "domain",
+            "world",
+            "challenge",
+            "start",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p023",
+          "score": 0.1007,
+          "evidence_terms": [
+            "challenge",
+            "start",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p066",
+          "score": 0.0988,
+          "evidence_terms": [
+            "find",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000061",
+      "start_ms": 3249359,
+      "end_ms": 3306559,
+      "slide_id": "w01-2-p034",
+      "score": 0.1722,
+      "confidence": "weak",
+      "evidence_terms": [
+        "hint",
+        "puzzle",
+        "knowledge",
+        "processing",
+        "top",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.2432,
+          "evidence_terms": [
+            "require",
+            "puzzle",
+            "knowledge",
+            "processing",
+            "top",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p034",
+          "score": 0.1722,
+          "evidence_terms": [
+            "hint",
+            "puzzle",
+            "knowledge",
+            "processing",
+            "top",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.1041,
+          "evidence_terms": [
+            "coding",
+            "processing",
+            "data"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.1031,
+          "evidence_terms": [
+            "set",
+            "instruction"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000062",
+      "start_ms": 3306559,
+      "end_ms": 3364079,
+      "slide_id": "w01-2-p034",
+      "score": 0.511,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "barbado",
+        "botswana",
+        "country",
+        "external",
+        "flag",
+        "hint",
+        "letter",
+        "oman",
+        "puzzle",
+        "identify",
+        "knowledge",
+        "top"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p034",
+          "score": 0.511,
+          "evidence_terms": [
+            "barbado",
+            "botswana",
+            "country",
+            "external",
+            "flag",
+            "hint",
+            "letter",
+            "oman",
+            "puzzle",
+            "identify",
+            "knowledge",
+            "top"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.1985,
+          "evidence_terms": [
+            "require",
+            "puzzle",
+            "knowledge",
+            "top",
+            "text",
+            "visual",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p032",
+          "score": 0.1111,
+          "evidence_terms": [
+            "visual",
+            "reasoning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p042",
+          "score": 0.0971,
+          "evidence_terms": [
+            "benchmark"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000063",
+      "start_ms": 3364079,
+      "end_ms": 3420960,
+      "slide_id": "w01-2-p035",
+      "score": 0.4052,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "exploration",
+        "extensive",
+        "require",
+        "strategy",
+        "puzzle",
+        "annotated",
+        "understanding",
+        "human",
+        "visual",
+        "reasoning",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p035",
+          "score": 0.4052,
+          "evidence_terms": [
+            "exploration",
+            "extensive",
+            "require",
+            "strategy",
+            "puzzle",
+            "annotated",
+            "understanding",
+            "human",
+            "visual",
+            "reasoning",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p027",
+          "score": 0.1412,
+          "evidence_terms": [
+            "fine",
+            "start",
+            "project",
+            "reasoning",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1323,
+          "evidence_terms": [
+            "understanding",
+            "world",
+            "start",
+            "human",
+            "project",
+            "reasoning",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1247,
+          "evidence_terms": [
+            "training",
+            "tuning",
+            "fine",
+            "start",
+            "human",
+            "project",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000064",
+      "start_ms": 3420960,
+      "end_ms": 3444839,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p048",
+          "score": 0.2463,
+          "evidence_terms": [
+            "include",
+            "visual",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.151,
+          "evidence_terms": [
+            "answer",
+            "visual"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p051",
+          "score": 0.1043,
+          "evidence_terms": [
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p032",
+          "score": 0.1022,
+          "evidence_terms": [
+            "visual",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000065",
+      "start_ms": 3451040,
+      "end_ms": 3506480,
+      "slide_id": "w01-2-p037",
+      "score": 0.4131,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "computer",
+        "term",
+        "long",
+        "help",
+        "instruction",
+        "tool",
+        "action",
+        "web",
+        "environment",
+        "grounded",
+        "agent",
+        "challenge"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.4131,
+          "evidence_terms": [
+            "computer",
+            "term",
+            "long",
+            "help",
+            "instruction",
+            "tool",
+            "action",
+            "web",
+            "environment",
+            "grounded",
+            "agent",
+            "challenge"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.1318,
+          "evidence_terms": [
+            "instruction",
+            "action",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1286,
+          "evidence_terms": [
+            "help",
+            "action",
+            "challenge",
+            "language",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.1272,
+          "evidence_terms": [
+            "answer",
+            "visual",
+            "image",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000066",
+      "start_ms": 3506480,
+      "end_ms": 3563040,
+      "slide_id": "w01-2-p037",
+      "score": 0.2737,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "apis",
+        "computer",
+        "risk",
+        "instruction",
+        "action",
+        "web",
+        "environment",
+        "agent",
+        "potential",
+        "language",
+        "model",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.2737,
+          "evidence_terms": [
+            "apis",
+            "computer",
+            "risk",
+            "instruction",
+            "action",
+            "web",
+            "environment",
+            "agent",
+            "potential",
+            "language",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.2268,
+          "evidence_terms": [
+            "earphone",
+            "rating",
+            "star",
+            "instruction",
+            "action",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.1657,
+          "evidence_terms": [
+            "website",
+            "environment",
+            "agent",
+            "data",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p042",
+          "score": 0.1502,
+          "evidence_terms": [
+            "benchmark",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000067",
+      "start_ms": 3563040,
+      "end_ms": 3620559,
+      "slide_id": "w01-2-p040",
+      "score": 0.4956,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "amazon",
+        "difficult",
+        "easy",
+        "gitlab",
+        "website",
+        "designed",
+        "source",
+        "code",
+        "html",
+        "llm",
+        "real",
+        "environment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.4956,
+          "evidence_terms": [
+            "amazon",
+            "difficult",
+            "easy",
+            "gitlab",
+            "website",
+            "designed",
+            "source",
+            "code",
+            "html",
+            "llm",
+            "real",
+            "environment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.1578,
+          "evidence_terms": [
+            "earphone",
+            "star",
+            "html",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p041",
+          "score": 0.1568,
+          "evidence_terms": [
+            "designed",
+            "code",
+            "html",
+            "web",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.1024,
+          "evidence_terms": [
+            "search",
+            "web",
+            "environment",
+            "agent",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000068",
+      "start_ms": 3620559,
+      "end_ms": 3676240,
+      "slide_id": "w01-2-p041",
+      "score": 0.2532,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "token",
+        "after",
+        "context",
+        "usually",
+        "html",
+        "spatial",
+        "object",
+        "web",
+        "process",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p041",
+          "score": 0.2532,
+          "evidence_terms": [
+            "token",
+            "after",
+            "context",
+            "usually",
+            "html",
+            "spatial",
+            "object",
+            "web",
+            "process",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.2099,
+          "evidence_terms": [
+            "category",
+            "reddit",
+            "website",
+            "html",
+            "agent",
+            "data",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p046",
+          "score": 0.1454,
+          "evidence_terms": [
+            "web",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.1436,
+          "evidence_terms": [
+            "web",
+            "agent",
+            "start",
+            "image",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000069",
+      "start_ms": 3676240,
+      "end_ms": 3733760,
+      "slide_id": "w01-2-p044",
+      "score": 0.6478,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "buy",
+        "cheapest",
+        "color",
+        "emily",
+        "photo",
+        "place",
+        "printer",
+        "send",
+        "shopping",
+        "image",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p044",
+          "score": 0.6478,
+          "evidence_terms": [
+            "buy",
+            "cheapest",
+            "color",
+            "emily",
+            "photo",
+            "place",
+            "printer",
+            "send",
+            "shopping",
+            "image",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.1717,
+          "evidence_terms": [
+            "website",
+            "shopping",
+            "html",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p029",
+          "score": 0.1048,
+          "evidence_terms": [
+            "visual",
+            "image",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p046",
+          "score": 0.1045,
+          "evidence_terms": [
+            "web",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000070",
+      "start_ms": 3733760,
+      "end_ms": 3744760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p044",
+          "score": 0.3269,
+          "evidence_terms": [
+            "photo",
+            "printer"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000071",
+      "start_ms": 3752480,
+      "end_ms": 3790040,
+      "slide_id": "w01-2-p045",
+      "score": 0.3587,
+      "confidence": "weak",
+      "evidence_terms": [
+        "desktop",
+        "mobile",
+        "atla",
+        "web"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p045",
+          "score": 0.3587,
+          "evidence_terms": [
+            "desktop",
+            "mobile",
+            "atla",
+            "web"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.171,
+          "evidence_terms": [
+            "open",
+            "source",
+            "environment",
+            "agent",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.1604,
+          "evidence_terms": [
+            "computer",
+            "web",
+            "environment",
+            "agent",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p042",
+          "score": 0.1531,
+          "evidence_terms": [
+            "benchmark",
+            "agent",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000072",
+      "start_ms": 3791760,
+      "end_ms": 3846640,
+      "slide_id": "w01-2-p047",
+      "score": 0.3737,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "intelligence",
+        "mind",
+        "theory",
+        "understand",
+        "interact",
+        "building",
+        "interaction",
+        "social",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p047",
+          "score": 0.3737,
+          "evidence_terms": [
+            "intelligence",
+            "mind",
+            "theory",
+            "understand",
+            "interact",
+            "building",
+            "interaction",
+            "social",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p051",
+          "score": 0.1592,
+          "evidence_terms": [
+            "interaction",
+            "social"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1586,
+          "evidence_terms": [
+            "people",
+            "multiple",
+            "social"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1276,
+          "evidence_terms": [
+            "physical",
+            "building",
+            "interaction",
+            "system",
+            "world",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000073",
+      "start_ms": 3846640,
+      "end_ms": 3904880,
+      "slide_id": "w01-2-p049",
+      "score": 0.2548,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "topic",
+        "sentiment",
+        "analysis",
+        "recognition",
+        "emotion",
+        "video"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p049",
+          "score": 0.2548,
+          "evidence_terms": [
+            "topic",
+            "sentiment",
+            "analysis",
+            "recognition",
+            "emotion",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.2286,
+          "evidence_terms": [
+            "affect",
+            "sentiment",
+            "analysis",
+            "recognition",
+            "emotion",
+            "video",
+            "visual",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p048",
+          "score": 0.1335,
+          "evidence_terms": [
+            "affect",
+            "recognition",
+            "emotion",
+            "video",
+            "visual",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.1197,
+          "evidence_terms": [
+            "expression",
+            "interactive",
+            "video",
+            "visual",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000074",
+      "start_ms": 3904880,
+      "end_ms": 3962079,
+      "slide_id": "w01-2-p050",
+      "score": 0.4151,
+      "confidence": "weak",
+      "evidence_terms": [
+        "party",
+        "multi",
+        "recognition",
+        "emotion"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p050",
+          "score": 0.4151,
+          "evidence_terms": [
+            "party",
+            "multi",
+            "recognition",
+            "emotion"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.1354,
+          "evidence_terms": [
+            "affect",
+            "sentiment",
+            "recognition",
+            "emotion"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p049",
+          "score": 0.1296,
+          "evidence_terms": [
+            "sentiment",
+            "recognition",
+            "emotion"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1261,
+          "evidence_terms": [
+            "people",
+            "person"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000075",
+      "start_ms": 3962079,
+      "end_ms": 4017760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1908,
+          "evidence_terms": [
+            "judgment",
+            "people",
+            "person",
+            "social"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p050",
+          "score": 0.1417,
+          "evidence_terms": [
+            "conversation",
+            "emotion"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p049",
+          "score": 0.1389,
+          "evidence_terms": [
+            "sentiment",
+            "emotion"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p047",
+          "score": 0.0947,
+          "evidence_terms": [
+            "relationship",
+            "social",
+            "motivation"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000076",
+      "start_ms": 4017760,
+      "end_ms": 4036920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p051",
+          "score": 0.1526,
+          "evidence_terms": [
+            "answer",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p049",
+          "score": 0.1445,
+          "evidence_terms": [
+            "annotated",
+            "emotion",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p012",
+          "score": 0.122,
+          "evidence_terms": [
+            "expression",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.0992,
+          "evidence_terms": [
+            "without",
+            "emotion",
+            "video"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000077",
+      "start_ms": 4042400,
+      "end_ms": 4081480,
+      "slide_id": "w01-2-p052",
+      "score": 0.4483,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "black",
+        "holding",
+        "imaginary",
+        "shirt",
+        "stone",
+        "heavy",
+        "object",
+        "person",
+        "recognition"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p052",
+          "score": 0.4483,
+          "evidence_terms": [
+            "black",
+            "holding",
+            "imaginary",
+            "shirt",
+            "stone",
+            "heavy",
+            "object",
+            "person",
+            "recognition"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.3702,
+          "evidence_terms": [
+            "book",
+            "caused",
+            "trip",
+            "heavy",
+            "reading",
+            "object",
+            "person",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.0973,
+          "evidence_terms": [
+            "people",
+            "person"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p011",
+          "score": 0.0895,
+          "evidence_terms": [
+            "recognition",
+            "vision",
+            "video"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000078",
+      "start_ms": 4083920,
+      "end_ms": 4105319,
+      "slide_id": "w01-2-p054",
+      "score": 0.2995,
+      "confidence": "weak",
+      "evidence_terms": [
+        "demonstrate",
+        "personality",
+        "action",
+        "person"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.2995,
+          "evidence_terms": [
+            "demonstrate",
+            "personality",
+            "action",
+            "person"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p053",
+          "score": 0.2807,
+          "evidence_terms": [
+            "earlier",
+            "left",
+            "tripped",
+            "person",
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p052",
+          "score": 0.1353,
+          "evidence_terms": [
+            "stone",
+            "person"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000079",
+      "start_ms": 4110080,
+      "end_ms": 4166319,
+      "slide_id": "w01-2-p056",
+      "score": 0.2743,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "perception",
+        "tangible",
+        "action",
+        "embodied",
+        "system",
+        "world",
+        "challenge",
+        "start",
+        "model",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.2743,
+          "evidence_terms": [
+            "perception",
+            "tangible",
+            "action",
+            "embodied",
+            "system",
+            "world",
+            "challenge",
+            "start",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.2018,
+          "evidence_terms": [
+            "computer",
+            "action",
+            "interactive",
+            "environment",
+            "world",
+            "agent",
+            "challenge",
+            "start",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p022",
+          "score": 0.1584,
+          "evidence_terms": [
+            "build",
+            "publicly",
+            "available",
+            "real",
+            "process",
+            "system",
+            "data",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.1373,
+          "evidence_terms": [
+            "website",
+            "real",
+            "environment",
+            "agent",
+            "data",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000080",
+      "start_ms": 4166319,
+      "end_ms": 4222320,
+      "slide_id": "w01-2-p056",
+      "score": 0.3143,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "efficient",
+        "hardware",
+        "influence",
+        "home",
+        "run",
+        "action",
+        "world",
+        "model",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.3143,
+          "evidence_terms": [
+            "efficient",
+            "hardware",
+            "influence",
+            "home",
+            "run",
+            "action",
+            "world",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p057",
+          "score": 0.1213,
+          "evidence_terms": [
+            "house",
+            "navigating",
+            "real"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.1141,
+          "evidence_terms": [
+            "world",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p037",
+          "score": 0.1134,
+          "evidence_terms": [
+            "computer",
+            "action",
+            "world",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000081",
+      "start_ms": 4222320,
+      "end_ms": 4277840,
+      "slide_id": "w01-2-p058",
+      "score": 0.3288,
+      "confidence": "weak",
+      "evidence_terms": [
+        "multilingual",
+        "path",
+        "larger",
+        "room"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p058",
+          "score": 0.3288,
+          "evidence_terms": [
+            "multilingual",
+            "path",
+            "larger",
+            "room"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p059",
+          "score": 0.2626,
+          "evidence_terms": [
+            "epic",
+            "kitchen",
+            "egocentric",
+            "audio",
+            "environment",
+            "large",
+            "scale",
+            "vision"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p057",
+          "score": 0.1757,
+          "evidence_terms": [
+            "house",
+            "room",
+            "instruction"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.1107,
+          "evidence_terms": [
+            "egocentric",
+            "large",
+            "scale",
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000082",
+      "start_ms": 4277840,
+      "end_ms": 4326199,
+      "slide_id": "w01-2-p059",
+      "score": 0.1556,
+      "confidence": "weak",
+      "evidence_terms": [
+        "egocentric",
+        "audio",
+        "environment",
+        "vision"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p059",
+          "score": 0.1556,
+          "evidence_terms": [
+            "egocentric",
+            "audio",
+            "environment",
+            "vision"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.1487,
+          "evidence_terms": [
+            "people",
+            "action",
+            "social"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.1352,
+          "evidence_terms": [
+            "egocentric",
+            "world",
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1169,
+          "evidence_terms": [
+            "physical",
+            "action",
+            "world",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000083",
+      "start_ms": 4328080,
+      "end_ms": 4384960,
+      "slide_id": "w01-2-p061",
+      "score": 0.1734,
+      "confidence": "weak",
+      "evidence_terms": [
+        "robotic",
+        "vision",
+        "language",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p020",
+          "score": 0.1975,
+          "evidence_terms": [
+            "touch",
+            "robotic",
+            "large",
+            "scale",
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p061",
+          "score": 0.1734,
+          "evidence_terms": [
+            "robotic",
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p040",
+          "score": 0.1455,
+          "evidence_terms": [
+            "open",
+            "source",
+            "data",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1428,
+          "evidence_terms": [
+            "run",
+            "sensing",
+            "building",
+            "action",
+            "language",
+            "project",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000084",
+      "start_ms": 4384960,
+      "end_ms": 4442480,
+      "slide_id": "w01-2-p064",
+      "score": 0.2265,
+      "confidence": "weak",
+      "evidence_terms": [
+        "biase",
+        "ethic",
+        "safety",
+        "generate",
+        "text",
+        "vision",
+        "start",
+        "human",
+        "data",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.2265,
+          "evidence_terms": [
+            "biase",
+            "ethic",
+            "safety",
+            "generate",
+            "text",
+            "vision",
+            "start",
+            "human",
+            "data",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p056",
+          "score": 0.1886,
+          "evidence_terms": [
+            "run",
+            "building",
+            "help",
+            "action",
+            "system",
+            "start",
+            "human",
+            "language",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p063",
+          "score": 0.1695,
+          "evidence_terms": [
+            "collaboration",
+            "synergy",
+            "enable",
+            "modality",
+            "text",
+            "start",
+            "human",
+            "model",
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p013",
+          "score": 0.1488,
+          "evidence_terms": [
+            "ethic",
+            "safety",
+            "modality",
+            "human",
+            "task",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000085",
+      "start_ms": 4442480,
+      "end_ms": 4500080,
+      "slide_id": "w01-2-p064",
+      "score": 0.1844,
+      "confidence": "weak",
+      "evidence_terms": [
+        "biase",
+        "mitigating",
+        "potential",
+        "start",
+        "project",
+        "data"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p067",
+          "score": 0.2551,
+          "evidence_terms": [
+            "resource"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w01-2-p064",
+          "score": 0.1844,
+          "evidence_terms": [
+            "biase",
+            "mitigating",
+            "potential",
+            "start",
+            "project",
+            "data"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.126,
+          "evidence_terms": [
+            "tuesday",
+            "assignment",
+            "project",
+            "data"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p068",
+          "score": 0.1123,
+          "evidence_terms": [
+            "group",
+            "available"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000086",
+      "start_ms": 4500080,
+      "end_ms": 4556239,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.4015,
+          "evidence_terms": [
+            "interest",
+            "unique",
+            "basic",
+            "homework",
+            "next",
+            "preference",
+            "week",
+            "form",
+            "processing",
+            "project",
+            "data",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p002",
+          "score": 0.1258,
+          "evidence_terms": [
+            "teammate",
+            "project",
+            "task",
+            "multimodal",
+            "research"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p039",
+          "score": 0.1059,
+          "evidence_terms": [
+            "set",
+            "instruction",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p054",
+          "score": 0.0916,
+          "evidence_terms": [
+            "people",
+            "form"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000087",
+      "start_ms": 4556239,
+      "end_ms": 4594120,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w01-2-p070",
+          "score": 0.3034,
+          "evidence_terms": [
+            "interest",
+            "tuesday",
+            "homework",
+            "next",
+            "tutorial",
+            "week",
+            "processing",
+            "project",
+            "data"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p006",
+          "score": 0.1383,
+          "evidence_terms": [
+            "tas",
+            "next",
+            "week",
+            "project"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w01-2-p002",
+          "score": 0.0968,
+          "evidence_terms": [
+            "mingle",
+            "project"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w01-2-p003",
+          "score": 0.0763,
+          "evidence_terms": [
+            "method",
+            "experiment",
+            "data"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": "w01-2-p001",
+      "deck_id": "w01-2",
+      "page": 1,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p002",
+      "deck_id": "w01-2",
+      "page": 2,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p003",
+      "deck_id": "w01-2",
+      "page": 3,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p004",
+      "deck_id": "w01-2",
+      "page": 4,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p005",
+      "deck_id": "w01-2",
+      "page": 5,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p006",
+      "deck_id": "w01-2",
+      "page": 6,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p007",
+      "deck_id": "w01-2",
+      "page": 7,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p008",
+      "deck_id": "w01-2",
+      "page": 8,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p009",
+      "deck_id": "w01-2",
+      "page": 9,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p010",
+      "deck_id": "w01-2",
+      "page": 10,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p011",
+      "deck_id": "w01-2",
+      "page": 11,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p012",
+      "deck_id": "w01-2",
+      "page": 12,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p013",
+      "deck_id": "w01-2",
+      "page": 13,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p014",
+      "deck_id": "w01-2",
+      "page": 14,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p015",
+      "deck_id": "w01-2",
+      "page": 15,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p016",
+      "deck_id": "w01-2",
+      "page": 16,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p017",
+      "deck_id": "w01-2",
+      "page": 17,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p018",
+      "deck_id": "w01-2",
+      "page": 18,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p019",
+      "deck_id": "w01-2",
+      "page": 19,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p020",
+      "deck_id": "w01-2",
+      "page": 20,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p021",
+      "deck_id": "w01-2",
+      "page": 21,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p022",
+      "deck_id": "w01-2",
+      "page": 22,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p023",
+      "deck_id": "w01-2",
+      "page": 23,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p024",
+      "deck_id": "w01-2",
+      "page": 24,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w01-2-p024",
+        "w01-2-p025"
+      ]
+    },
+    {
+      "slide_id": "w01-2-p025",
+      "deck_id": "w01-2",
+      "page": 25,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w01-2-p024",
+        "w01-2-p025"
+      ]
+    },
+    {
+      "slide_id": "w01-2-p026",
+      "deck_id": "w01-2",
+      "page": 26,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p027",
+      "deck_id": "w01-2",
+      "page": 27,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p028",
+      "deck_id": "w01-2",
+      "page": 28,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p029",
+      "deck_id": "w01-2",
+      "page": 29,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p030",
+      "deck_id": "w01-2",
+      "page": 30,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p031",
+      "deck_id": "w01-2",
+      "page": 31,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p032",
+      "deck_id": "w01-2",
+      "page": 32,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p033",
+      "deck_id": "w01-2",
+      "page": 33,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p034",
+      "deck_id": "w01-2",
+      "page": 34,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p035",
+      "deck_id": "w01-2",
+      "page": 35,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p036",
+      "deck_id": "w01-2",
+      "page": 36,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p037",
+      "deck_id": "w01-2",
+      "page": 37,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p038",
+      "deck_id": "w01-2",
+      "page": 38,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p039",
+      "deck_id": "w01-2",
+      "page": 39,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p040",
+      "deck_id": "w01-2",
+      "page": 40,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p041",
+      "deck_id": "w01-2",
+      "page": 41,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p042",
+      "deck_id": "w01-2",
+      "page": 42,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p043",
+      "deck_id": "w01-2",
+      "page": 43,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p044",
+      "deck_id": "w01-2",
+      "page": 44,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p045",
+      "deck_id": "w01-2",
+      "page": 45,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p046",
+      "deck_id": "w01-2",
+      "page": 46,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p047",
+      "deck_id": "w01-2",
+      "page": 47,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p048",
+      "deck_id": "w01-2",
+      "page": 48,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p049",
+      "deck_id": "w01-2",
+      "page": 49,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p050",
+      "deck_id": "w01-2",
+      "page": 50,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p051",
+      "deck_id": "w01-2",
+      "page": 51,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p052",
+      "deck_id": "w01-2",
+      "page": 52,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p053",
+      "deck_id": "w01-2",
+      "page": 53,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p054",
+      "deck_id": "w01-2",
+      "page": 54,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p055",
+      "deck_id": "w01-2",
+      "page": 55,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p056",
+      "deck_id": "w01-2",
+      "page": 56,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p057",
+      "deck_id": "w01-2",
+      "page": 57,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p058",
+      "deck_id": "w01-2",
+      "page": 58,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p059",
+      "deck_id": "w01-2",
+      "page": 59,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p060",
+      "deck_id": "w01-2",
+      "page": 60,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p061",
+      "deck_id": "w01-2",
+      "page": 61,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p062",
+      "deck_id": "w01-2",
+      "page": 62,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p063",
+      "deck_id": "w01-2",
+      "page": 63,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p064",
+      "deck_id": "w01-2",
+      "page": 64,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p065",
+      "deck_id": "w01-2",
+      "page": 65,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p066",
+      "deck_id": "w01-2",
+      "page": 66,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p067",
+      "deck_id": "w01-2",
+      "page": 67,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p068",
+      "deck_id": "w01-2",
+      "page": 68,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p069",
+      "deck_id": "w01-2",
+      "page": 69,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w01-2-p070",
+      "deck_id": "w01-2",
+      "page": 70,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MIT Modeling: MultiModal AI 2026：并排阅读讲稿与 slides，双向同步浏览并校对对应关系。">
+  <title>讲稿 × Slides · MIT MMAI 2026</title>
+  <link rel="stylesheet" href="./reader.css">
+  <script src="./reader.js" defer></script>
+</head>
+<body class="reader">
+  <a class="skip-link" href="#transcript-pane">跳至讲稿</a>
+  <header class="reader-header">
+    <a class="brand" href="../../course/mit-mmai-2026/index.html" aria-label="返回课程目录"><span class="brand-mark">mi<span>.</span></span><span>MI THINKING<small>COURSE READER</small></span></a>
+    <div class="reader-heading"><p class="eyebrow">MIT · MODELING: MULTIMODAL AI · SPRING 2026</p><h1>讲稿 <span>×</span> Slides</h1></div>
+    <a class="back-link" href="../../course/mit-mmai-2026/index.html">返回课程 ↗</a>
+  </header>
+
+  <main class="reader-main" id="reader-main">
+    <div class="toolbar">
+      <label class="session-control"><span>章节</span><select id="session-select" disabled aria-label="选择课程章节"><option>正在载入课程…</option></select></label>
+      <div class="language-control" role="group" aria-label="讲稿语言"><button type="button" data-language="zh" aria-pressed="true">中文</button><button type="button" data-language="en" aria-pressed="false">EN</button><button type="button" data-language="both" aria-pressed="false">双语</button></div>
+      <label class="sync-control"><input id="sync-toggle" type="checkbox" checked> 双向同步</label>
+      <button type="button" id="help-toggle" class="quiet-button" aria-expanded="false" aria-controls="reader-help">使用说明</button>
+    </div>
+    <div id="reader-help" class="reader-help" hidden>点击或滚动左侧讲稿，右侧自动切换对应 slide；切换右侧页码或缩略图，左侧跳转到对应段落。用左右方向键翻页（输入框除外）。对应关系为自动估计，部分段落可能无法对应；可点击「校对本段」固定段落，再选页并保存。校对仅保存在此浏览器，支持导出备份。</div>
+    <div class="lesson-summary"><h2 id="lesson-title">准备阅读…</h2><span id="lesson-counts"></span><span class="estimate-badge">自动对应 · 待校对</span></div>
+    <div id="load-error" class="load-error" role="alert" hidden><span id="load-error-text"></span><button type="button" id="reload-button">重新载入</button></div>
+
+    <div class="reader-columns" id="reader-columns" aria-busy="true">
+      <section class="transcript-column" aria-labelledby="transcript-heading">
+        <div class="pane-header"><div><p class="eyebrow">READ & UNDERSTAND</p><h3 id="transcript-heading">课程讲稿</h3></div><span id="block-position" class="pane-position"></span></div>
+        <div id="transcript-pane" class="transcript-pane" tabindex="0" aria-label="讲稿，可滚动以同步 slides"><p class="empty-state">正在载入讲稿…</p></div>
+        <div class="transcript-footer"><span id="block-status">专业术语保留英文原词</span><a id="video-link" target="_blank" rel="noopener noreferrer" hidden>在视频中查看 ↗</a></div>
+      </section>
+
+      <section class="slide-column" aria-labelledby="slide-heading">
+        <div class="pane-header"><div><p class="eyebrow">SEE THE CONTEXT</p><h3 id="slide-heading">Slides</h3></div><div class="slide-nav"><button type="button" id="slide-prev" aria-label="上一页 slide" disabled>←</button><label class="slide-page-label"><span class="sr-only">跳转到 slide</span><select id="slide-page" disabled aria-label="跳转到 slide"></select></label><button type="button" id="slide-next" aria-label="下一页 slide" disabled>→</button></div></div>
+        <div class="slide-scroll" id="slide-scroll">
+          <div class="slide-meta"><p id="slide-title">准备载入…</p><a id="original-link" target="_blank" rel="noopener noreferrer" hidden>打开原始 PDF ↗</a></div>
+          <div class="slide-stage" id="slide-stage"><p id="slide-placeholder" class="empty-state">正在载入 slides…</p><img id="slide-image" alt="" hidden><div id="image-error" class="image-error" hidden><p>这张 slide 暂时无法显示。</p><button type="button" id="image-retry">重新加载图片</button><span>也可通过上方链接打开原始 PDF。</span></div></div>
+          <p id="pair-status" class="pair-status" role="status">对应关系为自动估计，请结合原始内容判断。</p>
+          <div class="related-blocks" id="related-blocks" aria-label="本页对应段落"></div>
+          <div class="candidate-slides" id="candidate-slides" aria-label="当前段落的候选 slides" hidden></div>
+          <div id="slide-thumbnails" class="slide-thumbnails" tabindex="0" aria-label="Slide 缩略图，可横向滚动"></div>
+
+          <div class="correction-panel">
+            <div class="correction-top"><p><strong>对应关系校对</strong><span id="correction-summary">校对保存在当前浏览器。</span></p><button type="button" id="edit-start" disabled>校对本段</button></div>
+            <div id="edit-controls" class="edit-controls" hidden><p id="edit-label"></p><div class="edit-actions"><button type="button" id="edit-save" class="primary-button">将本段对应到当前页</button><button type="button" id="edit-unmatch">标为未对应</button><button type="button" id="edit-cancel">取消</button></div></div>
+            <details class="correction-tools"><summary>备份与恢复</summary><p>导入、导出和恢复仅针对当前章节。导入内容会先检查章节与段落 ID。</p><div class="backup-actions"><button type="button" id="export-corrections">导出校对 JSON</button><button type="button" id="import-corrections">导入校对 JSON</button><button type="button" id="reset-corrections">恢复自动对应</button><button type="button" id="undo-reset" hidden>撤销恢复</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></details>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="reader-status" id="reader-status" role="status" aria-live="polite">正在准备独立阅读器…</div>
+  </main>
+  <noscript><p class="load-error">此阅读器需要 JavaScript。你仍可通过上方「返回课程」阅读现有 Markdown 讲稿和课程预览。</p></noscript>
+</body>
+</html>

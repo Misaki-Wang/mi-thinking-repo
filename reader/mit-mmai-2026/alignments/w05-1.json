@@ -1,0 +1,5871 @@
+{
+  "schema_version": 1,
+  "session_id": "w05-1",
+  "deck_ids": [
+    "w04-2",
+    "w05-1"
+  ],
+  "method": {
+    "id": "lexical-sequence-v1",
+    "description": "TF-IDF word/term-bigram cosine retrieval with optional unmatched paragraphs, monotonic slide-order context, and coarse source-linked preview topic hints; no proportional time mapping.",
+    "topic_hints": [
+      {
+        "start_seconds": 2149,
+        "start_page": 5
+      },
+      {
+        "start_seconds": 3434,
+        "start_page": 18
+      },
+      {
+        "start_seconds": 3806,
+        "start_page": 23
+      }
+    ],
+    "topic_hint_tolerance_seconds": 90,
+    "confidence_note": "Estimated and weak are qualitative evidence labels, not calibrated probabilities or verified video timestamps.",
+    "synchronization_note": "Only non-null slide_id associations drive automatic synchronization; candidate pages are suggestions for manual inspection.",
+    "limits": [
+      "A paragraph may span multiple slides.",
+      "Image-only, duplicate builds, questions, and unlectured pages can be unmatched.",
+      "Monotonic content order may leave revisited pages unmatched."
+    ]
+  },
+  "provenance": {
+    "transcript_path": ".work/transcripts/H9nvkyTsrnI/data/blocks.en.json",
+    "transcript_sha256": "519c0b00555deaf68e2aa0c11afacd8421bc2b6d868440e8735d9b583fa036d9",
+    "video_url": "https://youtu.be/H9nvkyTsrnI?si=tjASlXudKbRcUefh",
+    "english_markdown_path": "course/mit-mmai-2026/w05-1/transcript.en.md",
+    "english_markdown_sha256": "805d04cf2d5c71da3384445dd9365922ff5e3efc112faca0f9037432e39826a1",
+    "catalog_sha256": "388d554bca0c00036eddf4e1e3998707bb8a2e06ed33bb5b04b22d1f64150217",
+    "slides": [
+      {
+        "deck_id": "w04-2",
+        "path": ".work/sources/w04-2/slides-pages.json",
+        "sha256": "c1dd21af9efdb5258ba4627b59ddb3eef81cec5da534431247627da8b06bd68d",
+        "source_url": "https://mit-mi.github.io/mmai-course/spring2026/schedule/lec4.2 - alignment.pdf"
+      },
+      {
+        "deck_id": "w05-1",
+        "path": ".work/sources/w05-1/slides-pages.json",
+        "sha256": "c5aa354778fdae02f8142fe8a860f9168b5135dcd9b1e2bca16e1db42572d219",
+        "source_url": "https://mit-mi.github.io/mmai-course/spring2026/schedule/lec5.1 - large multimodal models.pdf"
+      }
+    ],
+    "preview_path": "course/mit-mmai-2026/w05-1/preview.md",
+    "preview_sha256": "a68425e89af65406227dd7958d3d5ef395004045a541318cfc81a0fbc8624f52",
+    "script_sha256": "2566062a3c210abc439af443dc55cd07fbd7a41b67eddef12b6eb9e125560a12"
+  },
+  "summary": {
+    "unmatched": 35,
+    "estimated": 29,
+    "weak": 20,
+    "total_blocks": 84,
+    "total_slides": 79,
+    "associated_slides": 21,
+    "recap_blocks": 22
+  },
+  "blocks": [
+    {
+      "block_id": "b000001",
+      "start_ms": 480,
+      "end_ms": 55680,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w05-1-p002",
+        "w05-1-p036"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p002",
+          "score": 0.3766,
+          "evidence_terms": [
+            "presentation",
+            "tomorrow",
+            "depth",
+            "due",
+            "week",
+            "assignment",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p036",
+          "score": 0.3766,
+          "evidence_terms": [
+            "presentation",
+            "tomorrow",
+            "depth",
+            "due",
+            "week",
+            "assignment",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p043",
+          "score": 0.1726,
+          "evidence_terms": [
+            "due",
+            "week",
+            "assignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p002",
+          "score": 0.1532,
+          "evidence_terms": [
+            "due",
+            "week",
+            "assignment"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000002",
+      "start_ms": 55680,
+      "end_ms": 112880,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w05-1-p002",
+        "w05-1-p036"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p002",
+          "score": 0.3059,
+          "evidence_terms": [
+            "later",
+            "presentation",
+            "tutorial",
+            "coming",
+            "llms",
+            "week",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p036",
+          "score": 0.3059,
+          "evidence_terms": [
+            "later",
+            "presentation",
+            "tutorial",
+            "coming",
+            "llms",
+            "week",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.2213,
+          "evidence_terms": [
+            "before",
+            "fusion",
+            "level",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.1941,
+          "evidence_terms": [
+            "level",
+            "data",
+            "learning",
+            "representation",
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000003",
+      "start_ms": 112880,
+      "end_ms": 168720,
+      "slide_id": "w04-2-p004",
+      "score": 0.2514,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "identifying",
+        "individual",
+        "data",
+        "element",
+        "representation",
+        "modality",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.2514,
+          "evidence_terms": [
+            "identifying",
+            "individual",
+            "data",
+            "element",
+            "representation",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.2078,
+          "evidence_terms": [
+            "level",
+            "data",
+            "learning",
+            "representation",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.1989,
+          "evidence_terms": [
+            "align",
+            "fusion",
+            "level",
+            "information",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1795,
+          "evidence_terms": [
+            "learn",
+            "learning",
+            "representation",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000004",
+      "start_ms": 168720,
+      "end_ms": 221159,
+      "slide_id": "w04-2-p004",
+      "score": 0.3273,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "individual",
+        "contextualized",
+        "discrete",
+        "continuous",
+        "data",
+        "element",
+        "connection",
+        "representation",
+        "modality",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.3273,
+          "evidence_terms": [
+            "individual",
+            "contextualized",
+            "discrete",
+            "continuous",
+            "data",
+            "element",
+            "connection",
+            "representation",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.2369,
+          "evidence_terms": [
+            "continuous",
+            "learning",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.2325,
+          "evidence_terms": [
+            "segmentation",
+            "continuous",
+            "element",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.2253,
+          "evidence_terms": [
+            "contextualized",
+            "learn",
+            "transformer",
+            "representation",
+            "modality",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000005",
+      "start_ms": 221280,
+      "end_ms": 276400,
+      "slide_id": "w04-2-p009",
+      "score": 0.3262,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "cosine",
+        "learn",
+        "similarity",
+        "function",
+        "learning",
+        "representation",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.3262,
+          "evidence_terms": [
+            "cosine",
+            "learn",
+            "similarity",
+            "function",
+            "learning",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.2311,
+          "evidence_terms": [
+            "learn",
+            "similarity",
+            "function",
+            "learning",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.2111,
+          "evidence_terms": [
+            "cosine",
+            "vision",
+            "similarity",
+            "function",
+            "representation",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.189,
+          "evidence_terms": [
+            "similarity",
+            "function",
+            "learning",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000006",
+      "start_ms": 276400,
+      "end_ms": 331600,
+      "slide_id": "w04-2-p013",
+      "score": 0.4945,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "simple",
+        "apart",
+        "bring",
+        "closer",
+        "negative",
+        "positive",
+        "pair",
+        "data",
+        "similarity",
+        "learning",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.4945,
+          "evidence_terms": [
+            "simple",
+            "apart",
+            "bring",
+            "closer",
+            "negative",
+            "positive",
+            "pair",
+            "data",
+            "similarity",
+            "learning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.4186,
+          "evidence_terms": [
+            "apart",
+            "bring",
+            "closer",
+            "negative",
+            "positive",
+            "pair",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.3797,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "similarity",
+            "representation",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.1404,
+          "evidence_terms": [
+            "data",
+            "similarity",
+            "learning",
+            "representation"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000007",
+      "start_ms": 331600,
+      "end_ms": 389039,
+      "slide_id": "w04-2-p013",
+      "score": 0.2923,
+      "confidence": "weak",
+      "evidence_terms": [
+        "negative",
+        "positive",
+        "pair",
+        "data",
+        "contrastive",
+        "learning",
+        "text",
+        "image",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.2983,
+          "evidence_terms": [
+            "great",
+            "space",
+            "negative",
+            "positive",
+            "pair",
+            "clip",
+            "contrastive",
+            "representation",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p020",
+          "score": 0.2943,
+          "evidence_terms": [
+            "capture",
+            "give",
+            "word",
+            "mutual",
+            "contrastive",
+            "information",
+            "learning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.2923,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "data",
+            "contrastive",
+            "learning",
+            "text",
+            "image",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.2051,
+          "evidence_terms": [
+            "mutual",
+            "shared",
+            "information",
+            "learning",
+            "modality"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000008",
+      "start_ms": 389039,
+      "end_ms": 444400,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p021",
+          "score": 0.3051,
+          "evidence_terms": [
+            "enough",
+            "noise",
+            "too",
+            "problem",
+            "signal",
+            "shared"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.1062,
+          "evidence_terms": [
+            "before",
+            "fusion",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.0916,
+          "evidence_terms": [
+            "signal",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.0881,
+          "evidence_terms": [
+            "recap",
+            "problem"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000009",
+      "start_ms": 444400,
+      "end_ms": 501520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p021",
+          "score": 0.1776,
+          "evidence_terms": [
+            "noise",
+            "too",
+            "shared",
+            "information"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.1599,
+          "evidence_terms": [
+            "align",
+            "fusion",
+            "information",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.1519,
+          "evidence_terms": [
+            "shared",
+            "information"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p019",
+          "score": 0.1448,
+          "evidence_terms": [
+            "fusion",
+            "task",
+            "information"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000010",
+      "start_ms": 501520,
+      "end_ms": 557440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.306,
+          "evidence_terms": [
+            "unique",
+            "shared",
+            "information",
+            "learning",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.2589,
+          "evidence_terms": [
+            "fine",
+            "level",
+            "data",
+            "learning",
+            "representation",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.234,
+          "evidence_terms": [
+            "data",
+            "contrastive",
+            "information",
+            "learning",
+            "representation",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p017",
+          "score": 0.2286,
+          "evidence_terms": [
+            "unique",
+            "shared",
+            "contrastive",
+            "information",
+            "learning",
+            "modality"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000011",
+      "start_ms": 557440,
+      "end_ms": 614240,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p023",
+          "score": 0.3573,
+          "evidence_terms": [
+            "perspective",
+            "syntactic",
+            "texture",
+            "described",
+            "depth",
+            "structure",
+            "object",
+            "people",
+            "information",
+            "modality",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.2808,
+          "evidence_terms": [
+            "factorized",
+            "unique",
+            "information",
+            "learning",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p018",
+          "score": 0.2561,
+          "evidence_terms": [
+            "described",
+            "object",
+            "people",
+            "information",
+            "modality",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p017",
+          "score": 0.2239,
+          "evidence_terms": [
+            "unique",
+            "contrastive",
+            "information",
+            "learning",
+            "modality",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000012",
+      "start_ms": 614240,
+      "end_ms": 670800,
+      "slide_id": "w04-2-p013",
+      "score": 0.4725,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "negative",
+        "positive",
+        "pair",
+        "contrastive",
+        "learning",
+        "text",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.4725,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "learning",
+            "text",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.3915,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.367,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.2011,
+          "evidence_terms": [
+            "minimize",
+            "maximize",
+            "unique",
+            "information",
+            "learning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000013",
+      "start_ms": 670800,
+      "end_ms": 705800,
+      "slide_id": "w04-2-p015",
+      "score": 0.4298,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "negative",
+        "positive",
+        "vision",
+        "pair",
+        "contrastive",
+        "representation",
+        "language"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.4298,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "vision",
+            "pair",
+            "contrastive",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.3749,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "learning",
+            "text",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.3193,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.1399,
+          "evidence_terms": [
+            "vision",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000014",
+      "start_ms": 707600,
+      "end_ms": 765200,
+      "slide_id": "w04-2-p026",
+      "score": 0.322,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "global",
+        "extension",
+        "information",
+        "modality",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.322,
+          "evidence_terms": [
+            "global",
+            "extension",
+            "information",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p037",
+          "score": 0.2329,
+          "evidence_terms": [
+            "extension",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p005",
+          "score": 0.1875,
+          "evidence_terms": [
+            "discrete",
+            "unique",
+            "information",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p024",
+          "score": 0.1716,
+          "evidence_terms": [
+            "unique",
+            "information",
+            "modality"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000015",
+      "start_ms": 765200,
+      "end_ms": 821920,
+      "slide_id": "w04-2-p026",
+      "score": 0.3353,
+      "confidence": "weak",
+      "evidence_terms": [
+        "global",
+        "jointly",
+        "pairing",
+        "optimize",
+        "representation",
+        "modality",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.3353,
+          "evidence_terms": [
+            "global",
+            "jointly",
+            "pairing",
+            "optimize",
+            "representation",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.3245,
+          "evidence_terms": [
+            "negative",
+            "paired",
+            "positive",
+            "pair",
+            "data",
+            "text",
+            "image",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.2331,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "representation",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.215,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000016",
+      "start_ms": 821920,
+      "end_ms": 878000,
+      "slide_id": "w04-2-p026",
+      "score": 0.2993,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "jointly",
+        "pairing",
+        "optimize",
+        "representation",
+        "modality",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.2993,
+          "evidence_terms": [
+            "jointly",
+            "pairing",
+            "optimize",
+            "representation",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p021",
+          "score": 0.1321,
+          "evidence_terms": [
+            "too",
+            "view",
+            "problem",
+            "learning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p028",
+          "score": 0.1231,
+          "evidence_terms": [
+            "seen",
+            "graph",
+            "between",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p027",
+          "score": 0.1194,
+          "evidence_terms": [
+            "matching",
+            "graph",
+            "problem",
+            "between",
+            "modality",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000017",
+      "start_ms": 878000,
+      "end_ms": 934800,
+      "slide_id": "w04-2-p027",
+      "score": 0.2662,
+      "confidence": "weak",
+      "evidence_terms": [
+        "naive",
+        "bipartite",
+        "weight",
+        "assignment",
+        "element",
+        "between",
+        "similarity"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p028",
+          "score": 0.2887,
+          "evidence_terms": [
+            "seen",
+            "bipartite",
+            "weight",
+            "assignment",
+            "element",
+            "between",
+            "similarity"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p027",
+          "score": 0.2662,
+          "evidence_terms": [
+            "naive",
+            "bipartite",
+            "weight",
+            "assignment",
+            "element",
+            "between",
+            "similarity"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.229,
+          "evidence_terms": [
+            "positive",
+            "pair",
+            "similarity"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.2095,
+          "evidence_terms": [
+            "positive",
+            "pair",
+            "similarity"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000018",
+      "start_ms": 934800,
+      "end_ms": 992320,
+      "slide_id": "w04-2-p027",
+      "score": 0.3225,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "algorithm",
+        "hard",
+        "otherwise",
+        "programming",
+        "simplex",
+        "weight",
+        "linear",
+        "problem",
+        "assignment",
+        "between",
+        "similarity",
+        "connection"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p027",
+          "score": 0.3225,
+          "evidence_terms": [
+            "algorithm",
+            "hard",
+            "otherwise",
+            "programming",
+            "simplex",
+            "weight",
+            "linear",
+            "problem",
+            "assignment",
+            "between",
+            "similarity",
+            "connection"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.2119,
+          "evidence_terms": [
+            "positive",
+            "pair",
+            "similarity",
+            "function"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.2072,
+          "evidence_terms": [
+            "positive",
+            "pair",
+            "similarity",
+            "function"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.1699,
+          "evidence_terms": [
+            "positive",
+            "pair"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000019",
+      "start_ms": 992320,
+      "end_ms": 1026440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.269,
+          "evidence_terms": [
+            "jointly",
+            "pairing",
+            "optimize",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.2301,
+          "evidence_terms": [
+            "paired",
+            "aligned",
+            "data",
+            "learning",
+            "representation"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1823,
+          "evidence_terms": [
+            "aligned",
+            "learning",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p012",
+          "score": 0.161,
+          "evidence_terms": [
+            "aligned",
+            "learning",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000020",
+      "start_ms": 1029280,
+      "end_ms": 1076679,
+      "slide_id": "w04-2-p028",
+      "score": 0.5035,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "soft",
+        "maximize",
+        "transport",
+        "weight",
+        "optimal",
+        "assignment",
+        "element",
+        "between",
+        "similarity",
+        "modality"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p028",
+          "score": 0.5035,
+          "evidence_terms": [
+            "soft",
+            "maximize",
+            "transport",
+            "weight",
+            "optimal",
+            "assignment",
+            "element",
+            "between",
+            "similarity",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p014",
+          "score": 0.259,
+          "evidence_terms": [
+            "transport",
+            "optimal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p027",
+          "score": 0.1903,
+          "evidence_terms": [
+            "solved",
+            "weight",
+            "assignment",
+            "element",
+            "between",
+            "similarity",
+            "modality"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1303,
+          "evidence_terms": [
+            "aligned",
+            "similarity",
+            "function",
+            "modality"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000021",
+      "start_ms": 1077200,
+      "end_ms": 1081160,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": []
+    },
+    {
+      "block_id": "b000022",
+      "start_ms": 1085520,
+      "end_ms": 1140960,
+      "slide_id": "w04-2-p029",
+      "score": 0.192,
+      "confidence": "weak",
+      "evidence_terms": [
+        "extension",
+        "continuous",
+        "element"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.2061,
+          "evidence_terms": [
+            "video",
+            "continuous"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.192,
+          "evidence_terms": [
+            "extension",
+            "continuous",
+            "element"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.148,
+          "evidence_terms": [
+            "discrete",
+            "continuous",
+            "data",
+            "element"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.12,
+          "evidence_terms": [
+            "paired",
+            "data",
+            "learning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000023",
+      "start_ms": 1140960,
+      "end_ms": 1171000,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p031",
+          "score": 0.3019,
+          "evidence_terms": [
+            "detection",
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.2291,
+          "evidence_terms": [
+            "video",
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.1297,
+          "evidence_terms": [
+            "continuous",
+            "data",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.1271,
+          "evidence_terms": [
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000024",
+      "start_ms": 1171440,
+      "end_ms": 1228080,
+      "slide_id": "w04-2-p029",
+      "score": 0.2296,
+      "confidence": "weak",
+      "evidence_terms": [
+        "signal",
+        "discretization",
+        "continuous"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2477,
+          "evidence_terms": [
+            "pre",
+            "training"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p035",
+          "score": 0.244,
+          "evidence_terms": [
+            "speech",
+            "clustering",
+            "pre",
+            "training"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.2296,
+          "evidence_terms": [
+            "signal",
+            "discretization",
+            "continuous"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.1364,
+          "evidence_terms": [
+            "set",
+            "clustering",
+            "data",
+            "learning",
+            "representation"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000025",
+      "start_ms": 1228080,
+      "end_ms": 1254600,
+      "slide_id": "w04-2-p029",
+      "score": 0.3097,
+      "confidence": "weak",
+      "evidence_terms": [
+        "signal",
+        "continuous",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.3097,
+          "evidence_terms": [
+            "signal",
+            "continuous",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.2257,
+          "evidence_terms": [
+            "sequence",
+            "continuous"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p033",
+          "score": 0.1785,
+          "evidence_terms": [
+            "predict",
+            "sequence"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p034",
+          "score": 0.166,
+          "evidence_terms": [
+            "predict",
+            "sequence"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000026",
+      "start_ms": 1262000,
+      "end_ms": 1317600,
+      "slide_id": "w04-2-p036",
+      "score": 0.2208,
+      "confidence": "weak",
+      "evidence_terms": [
+        "token",
+        "variational",
+        "discrete",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p036",
+          "score": 0.2208,
+          "evidence_terms": [
+            "token",
+            "variational",
+            "discrete",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.2078,
+          "evidence_terms": [
+            "set",
+            "clustering",
+            "data",
+            "learning",
+            "representation"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.1901,
+          "evidence_terms": [
+            "audio",
+            "video",
+            "representation",
+            "model"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.1496,
+          "evidence_terms": [
+            "discrete",
+            "continuous",
+            "data",
+            "representation"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000027",
+      "start_ms": 1317600,
+      "end_ms": 1371440,
+      "slide_id": "w04-2-p036",
+      "score": 0.4393,
+      "confidence": "weak",
+      "evidence_terms": [
+        "token",
+        "discrete",
+        "visual",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p036",
+          "score": 0.4393,
+          "evidence_terms": [
+            "token",
+            "discrete",
+            "visual",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p015",
+          "score": 0.1547,
+          "evidence_terms": [
+            "between",
+            "transformer",
+            "visual",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.1399,
+          "evidence_terms": [
+            "text",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p019",
+          "score": 0.1344,
+          "evidence_terms": [
+            "text",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000028",
+      "start_ms": 1374240,
+      "end_ms": 1382520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p031",
+          "score": 0.4707,
+          "evidence_terms": [
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.4375,
+          "evidence_terms": [
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.4245,
+          "evidence_terms": [
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p029",
+          "score": 0.4155,
+          "evidence_terms": [
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000029",
+      "start_ms": 1390480,
+      "end_ms": 1446640,
+      "slide_id": "w04-2-p037",
+      "score": 0.4405,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "emergent",
+        "extension",
+        "explicit",
+        "implicit",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p037",
+          "score": 0.4405,
+          "evidence_terms": [
+            "emergent",
+            "extension",
+            "explicit",
+            "implicit",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.3312,
+          "evidence_terms": [
+            "apart",
+            "bring",
+            "negative",
+            "positive",
+            "pair",
+            "data",
+            "similarity",
+            "function",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.3138,
+          "evidence_terms": [
+            "emergent",
+            "explicit",
+            "implicit",
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.2946,
+          "evidence_terms": [
+            "apart",
+            "bring",
+            "negative",
+            "positive",
+            "pair"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000030",
+      "start_ms": 1446640,
+      "end_ms": 1500559,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p024",
+          "score": 0.2581,
+          "evidence_terms": [
+            "llama",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.2061,
+          "evidence_terms": [
+            "open",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.2008,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1672,
+          "evidence_terms": [
+            "aligned",
+            "representation",
+            "modality",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000031",
+      "start_ms": 1500559,
+      "end_ms": 1557760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.204,
+          "evidence_terms": [
+            "open",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.1997,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.1959,
+          "evidence_terms": [
+            "task",
+            "vision",
+            "similarity",
+            "function",
+            "visual",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1944,
+          "evidence_terms": [
+            "similarity",
+            "function",
+            "representation",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000032",
+      "start_ms": 1557760,
+      "end_ms": 1612559,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.2247,
+          "evidence_terms": [
+            "aligned",
+            "similarity",
+            "representation",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1817,
+          "evidence_terms": [
+            "aligned",
+            "similarity",
+            "representation",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p012",
+          "score": 0.1748,
+          "evidence_terms": [
+            "aligned",
+            "representation",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p007",
+          "score": 0.1743,
+          "evidence_terms": [
+            "paired",
+            "aligned",
+            "data",
+            "similarity",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000033",
+      "start_ms": 1612559,
+      "end_ms": 1669520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p011",
+          "score": 0.1793,
+          "evidence_terms": [
+            "view",
+            "representation",
+            "modality",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p027",
+          "score": 0.1589,
+          "evidence_terms": [
+            "evidence",
+            "representation"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1277,
+          "evidence_terms": [
+            "representation",
+            "modality",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.114,
+          "evidence_terms": [
+            "representation",
+            "modality",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000034",
+      "start_ms": 1669520,
+      "end_ms": 1727520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2234,
+          "evidence_terms": [
+            "pre",
+            "clip",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1847,
+          "evidence_terms": [
+            "aligned",
+            "similarity",
+            "learning",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.1555,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1494,
+          "evidence_terms": [
+            "aligned",
+            "similarity",
+            "learning",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000035",
+      "start_ms": 1727520,
+      "end_ms": 1782480,
+      "slide_id": "w04-2-p040",
+      "score": 0.183,
+      "confidence": "weak",
+      "evidence_terms": [
+        "embedding",
+        "similarity",
+        "image",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.183,
+          "evidence_terms": [
+            "embedding",
+            "similarity",
+            "image",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p037",
+          "score": 0.1661,
+          "evidence_terms": [
+            "emergent",
+            "implicit",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.1658,
+          "evidence_terms": [
+            "pre",
+            "training",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.1502,
+          "evidence_terms": [
+            "global",
+            "function",
+            "language",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000036",
+      "start_ms": 1782480,
+      "end_ms": 1840240,
+      "slide_id": "w04-2-p040",
+      "score": 0.5381,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "kernel",
+        "embedding",
+        "similarity",
+        "text",
+        "image",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.5381,
+          "evidence_terms": [
+            "kernel",
+            "embedding",
+            "similarity",
+            "text",
+            "image",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p029",
+          "score": 0.158,
+          "evidence_terms": [
+            "embedding",
+            "text",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p008",
+          "score": 0.1354,
+          "evidence_terms": [
+            "capture",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.1352,
+          "evidence_terms": [
+            "embedding",
+            "close",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000037",
+      "start_ms": 1840240,
+      "end_ms": 1887960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.2378,
+          "evidence_terms": [
+            "video",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.2211,
+          "evidence_terms": [
+            "global",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.2063,
+          "evidence_terms": [
+            "emergent",
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p037",
+          "score": 0.1976,
+          "evidence_terms": [
+            "emergent",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000038",
+      "start_ms": 1912880,
+      "end_ms": 1941159,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.3958,
+          "evidence_terms": [
+            "global",
+            "language",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.1777,
+          "evidence_terms": [
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p038",
+          "score": 0.1772,
+          "evidence_terms": [
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w04-2-p039",
+          "score": 0.1772,
+          "evidence_terms": [
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000039",
+      "start_ms": 1946399,
+      "end_ms": 2002559,
+      "slide_id": "w04-2-p040",
+      "score": 0.3519,
+      "confidence": "weak",
+      "evidence_terms": [
+        "kernel",
+        "embedding",
+        "similarity",
+        "alignment"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.3519,
+          "evidence_terms": [
+            "kernel",
+            "embedding",
+            "similarity",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.3428,
+          "evidence_terms": [
+            "global",
+            "function",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.2103,
+          "evidence_terms": [
+            "kernel",
+            "similarity",
+            "function",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1737,
+          "evidence_terms": [
+            "similarity",
+            "function",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000040",
+      "start_ms": 2002559,
+      "end_ms": 2058639,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.3671,
+          "evidence_terms": [
+            "global",
+            "extension",
+            "information",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.1807,
+          "evidence_terms": [
+            "contrastive",
+            "learning",
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p042",
+          "score": 0.1674,
+          "evidence_terms": [
+            "contrastive",
+            "learning",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.1612,
+          "evidence_terms": [
+            "align",
+            "mutual",
+            "information",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000041",
+      "start_ms": 2058639,
+      "end_ms": 2085879,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w04-2-p038",
+        "w04-2-p039"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p038",
+          "score": 0.4229,
+          "evidence_terms": [
+            "emergence",
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w04-2-p039",
+          "score": 0.4229,
+          "evidence_terms": [
+            "emergence",
+            "alignment"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w04-2-p037",
+          "score": 0.3189,
+          "evidence_terms": [
+            "extension",
+            "implicit",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p003",
+          "score": 0.251,
+          "evidence_terms": [
+            "implicit",
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p042",
+          "score": 0.2326,
+          "evidence_terms": [
+            "implicit",
+            "continuous",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000042",
+      "start_ms": 2092800,
+      "end_ms": 2149760,
+      "slide_id": "w05-1-p004",
+      "score": 0.3205,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "news",
+        "recap",
+        "ended",
+        "open",
+        "retrieve",
+        "large",
+        "language",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p003",
+          "score": 0.3248,
+          "evidence_terms": [
+            "foundation",
+            "adapting",
+            "transformer",
+            "generation",
+            "text",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.3205,
+          "evidence_terms": [
+            "news",
+            "recap",
+            "ended",
+            "open",
+            "retrieve",
+            "large",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p035",
+          "score": 0.2918,
+          "evidence_terms": [
+            "real",
+            "foundation",
+            "adapting",
+            "transformer",
+            "generation",
+            "text",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p033",
+          "score": 0.2151,
+          "evidence_terms": [
+            "generation",
+            "large",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000043",
+      "start_ms": 2149760,
+      "end_ms": 2204960,
+      "slide_id": "w05-1-p004",
+      "score": 0.3339,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "code",
+        "math",
+        "solving",
+        "problem",
+        "large",
+        "language",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.3339,
+          "evidence_terms": [
+            "code",
+            "math",
+            "solving",
+            "problem",
+            "large",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p001",
+          "score": 0.2716,
+          "evidence_terms": [
+            "large",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p024",
+          "score": 0.2407,
+          "evidence_terms": [
+            "large",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p033",
+          "score": 0.2175,
+          "evidence_terms": [
+            "large",
+            "image",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000044",
+      "start_ms": 2204960,
+      "end_ms": 2261440,
+      "slide_id": "w05-1-p005",
+      "score": 0.4011,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "classification",
+        "describe",
+        "explain",
+        "man",
+        "shirt",
+        "tone",
+        "ended",
+        "open",
+        "relationship",
+        "video",
+        "between",
+        "large"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p005",
+          "score": 0.4011,
+          "evidence_terms": [
+            "classification",
+            "describe",
+            "explain",
+            "man",
+            "shirt",
+            "tone",
+            "ended",
+            "open",
+            "relationship",
+            "video",
+            "between",
+            "large"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p017",
+          "score": 0.3323,
+          "evidence_terms": [
+            "friend",
+            "sarcastic",
+            "mind",
+            "watch",
+            "privilege",
+            "large",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p006",
+          "score": 0.3274,
+          "evidence_terms": [
+            "previous",
+            "episode",
+            "friend",
+            "sarcastic",
+            "mind",
+            "watch",
+            "privilege",
+            "large",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p009",
+          "score": 0.3239,
+          "evidence_terms": [
+            "previous",
+            "episode",
+            "friend",
+            "sarcastic",
+            "mind",
+            "watch",
+            "privilege",
+            "text",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000045",
+      "start_ms": 2261440,
+      "end_ms": 2318000,
+      "slide_id": "w05-1-p006",
+      "score": 0.4392,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "future",
+        "culture",
+        "generate",
+        "previous",
+        "story",
+        "episode",
+        "person",
+        "information",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p006",
+          "score": 0.4392,
+          "evidence_terms": [
+            "future",
+            "culture",
+            "generate",
+            "previous",
+            "story",
+            "episode",
+            "person",
+            "information",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p009",
+          "score": 0.2119,
+          "evidence_terms": [
+            "previous",
+            "episode",
+            "person",
+            "generation",
+            "information",
+            "text",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p005",
+          "score": 0.2039,
+          "evidence_terms": [
+            "animate",
+            "counterfactual",
+            "culture",
+            "story",
+            "video",
+            "generation",
+            "visual",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.198,
+          "evidence_terms": [
+            "audio",
+            "video",
+            "text",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000046",
+      "start_ms": 2318000,
+      "end_ms": 2373200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.2979,
+          "evidence_terms": [
+            "learn",
+            "learning",
+            "representation",
+            "modality",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.2631,
+          "evidence_terms": [
+            "multiple",
+            "learn",
+            "large",
+            "representation",
+            "modality",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p012",
+          "score": 0.2631,
+          "evidence_terms": [
+            "learn",
+            "learning",
+            "representation",
+            "modality",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.2408,
+          "evidence_terms": [
+            "learn",
+            "learning",
+            "representation",
+            "modality",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p006",
+          "score": 0.1604,
+          "evidence_terms": [
+            "generate",
+            "large",
+            "representation",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000047",
+      "start_ms": 2373200,
+      "end_ms": 2429359,
+      "slide_id": "w05-1-p006",
+      "score": 0.3188,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "generate",
+        "previous",
+        "episode",
+        "highlight",
+        "large",
+        "representation",
+        "language",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p008",
+          "score": 0.3376,
+          "evidence_terms": [
+            "adapting",
+            "generation",
+            "large",
+            "text",
+            "representation",
+            "language",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p009",
+          "score": 0.3218,
+          "evidence_terms": [
+            "enabling",
+            "previous",
+            "episode",
+            "highlight",
+            "generation",
+            "text",
+            "representation",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p006",
+          "score": 0.3188,
+          "evidence_terms": [
+            "generate",
+            "previous",
+            "episode",
+            "highlight",
+            "large",
+            "representation",
+            "language",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.2811,
+          "evidence_terms": [
+            "adapting",
+            "large",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000048",
+      "start_ms": 2429359,
+      "end_ms": 2487280,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.2331,
+          "evidence_terms": [
+            "audio",
+            "video",
+            "model"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p005",
+          "score": 0.1834,
+          "evidence_terms": [
+            "tone",
+            "video",
+            "people",
+            "visual",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.1361,
+          "evidence_terms": [
+            "video"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p005",
+          "score": 0.1352,
+          "evidence_terms": [
+            "identify",
+            "multiple",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000049",
+      "start_ms": 2487280,
+      "end_ms": 2544960,
+      "slide_id": "w05-1-p010",
+      "score": 0.1757,
+      "confidence": "weak",
+      "evidence_terms": [
+        "self",
+        "learn",
+        "representation",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p008",
+          "score": 0.2358,
+          "evidence_terms": [
+            "sarcastic",
+            "generation",
+            "text",
+            "representation",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2355,
+          "evidence_terms": [
+            "pre",
+            "training"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p027",
+          "score": 0.1902,
+          "evidence_terms": [
+            "sarcastic",
+            "generation",
+            "text",
+            "representation",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.1891,
+          "evidence_terms": [
+            "text",
+            "representation",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1757,
+          "evidence_terms": [
+            "self",
+            "learn",
+            "representation",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000050",
+      "start_ms": 2544960,
+      "end_ms": 2600800,
+      "slide_id": "w05-1-p010",
+      "score": 0.2747,
+      "confidence": "weak",
+      "evidence_terms": [
+        "contextualized",
+        "self",
+        "attention",
+        "learn",
+        "transformer",
+        "representation",
+        "alignment",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.3382,
+          "evidence_terms": [
+            "aligning",
+            "sequence",
+            "video",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p004",
+          "score": 0.2837,
+          "evidence_terms": [
+            "sub",
+            "challenge",
+            "contextualized",
+            "data",
+            "element",
+            "between",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.2747,
+          "evidence_terms": [
+            "contextualized",
+            "self",
+            "attention",
+            "learn",
+            "transformer",
+            "representation",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p034",
+          "score": 0.2019,
+          "evidence_terms": [
+            "challenge",
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000051",
+      "start_ms": 2600800,
+      "end_ms": 2658000,
+      "slide_id": "w05-1-p010",
+      "score": 0.1656,
+      "confidence": "weak",
+      "evidence_terms": [
+        "contextualized",
+        "transformer",
+        "representation",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p012",
+          "score": 0.2318,
+          "evidence_terms": [
+            "unimodal",
+            "transformer",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1656,
+          "evidence_terms": [
+            "contextualized",
+            "transformer",
+            "representation",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.1379,
+          "evidence_terms": [
+            "word",
+            "transformer",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p031",
+          "score": 0.1175,
+          "evidence_terms": [
+            "detection"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000052",
+      "start_ms": 2658000,
+      "end_ms": 2713599,
+      "slide_id": "w05-1-p011",
+      "score": 0.2053,
+      "confidence": "weak",
+      "evidence_terms": [
+        "emphasis",
+        "eye",
+        "vocal",
+        "dimension",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.2053,
+          "evidence_terms": [
+            "emphasis",
+            "eye",
+            "vocal",
+            "dimension",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1125,
+          "evidence_terms": [
+            "linear",
+            "parameter",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.083,
+          "evidence_terms": [
+            "bring",
+            "visual"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p035",
+          "score": 0.0801,
+          "evidence_terms": [
+            "linear"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000053",
+      "start_ms": 2713599,
+      "end_ms": 2770160,
+      "slide_id": "w05-1-p011",
+      "score": 0.2364,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "outer",
+        "product",
+        "weighted",
+        "dimension",
+        "vision",
+        "attention",
+        "representation",
+        "language",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.2364,
+          "evidence_terms": [
+            "outer",
+            "product",
+            "weighted",
+            "dimension",
+            "vision",
+            "attention",
+            "representation",
+            "language",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1206,
+          "evidence_terms": [
+            "attention",
+            "representation",
+            "language",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p008",
+          "score": 0.1205,
+          "evidence_terms": [
+            "capture",
+            "representation",
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p001",
+          "score": 0.1183,
+          "evidence_terms": [
+            "alignment",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000054",
+      "start_ms": 2770160,
+      "end_ms": 2824319,
+      "slide_id": "w05-1-p011",
+      "score": 0.3263,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "emphasis",
+        "eye",
+        "row",
+        "softmax",
+        "vocal",
+        "dimension",
+        "attention",
+        "privilege"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.3263,
+          "evidence_terms": [
+            "emphasis",
+            "eye",
+            "row",
+            "softmax",
+            "vocal",
+            "dimension",
+            "attention",
+            "privilege"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.0992,
+          "evidence_terms": [
+            "attention",
+            "learn",
+            "privilege",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.094,
+          "evidence_terms": [
+            "word",
+            "attention"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p017",
+          "score": 0.0913,
+          "evidence_terms": [
+            "person",
+            "privilege"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000055",
+      "start_ms": 2824319,
+      "end_ms": 2881680,
+      "slide_id": "w05-1-p011",
+      "score": 0.2442,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "emphasis",
+        "vocal",
+        "attention",
+        "mind",
+        "representation",
+        "language"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.2442,
+          "evidence_terms": [
+            "emphasis",
+            "vocal",
+            "attention",
+            "mind",
+            "representation",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1803,
+          "evidence_terms": [
+            "aligned",
+            "learn",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1626,
+          "evidence_terms": [
+            "attention",
+            "learn",
+            "representation",
+            "language",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p012",
+          "score": 0.1593,
+          "evidence_terms": [
+            "aligned",
+            "learn",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000056",
+      "start_ms": 2881680,
+      "end_ms": 2917480,
+      "slide_id": "w05-1-p011",
+      "score": 0.4702,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "emphasis",
+        "eye",
+        "vocal",
+        "contextualized",
+        "mind",
+        "privilege",
+        "representation"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.4702,
+          "evidence_terms": [
+            "emphasis",
+            "eye",
+            "vocal",
+            "contextualized",
+            "mind",
+            "privilege",
+            "representation"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1257,
+          "evidence_terms": [
+            "contextualized",
+            "privilege",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p027",
+          "score": 0.1072,
+          "evidence_terms": [
+            "next",
+            "mind",
+            "privilege",
+            "representation"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.0989,
+          "evidence_terms": [
+            "mind",
+            "privilege",
+            "representation"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000057",
+      "start_ms": 2917920,
+      "end_ms": 2967960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.1516,
+          "evidence_terms": [
+            "video",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.1393,
+          "evidence_terms": [
+            "video",
+            "representation"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p026",
+          "score": 0.1297,
+          "evidence_terms": [
+            "latent",
+            "representation",
+            "language",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p009",
+          "score": 0.1267,
+          "evidence_terms": [
+            "aligned",
+            "representation",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000058",
+      "start_ms": 2970240,
+      "end_ms": 2975160,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": []
+    },
+    {
+      "block_id": "b000059",
+      "start_ms": 2985200,
+      "end_ms": 3036079,
+      "slide_id": "w05-1-p011",
+      "score": 0.2101,
+      "confidence": "weak",
+      "evidence_terms": [
+        "eye",
+        "roll",
+        "dimension",
+        "attention",
+        "transformer"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.2101,
+          "evidence_terms": [
+            "eye",
+            "roll",
+            "dimension",
+            "attention",
+            "transformer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.1566,
+          "evidence_terms": [
+            "word",
+            "attention",
+            "transformer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p033",
+          "score": 0.1415,
+          "evidence_terms": [
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.1412,
+          "evidence_terms": [
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000060",
+      "start_ms": 3039920,
+      "end_ms": 3095680,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p018",
+          "score": 0.1402,
+          "evidence_terms": [
+            "small",
+            "text",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.1199,
+          "evidence_terms": [
+            "open",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p005",
+          "score": 0.1131,
+          "evidence_terms": [
+            "open",
+            "video",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.098,
+          "evidence_terms": [
+            "video",
+            "text",
+            "model"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000061",
+      "start_ms": 3095680,
+      "end_ms": 3152240,
+      "slide_id": "w05-1-p011",
+      "score": 0.2954,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "emphasis",
+        "eye",
+        "vocal",
+        "vision",
+        "attention",
+        "transformer"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p011",
+          "score": 0.2954,
+          "evidence_terms": [
+            "emphasis",
+            "eye",
+            "vocal",
+            "vision",
+            "attention",
+            "transformer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p036",
+          "score": 0.2326,
+          "evidence_terms": [
+            "token",
+            "discrete",
+            "visual",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.1886,
+          "evidence_terms": [
+            "word",
+            "attention",
+            "transformer",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p031",
+          "score": 0.1714,
+          "evidence_terms": [
+            "retrieval",
+            "image"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000062",
+      "start_ms": 3152240,
+      "end_ms": 3181720,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.2178,
+          "evidence_terms": [
+            "word",
+            "transformer",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p009",
+          "score": 0.1431,
+          "evidence_terms": [
+            "highlight",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p036",
+          "score": 0.1427,
+          "evidence_terms": [
+            "token",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p027",
+          "score": 0.1382,
+          "evidence_terms": [
+            "highlight",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000063",
+      "start_ms": 3187440,
+      "end_ms": 3244559,
+      "slide_id": "w05-1-p012",
+      "score": 0.3628,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "unimodal",
+        "cross",
+        "attention",
+        "transformer",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p012",
+          "score": 0.3628,
+          "evidence_terms": [
+            "unimodal",
+            "cross",
+            "attention",
+            "transformer",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.275,
+          "evidence_terms": [
+            "self",
+            "attention",
+            "learn",
+            "transformer",
+            "language",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.2354,
+          "evidence_terms": [
+            "cross",
+            "attention",
+            "transformer",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p035",
+          "score": 0.1863,
+          "evidence_terms": [
+            "self",
+            "pre",
+            "attention",
+            "transformer"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000064",
+      "start_ms": 3244559,
+      "end_ms": 3301520,
+      "slide_id": "w05-1-p013",
+      "score": 0.4005,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "masking",
+        "word",
+        "transformer",
+        "image",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.4005,
+          "evidence_terms": [
+            "masking",
+            "word",
+            "transformer",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.2813,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "visual",
+            "text",
+            "image",
+            "language",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.2523,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "visual",
+            "representation",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.2422,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "visual",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000065",
+      "start_ms": 3301520,
+      "end_ms": 3348280,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p013",
+          "score": 0.3761,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "learning",
+            "text",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.3359,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "pre",
+            "clip",
+            "contrastive",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.3201,
+          "evidence_terms": [
+            "pre",
+            "clip",
+            "contrastive",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p014",
+          "score": 0.2642,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "pair",
+            "contrastive",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.1448,
+          "evidence_terms": [
+            "sentence",
+            "transformer",
+            "image",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000066",
+      "start_ms": 3348400,
+      "end_ms": 3372359,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.1954,
+          "evidence_terms": [
+            "embedding",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.1016,
+          "evidence_terms": [
+            "space"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p019",
+          "score": 0.0984,
+          "evidence_terms": [
+            "present"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p016",
+          "score": 0.0915,
+          "evidence_terms": [
+            "embedding",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000067",
+      "start_ms": 3376880,
+      "end_ms": 3434000,
+      "slide_id": "w05-1-p021",
+      "score": 0.1825,
+      "confidence": "weak",
+      "evidence_terms": [
+        "adapter",
+        "language",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.1825,
+          "evidence_terms": [
+            "adapter",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p022",
+          "score": 0.1505,
+          "evidence_terms": [
+            "fine",
+            "data",
+            "learning",
+            "representation",
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p010",
+          "score": 0.1468,
+          "evidence_terms": [
+            "learn",
+            "transformer",
+            "representation",
+            "modality",
+            "language",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p019",
+          "score": 0.1465,
+          "evidence_terms": [
+            "downstream",
+            "task",
+            "information",
+            "modality",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000068",
+      "start_ms": 3434000,
+      "end_ms": 3491040,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w05-1-p020",
+        "w05-1-p021"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.2731,
+          "evidence_terms": [
+            "adapted",
+            "prefix",
+            "adapter",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.2514,
+          "evidence_terms": [
+            "adapted",
+            "prefix",
+            "adapter",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.2173,
+          "evidence_terms": [
+            "embedding",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p019",
+          "score": 0.2157,
+          "evidence_terms": [
+            "adapted",
+            "prefix",
+            "adapter",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000069",
+      "start_ms": 3491040,
+      "end_ms": 3549280,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p018",
+          "score": 0.2781,
+          "evidence_terms": [
+            "boat",
+            "red",
+            "water",
+            "adapter",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.1847,
+          "evidence_terms": [
+            "embedding",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p002",
+          "score": 0.1346,
+          "evidence_terms": [
+            "once",
+            "project",
+            "next"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p043",
+          "score": 0.1269,
+          "evidence_terms": [
+            "once",
+            "project",
+            "next"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000070",
+      "start_ms": 3549280,
+      "end_ms": 3604480,
+      "slide_id": "w05-1-p021",
+      "score": 0.1951,
+      "confidence": "weak",
+      "evidence_terms": [
+        "dax",
+        "prefix",
+        "image",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.2341,
+          "evidence_terms": [
+            "jobs",
+            "steve",
+            "prefix",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.1951,
+          "evidence_terms": [
+            "dax",
+            "prefix",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p020",
+          "score": 0.1487,
+          "evidence_terms": [
+            "give",
+            "word",
+            "learning",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p013",
+          "score": 0.1223,
+          "evidence_terms": [
+            "word",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000071",
+      "start_ms": 3604480,
+      "end_ms": 3661760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p040",
+          "score": 0.2788,
+          "evidence_terms": [
+            "embedding",
+            "similarity",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.1523,
+          "evidence_terms": [
+            "dax",
+            "adapter",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p029",
+          "score": 0.1443,
+          "evidence_terms": [
+            "embedding",
+            "training",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.1389,
+          "evidence_terms": [
+            "task",
+            "training",
+            "similarity",
+            "representation",
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000072",
+      "start_ms": 3661760,
+      "end_ms": 3719520,
+      "slide_id": "w05-1-p022",
+      "score": 0.3366,
+      "confidence": "weak",
+      "evidence_terms": [
+        "flamingo",
+        "language",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.3366,
+          "evidence_terms": [
+            "flamingo",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2185,
+          "evidence_terms": [
+            "pre",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.1832,
+          "evidence_terms": [
+            "problem",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p020",
+          "score": 0.1636,
+          "evidence_terms": [
+            "trained",
+            "give",
+            "encoder",
+            "visual",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000073",
+      "start_ms": 3719520,
+      "end_ms": 3750760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p031",
+          "score": 0.2234,
+          "evidence_terms": [
+            "grounding",
+            "image"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w05-1-p033",
+          "score": 0.2209,
+          "evidence_terms": [
+            "grounding",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p032",
+          "score": 0.2035,
+          "evidence_terms": [
+            "grounding",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p034",
+          "score": 0.1346,
+          "evidence_terms": [
+            "grounding"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000074",
+      "start_ms": 3751040,
+      "end_ms": 3806559,
+      "slide_id": "w05-1-p023",
+      "score": 0.2161,
+      "confidence": "weak",
+      "evidence_terms": [
+        "mini",
+        "stage",
+        "image",
+        "alignment",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.2161,
+          "evidence_terms": [
+            "mini",
+            "stage",
+            "image",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p004",
+          "score": 0.1492,
+          "evidence_terms": [
+            "open",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.1397,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.1318,
+          "evidence_terms": [
+            "adapted",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000075",
+      "start_ms": 3806559,
+      "end_ms": 3863280,
+      "slide_id": "w05-1-p023",
+      "score": 0.405,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "stage",
+        "instruction",
+        "paired",
+        "data",
+        "tuning",
+        "text",
+        "image",
+        "alignment",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.405,
+          "evidence_terms": [
+            "stage",
+            "instruction",
+            "paired",
+            "data",
+            "tuning",
+            "text",
+            "image",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2639,
+          "evidence_terms": [
+            "pre",
+            "training",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p022",
+          "score": 0.2,
+          "evidence_terms": [
+            "flamingo",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p035",
+          "score": 0.1424,
+          "evidence_terms": [
+            "linear",
+            "pre",
+            "training"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000076",
+      "start_ms": 3863280,
+      "end_ms": 3917480,
+      "slide_id": "w05-1-p023",
+      "score": 0.4792,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "completion",
+        "stage",
+        "instruction",
+        "tuning",
+        "text",
+        "image",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.4792,
+          "evidence_terms": [
+            "completion",
+            "stage",
+            "instruction",
+            "tuning",
+            "text",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.1673,
+          "evidence_terms": [
+            "pre",
+            "training",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.1247,
+          "evidence_terms": [
+            "tuning",
+            "adapting",
+            "text",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p019",
+          "score": 0.1198,
+          "evidence_terms": [
+            "tuning",
+            "adapting",
+            "text",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000077",
+      "start_ms": 3920480,
+      "end_ms": 3923799,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": []
+    },
+    {
+      "block_id": "b000078",
+      "start_ms": 3926720,
+      "end_ms": 3983440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p024",
+          "score": 0.368,
+          "evidence_terms": [
+            "llama",
+            "adapter",
+            "large",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.1965,
+          "evidence_terms": [
+            "adapted",
+            "adapter",
+            "large",
+            "text",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.1939,
+          "evidence_terms": [
+            "adapted",
+            "adapter",
+            "large",
+            "text",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p019",
+          "score": 0.1731,
+          "evidence_terms": [
+            "adapted",
+            "adapter",
+            "large",
+            "text",
+            "image",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000079",
+      "start_ms": 3983440,
+      "end_ms": 3994920,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p021",
+          "score": 0.2178,
+          "evidence_terms": [
+            "adapter",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p020",
+          "score": 0.1759,
+          "evidence_terms": [
+            "adapter",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p024",
+          "score": 0.1678,
+          "evidence_terms": [
+            "adapter",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p036",
+          "score": 0.1629,
+          "evidence_terms": [
+            "token"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000080",
+      "start_ms": 3997920,
+      "end_ms": 4054720,
+      "slide_id": "w05-1-p023",
+      "score": 0.3903,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "stage",
+        "instruction",
+        "data",
+        "tuning",
+        "large",
+        "image",
+        "alignment",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.3903,
+          "evidence_terms": [
+            "stage",
+            "instruction",
+            "data",
+            "tuning",
+            "large",
+            "image",
+            "alignment",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.258,
+          "evidence_terms": [
+            "pre",
+            "training",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p025",
+          "score": 0.1954,
+          "evidence_terms": [
+            "billion",
+            "largest",
+            "pair",
+            "pre",
+            "training",
+            "data",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.191,
+          "evidence_terms": [
+            "task",
+            "vision",
+            "pair",
+            "pre",
+            "training",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000081",
+      "start_ms": 4054720,
+      "end_ms": 4078920,
+      "slide_id": "w05-1-p023",
+      "score": 0.4077,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "completion",
+        "stage",
+        "instruction",
+        "data",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.4077,
+          "evidence_terms": [
+            "completion",
+            "stage",
+            "instruction",
+            "data",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.1596,
+          "evidence_terms": [
+            "training",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.1348,
+          "evidence_terms": [
+            "task",
+            "training",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p019",
+          "score": 0.1196,
+          "evidence_terms": [
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000082",
+      "start_ms": 4082319,
+      "end_ms": 4139600,
+      "slide_id": "w05-1-p023",
+      "score": 0.2425,
+      "confidence": "weak",
+      "evidence_terms": [
+        "stage",
+        "data",
+        "large",
+        "alignment",
+        "model",
+        "multimodal"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p030",
+          "score": 0.3498,
+          "evidence_terms": [
+            "aligning",
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.2425,
+          "evidence_terms": [
+            "stage",
+            "data",
+            "large",
+            "alignment",
+            "model",
+            "multimodal"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p034",
+          "score": 0.2294,
+          "evidence_terms": [
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p033",
+          "score": 0.2233,
+          "evidence_terms": [
+            "sequence",
+            "alignment"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000083",
+      "start_ms": 4139600,
+      "end_ms": 4194440,
+      "slide_id": "w05-1-p023",
+      "score": 0.2841,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "completion",
+        "stage",
+        "instruction",
+        "tuning",
+        "image",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w05-1-p023",
+          "score": 0.2841,
+          "evidence_terms": [
+            "completion",
+            "stage",
+            "instruction",
+            "tuning",
+            "image",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p016",
+          "score": 0.2043,
+          "evidence_terms": [
+            "pre",
+            "training",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p010",
+          "score": 0.1854,
+          "evidence_terms": [
+            "linear",
+            "aligned",
+            "learn",
+            "representation",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w04-2-p015",
+          "score": 0.168,
+          "evidence_terms": [
+            "space",
+            "task",
+            "pre",
+            "training",
+            "representation",
+            "image",
+            "language"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000084",
+      "start_ms": 4194640,
+      "end_ms": 4227760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w04-2-p002",
+          "score": 0.1733,
+          "evidence_terms": [
+            "project"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p003",
+          "score": 0.1588,
+          "evidence_terms": [
+            "text",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w04-2-p001",
+          "score": 0.1474,
+          "evidence_terms": [
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w05-1-p007",
+          "score": 0.1393,
+          "evidence_terms": [
+            "text",
+            "multimodal"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": "w04-2-p001",
+      "deck_id": "w04-2",
+      "page": 1,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p002",
+      "deck_id": "w04-2",
+      "page": 2,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p003",
+      "deck_id": "w04-2",
+      "page": 3,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p004",
+      "deck_id": "w04-2",
+      "page": 4,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p005",
+      "deck_id": "w04-2",
+      "page": 5,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p006",
+      "deck_id": "w04-2",
+      "page": 6,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p007",
+      "deck_id": "w04-2",
+      "page": 7,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p008",
+      "deck_id": "w04-2",
+      "page": 8,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p009",
+      "deck_id": "w04-2",
+      "page": 9,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p010",
+      "deck_id": "w04-2",
+      "page": 10,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p011",
+      "deck_id": "w04-2",
+      "page": 11,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p012",
+      "deck_id": "w04-2",
+      "page": 12,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p013",
+      "deck_id": "w04-2",
+      "page": 13,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p014",
+      "deck_id": "w04-2",
+      "page": 14,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p015",
+      "deck_id": "w04-2",
+      "page": 15,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p016",
+      "deck_id": "w04-2",
+      "page": 16,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p017",
+      "deck_id": "w04-2",
+      "page": 17,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p018",
+      "deck_id": "w04-2",
+      "page": 18,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p019",
+      "deck_id": "w04-2",
+      "page": 19,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p020",
+      "deck_id": "w04-2",
+      "page": 20,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p021",
+      "deck_id": "w04-2",
+      "page": 21,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p022",
+      "deck_id": "w04-2",
+      "page": 22,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p023",
+      "deck_id": "w04-2",
+      "page": 23,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p024",
+      "deck_id": "w04-2",
+      "page": 24,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p025",
+      "deck_id": "w04-2",
+      "page": 25,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p026",
+      "deck_id": "w04-2",
+      "page": 26,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p027",
+      "deck_id": "w04-2",
+      "page": 27,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p028",
+      "deck_id": "w04-2",
+      "page": 28,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p029",
+      "deck_id": "w04-2",
+      "page": 29,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p030",
+      "deck_id": "w04-2",
+      "page": 30,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p031",
+      "deck_id": "w04-2",
+      "page": 31,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p032",
+      "deck_id": "w04-2",
+      "page": 32,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p033",
+      "deck_id": "w04-2",
+      "page": 33,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p034",
+      "deck_id": "w04-2",
+      "page": 34,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p035",
+      "deck_id": "w04-2",
+      "page": 35,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p036",
+      "deck_id": "w04-2",
+      "page": 36,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p037",
+      "deck_id": "w04-2",
+      "page": 37,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p038",
+      "deck_id": "w04-2",
+      "page": 38,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w04-2-p038",
+        "w04-2-p039"
+      ]
+    },
+    {
+      "slide_id": "w04-2-p039",
+      "deck_id": "w04-2",
+      "page": 39,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w04-2-p038",
+        "w04-2-p039"
+      ]
+    },
+    {
+      "slide_id": "w04-2-p040",
+      "deck_id": "w04-2",
+      "page": 40,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p041",
+      "deck_id": "w04-2",
+      "page": 41,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p042",
+      "deck_id": "w04-2",
+      "page": 42,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w04-2-p043",
+      "deck_id": "w04-2",
+      "page": 43,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p001",
+      "deck_id": "w05-1",
+      "page": 1,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p002",
+      "deck_id": "w05-1",
+      "page": 2,
+      "text_quality": "frontmatter",
+      "duplicate_group": [
+        "w05-1-p002",
+        "w05-1-p036"
+      ]
+    },
+    {
+      "slide_id": "w05-1-p003",
+      "deck_id": "w05-1",
+      "page": 3,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p004",
+      "deck_id": "w05-1",
+      "page": 4,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p005",
+      "deck_id": "w05-1",
+      "page": 5,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p006",
+      "deck_id": "w05-1",
+      "page": 6,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p007",
+      "deck_id": "w05-1",
+      "page": 7,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p008",
+      "deck_id": "w05-1",
+      "page": 8,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p009",
+      "deck_id": "w05-1",
+      "page": 9,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p010",
+      "deck_id": "w05-1",
+      "page": 10,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p011",
+      "deck_id": "w05-1",
+      "page": 11,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p012",
+      "deck_id": "w05-1",
+      "page": 12,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p013",
+      "deck_id": "w05-1",
+      "page": 13,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p014",
+      "deck_id": "w05-1",
+      "page": 14,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p015",
+      "deck_id": "w05-1",
+      "page": 15,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p016",
+      "deck_id": "w05-1",
+      "page": 16,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p017",
+      "deck_id": "w05-1",
+      "page": 17,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p018",
+      "deck_id": "w05-1",
+      "page": 18,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p019",
+      "deck_id": "w05-1",
+      "page": 19,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p020",
+      "deck_id": "w05-1",
+      "page": 20,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p021",
+      "deck_id": "w05-1",
+      "page": 21,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p022",
+      "deck_id": "w05-1",
+      "page": 22,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p023",
+      "deck_id": "w05-1",
+      "page": 23,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p024",
+      "deck_id": "w05-1",
+      "page": 24,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p025",
+      "deck_id": "w05-1",
+      "page": 25,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p026",
+      "deck_id": "w05-1",
+      "page": 26,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p027",
+      "deck_id": "w05-1",
+      "page": 27,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p028",
+      "deck_id": "w05-1",
+      "page": 28,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p029",
+      "deck_id": "w05-1",
+      "page": 29,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p030",
+      "deck_id": "w05-1",
+      "page": 30,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p031",
+      "deck_id": "w05-1",
+      "page": 31,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p032",
+      "deck_id": "w05-1",
+      "page": 32,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w05-1-p032",
+        "w05-1-p033"
+      ]
+    },
+    {
+      "slide_id": "w05-1-p033",
+      "deck_id": "w05-1",
+      "page": 33,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w05-1-p032",
+        "w05-1-p033"
+      ]
+    },
+    {
+      "slide_id": "w05-1-p034",
+      "deck_id": "w05-1",
+      "page": 34,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p035",
+      "deck_id": "w05-1",
+      "page": 35,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w05-1-p036",
+      "deck_id": "w05-1",
+      "page": 36,
+      "text_quality": "frontmatter",
+      "duplicate_group": [
+        "w05-1-p002",
+        "w05-1-p036"
+      ]
+    }
+  ]
+}

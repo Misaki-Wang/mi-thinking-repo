@@ -1,0 +1,5815 @@
+{
+  "schema_version": 1,
+  "session_id": "w10-1",
+  "deck_ids": [
+    "w10-1"
+  ],
+  "method": {
+    "id": "lexical-sequence-v1",
+    "description": "TF-IDF word/term-bigram cosine retrieval with optional unmatched paragraphs, monotonic slide-order context, and coarse source-linked preview topic hints; no proportional time mapping.",
+    "topic_hints": [
+      {
+        "start_seconds": 2016,
+        "start_page": 14
+      },
+      {
+        "start_seconds": 2671,
+        "start_page": 21
+      },
+      {
+        "start_seconds": 3402,
+        "start_page": 31
+      },
+      {
+        "start_seconds": 3664,
+        "start_page": 36
+      },
+      {
+        "start_seconds": 3904,
+        "start_page": 38
+      },
+      {
+        "start_seconds": 4142,
+        "start_page": 49
+      }
+    ],
+    "topic_hint_tolerance_seconds": 90,
+    "confidence_note": "Estimated and weak are qualitative evidence labels, not calibrated probabilities or verified video timestamps.",
+    "synchronization_note": "Only non-null slide_id associations drive automatic synchronization; candidate pages are suggestions for manual inspection.",
+    "limits": [
+      "A paragraph may span multiple slides.",
+      "Image-only, duplicate builds, questions, and unlectured pages can be unmatched.",
+      "Monotonic content order may leave revisited pages unmatched."
+    ]
+  },
+  "provenance": {
+    "transcript_path": ".work/transcripts/Sk_TYpA6DWA/data/blocks.en.json",
+    "transcript_sha256": "8d5a28d7055feb33267b05de6331f27b45a889fd13e594b07f8eb527accd4311",
+    "video_url": "https://youtu.be/Sk_TYpA6DWA?si=xI7BVwWyEQb31Wg8",
+    "english_markdown_path": "course/mit-mmai-2026/w10-1/transcript.en.md",
+    "english_markdown_sha256": "ea6c32dd6e23528481371057523d525d133ee824351c36efe3c6ee32b26c741c",
+    "catalog_sha256": "388d554bca0c00036eddf4e1e3998707bb8a2e06ed33bb5b04b22d1f64150217",
+    "slides": [
+      {
+        "deck_id": "w10-1",
+        "path": ".work/sources/w10-1/slides-pages.json",
+        "sha256": "8b807716a33105eedff7a2fedbe7bbf38aa78d2fb1db7e079d44fb7e45660c72",
+        "source_url": "https://mit-mi.github.io/mmai-course/spring2026/schedule/lec10.1 - interaction.pdf"
+      }
+    ],
+    "preview_path": "course/mit-mmai-2026/w10-1/preview.md",
+    "preview_sha256": "498137987e0241a234389d43b059a8738c3a6ae7387c322432f5f562accec76d",
+    "script_sha256": "2566062a3c210abc439af443dc55cd07fbd7a41b67eddef12b6eb9e125560a12"
+  },
+  "summary": {
+    "unmatched": 44,
+    "estimated": 20,
+    "weak": 25,
+    "total_blocks": 89,
+    "total_slides": 54,
+    "associated_slides": 24,
+    "recap_blocks": 0
+  },
+  "blocks": [
+    {
+      "block_id": "b000001",
+      "start_ms": 160,
+      "end_ms": 55840,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.463,
+          "evidence_terms": [
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p002",
+          "score": 0.345,
+          "evidence_terms": [
+            "grade",
+            "median",
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week",
+            "baseline"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p045",
+          "score": 0.1774,
+          "evidence_terms": [
+            "method",
+            "baseline"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p025",
+          "score": 0.1162,
+          "evidence_terms": [
+            "baseline"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000002",
+      "start_ms": 55840,
+      "end_ms": 113360,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p002",
+          "score": 0.4481,
+          "evidence_terms": [
+            "analysis",
+            "error",
+            "grade",
+            "median",
+            "tomorrow",
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week",
+            "baseline",
+            "model"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.4174,
+          "evidence_terms": [
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week",
+            "reasoning"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p045",
+          "score": 0.1921,
+          "evidence_terms": [
+            "method",
+            "result",
+            "baseline"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1448,
+          "evidence_terms": [
+            "method",
+            "training",
+            "function",
+            "reward",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000003",
+      "start_ms": 113360,
+      "end_ms": 155879,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.5546,
+          "evidence_terms": [
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p002",
+          "score": 0.2826,
+          "evidence_terms": [
+            "assignment",
+            "due",
+            "midterm",
+            "project",
+            "week"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p001",
+          "score": 0.1209,
+          "evidence_terms": [
+            "interactive",
+            "agent"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000004",
+      "start_ms": 157120,
+      "end_ms": 213200,
+      "slide_id": "w10-1-p003",
+      "score": 0.5124,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "inferential",
+        "local",
+        "modality",
+        "representation",
+        "usually",
+        "problem",
+        "structure",
+        "multiple",
+        "step",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p003",
+          "score": 0.5124,
+          "evidence_terms": [
+            "inferential",
+            "local",
+            "modality",
+            "representation",
+            "usually",
+            "problem",
+            "structure",
+            "multiple",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p023",
+          "score": 0.1656,
+          "evidence_terms": [
+            "element",
+            "representation",
+            "information"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.142,
+          "evidence_terms": [
+            "image",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1256,
+          "evidence_terms": [
+            "modality",
+            "problem",
+            "step",
+            "information",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000005",
+      "start_ms": 213200,
+      "end_ms": 269440,
+      "slide_id": "w10-1-p004",
+      "score": 0.2599,
+      "confidence": "weak",
+      "evidence_terms": [
+        "output",
+        "input",
+        "step",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2599,
+          "evidence_terms": [
+            "output",
+            "input",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p003",
+          "score": 0.2167,
+          "evidence_terms": [
+            "definition",
+            "structure",
+            "multiple",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.2043,
+          "evidence_terms": [
+            "chain",
+            "thought",
+            "input",
+            "step",
+            "language",
+            "model",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1473,
+          "evidence_terms": [
+            "planning",
+            "high",
+            "level",
+            "model",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000006",
+      "start_ms": 269440,
+      "end_ms": 324160,
+      "slide_id": "w10-1-p004",
+      "score": 0.1905,
+      "confidence": "weak",
+      "evidence_terms": [
+        "direct",
+        "training",
+        "step",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.221,
+          "evidence_terms": [
+            "directly",
+            "robotic",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.2166,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.2166,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1905,
+          "evidence_terms": [
+            "direct",
+            "training",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000007",
+      "start_ms": 324160,
+      "end_ms": 360680,
+      "slide_id": "w10-1-p004",
+      "score": 0.5781,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "fine",
+        "output",
+        "supervised",
+        "trace",
+        "tuning",
+        "input",
+        "prompting",
+        "step",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.5781,
+          "evidence_terms": [
+            "fine",
+            "output",
+            "supervised",
+            "trace",
+            "tuning",
+            "input",
+            "prompting",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.1257,
+          "evidence_terms": [
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1028,
+          "evidence_terms": [
+            "input",
+            "prompting",
+            "step",
+            "human",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p039",
+          "score": 0.1024,
+          "evidence_terms": [
+            "reasoning"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000008",
+      "start_ms": 360720,
+      "end_ms": 410840,
+      "slide_id": "w10-1-p004",
+      "score": 0.5724,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "assume",
+        "output",
+        "trace",
+        "input",
+        "method",
+        "reinforcement",
+        "function",
+        "reward",
+        "learning",
+        "step",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.5724,
+          "evidence_terms": [
+            "assume",
+            "output",
+            "trace",
+            "input",
+            "method",
+            "reinforcement",
+            "function",
+            "reward",
+            "learning",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1503,
+          "evidence_terms": [
+            "reinforcement",
+            "function",
+            "learning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.1019,
+          "evidence_terms": [
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.098,
+          "evidence_terms": [
+            "week",
+            "reasoning"
+          ],
+          "text_quality": "frontmatter"
+        }
+      ]
+    },
+    {
+      "block_id": "b000009",
+      "start_ms": 411120,
+      "end_ms": 468720,
+      "slide_id": "w10-1-p004",
+      "score": 0.2118,
+      "confidence": "weak",
+      "evidence_terms": [
+        "reinforcement",
+        "function",
+        "reward",
+        "learning",
+        "step"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2118,
+          "evidence_terms": [
+            "reinforcement",
+            "function",
+            "reward",
+            "learning",
+            "step"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.2053,
+          "evidence_terms": [
+            "reinforcement",
+            "function",
+            "learning",
+            "action"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.139,
+          "evidence_terms": [
+            "moving",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1259,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000010",
+      "start_ms": 468720,
+      "end_ms": 526320,
+      "slide_id": "w10-1-p006",
+      "score": 0.3456,
+      "confidence": "weak",
+      "evidence_terms": [
+        "negative",
+        "probability",
+        "gradient",
+        "policy"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p006",
+          "score": 0.3456,
+          "evidence_terms": [
+            "negative",
+            "probability",
+            "gradient",
+            "policy"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1907,
+          "evidence_terms": [
+            "gradient",
+            "policy",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p005",
+          "score": 0.1835,
+          "evidence_terms": [
+            "maximize",
+            "gradient",
+            "policy"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1819,
+          "evidence_terms": [
+            "reward",
+            "trajectory"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000011",
+      "start_ms": 526320,
+      "end_ms": 559959,
+      "slide_id": "w10-1-p006",
+      "score": 0.6155,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "decrease",
+        "increase",
+        "negative",
+        "positive",
+        "probability",
+        "gradient",
+        "policy"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p006",
+          "score": 0.6155,
+          "evidence_terms": [
+            "decrease",
+            "increase",
+            "negative",
+            "positive",
+            "probability",
+            "gradient",
+            "policy"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.2434,
+          "evidence_terms": [
+            "gradient",
+            "policy",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1726,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1283,
+          "evidence_terms": [
+            "output",
+            "function",
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000012",
+      "start_ms": 562560,
+      "end_ms": 619440,
+      "slide_id": "w10-1-p007",
+      "score": 0.601,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "average",
+        "higher",
+        "important",
+        "lower",
+        "meaningful",
+        "raw",
+        "relative",
+        "moving",
+        "reward",
+        "baseline"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.601,
+          "evidence_terms": [
+            "average",
+            "higher",
+            "important",
+            "lower",
+            "meaningful",
+            "raw",
+            "relative",
+            "moving",
+            "reward",
+            "baseline"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p006",
+          "score": 0.1901,
+          "evidence_terms": [
+            "negative",
+            "positive",
+            "probability"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p025",
+          "score": 0.1704,
+          "evidence_terms": [
+            "baseline"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1497,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000013",
+      "start_ms": 619440,
+      "end_ms": 676079,
+      "slide_id": "w10-1-p007",
+      "score": 0.2328,
+      "confidence": "weak",
+      "evidence_terms": [
+        "average",
+        "exponential",
+        "moving",
+        "policy",
+        "reward"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.2328,
+          "evidence_terms": [
+            "average",
+            "exponential",
+            "moving",
+            "policy",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.2177,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.2177,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.1838,
+          "evidence_terms": [
+            "generate",
+            "state",
+            "action"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000014",
+      "start_ms": 676079,
+      "end_ms": 733760,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1955,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1759,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.163,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.163,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000015",
+      "start_ms": 733760,
+      "end_ms": 789920,
+      "slide_id": "w10-1-p007",
+      "score": 0.2692,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "average",
+        "exponential",
+        "moving",
+        "policy",
+        "reward"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.2692,
+          "evidence_terms": [
+            "average",
+            "exponential",
+            "moving",
+            "policy",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1762,
+          "evidence_terms": [
+            "fine",
+            "tuning",
+            "reinforcement",
+            "reward",
+            "learning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.1366,
+          "evidence_terms": [
+            "trained",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1357,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000016",
+      "start_ms": 789920,
+      "end_ms": 829480,
+      "slide_id": "w10-1-p007",
+      "score": 0.3071,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "average",
+        "lower",
+        "gradient",
+        "policy",
+        "reward"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.3071,
+          "evidence_terms": [
+            "average",
+            "lower",
+            "gradient",
+            "policy",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p006",
+          "score": 0.1687,
+          "evidence_terms": [
+            "probability",
+            "gradient",
+            "policy"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1378,
+          "evidence_terms": [
+            "large",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.1199,
+          "evidence_terms": [
+            "language"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000017",
+      "start_ms": 832000,
+      "end_ms": 889120,
+      "slide_id": "w10-1-p009",
+      "score": 0.3178,
+      "confidence": "weak",
+      "evidence_terms": [
+        "medical",
+        "sensor",
+        "image",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.3178,
+          "evidence_terms": [
+            "medical",
+            "sensor",
+            "image",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1336,
+          "evidence_terms": [
+            "low",
+            "high",
+            "image",
+            "model",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p046",
+          "score": 0.1142,
+          "evidence_terms": [
+            "sery",
+            "key"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1139,
+          "evidence_terms": [
+            "input",
+            "reinforcement",
+            "learning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000018",
+      "start_ms": 889120,
+      "end_ms": 917800,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2225,
+          "evidence_terms": [
+            "reinforcement",
+            "reward",
+            "learning",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.2181,
+          "evidence_terms": [
+            "reward",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1606,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p005",
+          "score": 0.1159,
+          "evidence_terms": [
+            "maximize"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000019",
+      "start_ms": 921120,
+      "end_ms": 976560,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1951,
+          "evidence_terms": [
+            "output",
+            "reinforcement",
+            "reward",
+            "learning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1533,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.1511,
+          "evidence_terms": [
+            "week",
+            "reasoning"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1379,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000020",
+      "start_ms": 976560,
+      "end_ms": 1033120,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.2029,
+          "evidence_terms": [
+            "reward",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.196,
+          "evidence_terms": [
+            "important",
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.1903,
+          "evidence_terms": [
+            "text"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1839,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000021",
+      "start_ms": 1033120,
+      "end_ms": 1091520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.198,
+          "evidence_terms": [
+            "reinforcement",
+            "function",
+            "reward",
+            "learning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.193,
+          "evidence_terms": [
+            "reward",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1453,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1371,
+          "evidence_terms": [
+            "reinforcement",
+            "function",
+            "learning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000022",
+      "start_ms": 1091520,
+      "end_ms": 1148080,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1897,
+          "evidence_terms": [
+            "tuning",
+            "reinforcement",
+            "training",
+            "prompting",
+            "learning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.1429,
+          "evidence_terms": [
+            "generate",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1343,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1343,
+          "evidence_terms": [
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000023",
+      "start_ms": 1148080,
+      "end_ms": 1204960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.1748,
+          "evidence_terms": [
+            "image",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.1222,
+          "evidence_terms": [
+            "getting",
+            "processing",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.0981,
+          "evidence_terms": [
+            "accurate",
+            "improve"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.0901,
+          "evidence_terms": [
+            "image",
+            "model",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000024",
+      "start_ms": 1204960,
+      "end_ms": 1219720,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1322,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1206,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1206,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.1189,
+          "evidence_terms": [
+            "reward"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000025",
+      "start_ms": 1224880,
+      "end_ms": 1280480,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.2309,
+          "evidence_terms": [
+            "generate",
+            "state",
+            "action"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2297,
+          "evidence_terms": [
+            "output",
+            "input",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.2097,
+          "evidence_terms": [
+            "high",
+            "level",
+            "action",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.179,
+          "evidence_terms": [
+            "feedback",
+            "input",
+            "step",
+            "action",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000026",
+      "start_ms": 1280480,
+      "end_ms": 1337919,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p012",
+        "w10-1-p013"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.3074,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.3074,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.2068,
+          "evidence_terms": [
+            "text",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.1412,
+          "evidence_terms": [
+            "computer",
+            "web",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1368,
+          "evidence_terms": [
+            "digital",
+            "grounding",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000027",
+      "start_ms": 1337919,
+      "end_ms": 1394159,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w10-1-p010",
+        "w10-1-p053"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1681,
+          "evidence_terms": [
+            "digital",
+            "embodied",
+            "structure",
+            "world",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1637,
+          "evidence_terms": [
+            "digital",
+            "embodied",
+            "structure",
+            "world",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.1622,
+          "evidence_terms": [
+            "text",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p014",
+          "score": 0.1515,
+          "evidence_terms": [
+            "environment",
+            "feedback",
+            "action",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000028",
+      "start_ms": 1394159,
+      "end_ms": 1451440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.3043,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.3043,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.233,
+          "evidence_terms": [
+            "workflow",
+            "world",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.2268,
+          "evidence_terms": [
+            "workflow",
+            "world",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000029",
+      "start_ms": 1451440,
+      "end_ms": 1507120,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w10-1-p010",
+        "w10-1-p053"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.3345,
+          "evidence_terms": [
+            "evolving",
+            "workflow",
+            "optimization",
+            "self",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.3256,
+          "evidence_terms": [
+            "evolving",
+            "workflow",
+            "optimization",
+            "self",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.1267,
+          "evidence_terms": [
+            "computer",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.1146,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000030",
+      "start_ms": 1507120,
+      "end_ms": 1564960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w10-1-p010",
+        "w10-1-p053"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.2708,
+          "evidence_terms": [
+            "autonomous",
+            "interaction",
+            "workflow",
+            "structure",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.2636,
+          "evidence_terms": [
+            "autonomous",
+            "interaction",
+            "workflow",
+            "structure",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1615,
+          "evidence_terms": [
+            "integrate",
+            "key",
+            "information",
+            "memory",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p039",
+          "score": 0.1351,
+          "evidence_terms": [
+            "memory",
+            "reasoning"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000031",
+      "start_ms": 1564960,
+      "end_ms": 1621120,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w10-1-p010",
+        "w10-1-p053"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1839,
+          "evidence_terms": [
+            "user",
+            "success",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1733,
+          "evidence_terms": [
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1687,
+          "evidence_terms": [
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1149,
+          "evidence_terms": [
+            "output",
+            "step"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000032",
+      "start_ms": 1621120,
+      "end_ms": 1674640,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.1224,
+          "evidence_terms": [
+            "accurate",
+            "idea",
+            "problem",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.0956,
+          "evidence_terms": [
+            "autonomous",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.0935,
+          "evidence_terms": [
+            "popular",
+            "code",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.0931,
+          "evidence_terms": [
+            "autonomous",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000033",
+      "start_ms": 1674640,
+      "end_ms": 1724880,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1294,
+          "evidence_terms": [
+            "user",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1195,
+          "evidence_terms": [
+            "experience",
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1163,
+          "evidence_terms": [
+            "experience",
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.1048,
+          "evidence_terms": [
+            "automate",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000034",
+      "start_ms": 1724880,
+      "end_ms": 1755960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Similar adjacent/build slides; text cannot identify one page.",
+      "ambiguity_slide_ids": [
+        "w10-1-p010",
+        "w10-1-p053"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1571,
+          "evidence_terms": [
+            "autonomous",
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1529,
+          "evidence_terms": [
+            "autonomous",
+            "loop",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1523,
+          "evidence_terms": [
+            "data",
+            "code",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.1316,
+          "evidence_terms": [
+            "eventually",
+            "code",
+            "interactive",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000035",
+      "start_ms": 1757360,
+      "end_ms": 1812960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1811,
+          "evidence_terms": [
+            "self",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1763,
+          "evidence_terms": [
+            "self",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.1321,
+          "evidence_terms": [
+            "capability",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.0995,
+          "evidence_terms": [
+            "self",
+            "human"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000036",
+      "start_ms": 1812960,
+      "end_ms": 1868960,
+      "slide_id": "w10-1-p011",
+      "score": 0.4533,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "automate",
+        "computer",
+        "done",
+        "menial",
+        "opportunity",
+        "language",
+        "task",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.4533,
+          "evidence_terms": [
+            "automate",
+            "computer",
+            "done",
+            "menial",
+            "opportunity",
+            "language",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.3343,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.3343,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.1299,
+          "evidence_terms": [
+            "embodied",
+            "language",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000037",
+      "start_ms": 1868960,
+      "end_ms": 1925200,
+      "slide_id": "w10-1-p014",
+      "score": 0.5948,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "instruction",
+        "least",
+        "online",
+        "rating",
+        "ship",
+        "star",
+        "environment",
+        "purchase",
+        "set",
+        "earphone",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p014",
+          "score": 0.5948,
+          "evidence_terms": [
+            "instruction",
+            "least",
+            "online",
+            "rating",
+            "ship",
+            "star",
+            "environment",
+            "purchase",
+            "set",
+            "earphone",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1762,
+          "evidence_terms": [
+            "data",
+            "environment",
+            "shopping",
+            "designed",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p022",
+          "score": 0.1102,
+          "evidence_terms": [
+            "web",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1096,
+          "evidence_terms": [
+            "user",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000038",
+      "start_ms": 1925200,
+      "end_ms": 1960679,
+      "slide_id": "w10-1-p014",
+      "score": 0.2625,
+      "confidence": "weak",
+      "evidence_terms": [
+        "instruction",
+        "rating",
+        "star",
+        "earphone"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p014",
+          "score": 0.2625,
+          "evidence_terms": [
+            "instruction",
+            "rating",
+            "star",
+            "earphone"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1229,
+          "evidence_terms": [
+            "cart",
+            "add",
+            "click",
+            "search",
+            "web",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p033",
+          "score": 0.1216,
+          "evidence_terms": [
+            "earphone",
+            "price"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1204,
+          "evidence_terms": [
+            "click",
+            "search",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000039",
+      "start_ms": 1961200,
+      "end_ms": 2016399,
+      "slide_id": "w10-1-p015",
+      "score": 0.4592,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "amazon",
+        "data",
+        "easy",
+        "gitlab",
+        "reddit",
+        "website",
+        "environment",
+        "real",
+        "shopping",
+        "success",
+        "human",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.4592,
+          "evidence_terms": [
+            "amazon",
+            "data",
+            "easy",
+            "gitlab",
+            "reddit",
+            "website",
+            "environment",
+            "real",
+            "shopping",
+            "success",
+            "human",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p014",
+          "score": 0.1037,
+          "evidence_terms": [
+            "online",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.0998,
+          "evidence_terms": [
+            "user",
+            "success",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.0976,
+          "evidence_terms": [
+            "checkout",
+            "click",
+            "product",
+            "step",
+            "after",
+            "web",
+            "human",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000040",
+      "start_ms": 2016399,
+      "end_ms": 2071119,
+      "slide_id": "w10-1-p016",
+      "score": 0.3072,
+      "confidence": "weak",
+      "evidence_terms": [
+        "conveyed",
+        "easily",
+        "layout",
+        "length",
+        "messy",
+        "spatial",
+        "token",
+        "html",
+        "context",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.4051,
+          "evidence_terms": [
+            "text",
+            "llm",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.3072,
+          "evidence_terms": [
+            "conveyed",
+            "easily",
+            "layout",
+            "length",
+            "messy",
+            "spatial",
+            "token",
+            "html",
+            "context",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2947,
+          "evidence_terms": [
+            "difficult",
+            "easy",
+            "website",
+            "success",
+            "text",
+            "html",
+            "llm",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p023",
+          "score": 0.0982,
+          "evidence_terms": [
+            "html",
+            "context",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000041",
+      "start_ms": 2071119,
+      "end_ms": 2116760,
+      "slide_id": "w10-1-p016",
+      "score": 0.1815,
+      "confidence": "weak",
+      "evidence_terms": [
+        "beyond",
+        "layout",
+        "spatial",
+        "token",
+        "html",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p027",
+          "score": 0.2411,
+          "evidence_terms": [
+            "multimodal",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.1815,
+          "evidence_terms": [
+            "beyond",
+            "layout",
+            "spatial",
+            "token",
+            "html",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.1483,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.1483,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000042",
+      "start_ms": 2118079,
+      "end_ms": 2173920,
+      "slide_id": "w10-1-p017",
+      "score": 0.2625,
+      "confidence": "weak",
+      "evidence_terms": [
+        "track",
+        "benchmark",
+        "progress",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p017",
+          "score": 0.2625,
+          "evidence_terms": [
+            "track",
+            "benchmark",
+            "progress",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2151,
+          "evidence_terms": [
+            "source",
+            "website",
+            "shopping",
+            "designed",
+            "html",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1771,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1771,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000043",
+      "start_ms": 2173920,
+      "end_ms": 2204119,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1473,
+          "evidence_terms": [
+            "hover",
+            "click",
+            "action",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p017",
+          "score": 0.1407,
+          "evidence_terms": [
+            "benchmark",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1402,
+          "evidence_terms": [
+            "click",
+            "action",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1219,
+          "evidence_terms": [
+            "website",
+            "human",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000044",
+      "start_ms": 2204880,
+      "end_ms": 2262480,
+      "slide_id": "w10-1-p019",
+      "score": 0.2261,
+      "confidence": "weak",
+      "evidence_terms": [
+        "cheapest",
+        "photo",
+        "buy",
+        "shopping",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2585,
+          "evidence_terms": [
+            "difficult",
+            "easy",
+            "reddit",
+            "website",
+            "shopping",
+            "human",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p019",
+          "score": 0.2261,
+          "evidence_terms": [
+            "cheapest",
+            "photo",
+            "buy",
+            "shopping",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1154,
+          "evidence_terms": [
+            "buy",
+            "input",
+            "click",
+            "action",
+            "web",
+            "human",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p022",
+          "score": 0.1119,
+          "evidence_terms": [
+            "web",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000045",
+      "start_ms": 2262480,
+      "end_ms": 2291640,
+      "slide_id": "w10-1-p019",
+      "score": 0.7558,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "cheapest",
+        "color",
+        "emily",
+        "photo",
+        "place",
+        "printer",
+        "send",
+        "image"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p019",
+          "score": 0.7558,
+          "evidence_terms": [
+            "cheapest",
+            "color",
+            "emily",
+            "photo",
+            "place",
+            "printer",
+            "send",
+            "image"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p009",
+          "score": 0.0945,
+          "evidence_terms": [
+            "image"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000046",
+      "start_ms": 2303280,
+      "end_ms": 2361040,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.1569,
+          "evidence_terms": [
+            "state",
+            "action"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.143,
+          "evidence_terms": [
+            "output",
+            "input",
+            "method"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1408,
+          "evidence_terms": [
+            "desired",
+            "input",
+            "search",
+            "action",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1368,
+          "evidence_terms": [
+            "website",
+            "self",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000047",
+      "start_ms": 2361040,
+      "end_ms": 2415119,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p021",
+        "w10-1-p029"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p021",
+          "score": 0.2857,
+          "evidence_terms": [
+            "atla",
+            "desktop",
+            "mobile"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p029",
+          "score": 0.2857,
+          "evidence_terms": [
+            "atla",
+            "desktop",
+            "mobile"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1225,
+          "evidence_terms": [
+            "website",
+            "environment",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.0897,
+          "evidence_terms": [
+            "visual",
+            "price",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000048",
+      "start_ms": 2419040,
+      "end_ms": 2475280,
+      "slide_id": "w10-1-p019",
+      "score": 0.254,
+      "confidence": "weak",
+      "evidence_terms": [
+        "cheapest",
+        "printer",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p019",
+          "score": 0.254,
+          "evidence_terms": [
+            "cheapest",
+            "printer",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.0961,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.0961,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p025",
+          "score": 0.0811,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000049",
+      "start_ms": 2475280,
+      "end_ms": 2530960,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p019",
+          "score": 0.1798,
+          "evidence_terms": [
+            "printer",
+            "buy"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.0793,
+          "evidence_terms": [
+            "react",
+            "buy",
+            "prompting",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.0731,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.0731,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000050",
+      "start_ms": 2530960,
+      "end_ms": 2567800,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p020",
+          "score": 0.1449,
+          "evidence_terms": [
+            "wish",
+            "list",
+            "price"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p041",
+          "score": 0.1102,
+          "evidence_terms": [
+            "continuously",
+            "keep",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.1063,
+          "evidence_terms": [
+            "list",
+            "price"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000051",
+      "start_ms": 2569280,
+      "end_ms": 2613720,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p050",
+          "score": 0.1449,
+          "evidence_terms": [
+            "google"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.0933,
+          "evidence_terms": [
+            "search"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p048",
+          "score": 0.0831,
+          "evidence_terms": [
+            "searche",
+            "information"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.0827,
+          "evidence_terms": [
+            "data",
+            "easy"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000052",
+      "start_ms": 2617520,
+      "end_ms": 2671520,
+      "slide_id": "w10-1-p023",
+      "score": 0.1551,
+      "confidence": "weak",
+      "evidence_terms": [
+        "unnecessary",
+        "accessibility",
+        "tree",
+        "html",
+        "context"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2133,
+          "evidence_terms": [
+            "difficult",
+            "website",
+            "environment",
+            "text",
+            "html"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p023",
+          "score": 0.1551,
+          "evidence_terms": [
+            "unnecessary",
+            "accessibility",
+            "tree",
+            "html",
+            "context"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.1495,
+          "evidence_terms": [
+            "don",
+            "token",
+            "usually",
+            "html",
+            "context"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.0913,
+          "evidence_terms": [
+            "text"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000053",
+      "start_ms": 2671520,
+      "end_ms": 2727280,
+      "slide_id": "w10-1-p023",
+      "score": 0.1776,
+      "confidence": "weak",
+      "evidence_terms": [
+        "mark",
+        "representation",
+        "set"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p023",
+          "score": 0.1776,
+          "evidence_terms": [
+            "mark",
+            "representation",
+            "set"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1461,
+          "evidence_terms": [
+            "click",
+            "action"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1249,
+          "evidence_terms": [
+            "website",
+            "text"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.101,
+          "evidence_terms": [
+            "action",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000054",
+      "start_ms": 2727280,
+      "end_ms": 2784079,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.4758,
+          "evidence_terms": [
+            "text",
+            "llm",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p025",
+          "score": 0.2326,
+          "evidence_terms": [
+            "baseline",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2076,
+          "evidence_terms": [
+            "website",
+            "text",
+            "llm",
+            "human",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p027",
+          "score": 0.1828,
+          "evidence_terms": [
+            "multimodal",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p023",
+          "score": 0.1718,
+          "evidence_terms": [
+            "mark",
+            "representation",
+            "set",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000055",
+      "start_ms": 2784079,
+      "end_ms": 2833400,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1902,
+          "evidence_terms": [
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1902,
+          "evidence_terms": [
+            "vision",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p027",
+          "score": 0.1845,
+          "evidence_terms": [
+            "multimodal",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p045",
+          "score": 0.121,
+          "evidence_terms": [
+            "result",
+            "performance"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000056",
+      "start_ms": 2834240,
+      "end_ms": 2869880,
+      "slide_id": "w10-1-p028",
+      "score": 0.3486,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "blocking",
+        "posted",
+        "successful",
+        "user",
+        "success",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.3486,
+          "evidence_terms": [
+            "blocking",
+            "posted",
+            "successful",
+            "user",
+            "success",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1707,
+          "evidence_terms": [
+            "difficult",
+            "reddit",
+            "success",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p020",
+          "score": 0.1502,
+          "evidence_terms": [
+            "forum",
+            "navigate",
+            "post",
+            "list",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.109,
+          "evidence_terms": [
+            "click",
+            "search"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000057",
+      "start_ms": 2875119,
+      "end_ms": 2933520,
+      "slide_id": "w10-1-p030",
+      "score": 0.2478,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "horizon",
+        "stuck",
+        "long",
+        "planning",
+        "reasoning",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.2478,
+          "evidence_terms": [
+            "horizon",
+            "stuck",
+            "long",
+            "planning",
+            "reasoning",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1512,
+          "evidence_terms": [
+            "challenge",
+            "longer",
+            "problem",
+            "step",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1347,
+          "evidence_terms": [
+            "website",
+            "real",
+            "task",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.0951,
+          "evidence_terms": [
+            "planning",
+            "plan",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000058",
+      "start_ms": 2933520,
+      "end_ms": 2976599,
+      "slide_id": "w10-1-p030",
+      "score": 0.2949,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "failure",
+        "getting",
+        "horizon",
+        "processing",
+        "visual",
+        "long",
+        "planning",
+        "reasoning"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.2949,
+          "evidence_terms": [
+            "failure",
+            "getting",
+            "horizon",
+            "processing",
+            "visual",
+            "long",
+            "planning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p027",
+          "score": 0.1945,
+          "evidence_terms": [
+            "multimodal",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p003",
+          "score": 0.1352,
+          "evidence_terms": [
+            "modality",
+            "usually",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1284,
+          "evidence_terms": [
+            "challenge",
+            "complexity",
+            "modality",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000059",
+      "start_ms": 2981440,
+      "end_ms": 3038720,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1868,
+          "evidence_terms": [
+            "data",
+            "website",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p021",
+          "score": 0.1431,
+          "evidence_terms": [
+            "mobile"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p029",
+          "score": 0.1431,
+          "evidence_terms": [
+            "mobile"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.083,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000060",
+      "start_ms": 3038720,
+      "end_ms": 3094800,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.1825,
+          "evidence_terms": [
+            "data",
+            "website",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.116,
+          "evidence_terms": [
+            "end",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.0766,
+          "evidence_terms": [
+            "layout",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000061",
+      "start_ms": 3094800,
+      "end_ms": 3143079,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.319,
+          "evidence_terms": [
+            "text",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p015",
+          "score": 0.2439,
+          "evidence_terms": [
+            "website",
+            "text",
+            "html",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.1845,
+          "evidence_terms": [
+            "don",
+            "easily",
+            "process",
+            "html",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.0794,
+          "evidence_terms": [
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000062",
+      "start_ms": 3146480,
+      "end_ms": 3203440,
+      "slide_id": "w10-1-p031",
+      "score": 0.4384,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "observed",
+        "planning",
+        "objective",
+        "low",
+        "plan",
+        "high",
+        "level",
+        "action",
+        "reasoning",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.4384,
+          "evidence_terms": [
+            "observed",
+            "planning",
+            "objective",
+            "low",
+            "plan",
+            "high",
+            "level",
+            "action",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p033",
+          "score": 0.2567,
+          "evidence_terms": [
+            "understand",
+            "low",
+            "plan",
+            "high",
+            "level"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.2187,
+          "evidence_terms": [
+            "horizon",
+            "processing",
+            "visual",
+            "complex",
+            "long",
+            "planning",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.2092,
+          "evidence_terms": [
+            "low",
+            "plan",
+            "high",
+            "level",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000063",
+      "start_ms": 3203440,
+      "end_ms": 3260000,
+      "slide_id": "w10-1-p031",
+      "score": 0.3839,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "observed",
+        "type",
+        "click",
+        "low",
+        "plan",
+        "high",
+        "level",
+        "stop",
+        "action",
+        "model",
+        "reasoning",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.3839,
+          "evidence_terms": [
+            "observed",
+            "type",
+            "click",
+            "low",
+            "plan",
+            "high",
+            "level",
+            "stop",
+            "action",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.3305,
+          "evidence_terms": [
+            "budget",
+            "confused",
+            "pouch",
+            "rated",
+            "switch",
+            "under",
+            "within",
+            "buy",
+            "category",
+            "highest",
+            "click",
+            "product"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.2248,
+          "evidence_terms": [
+            "click",
+            "product",
+            "low",
+            "search",
+            "level",
+            "action",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.1797,
+          "evidence_terms": [
+            "highest",
+            "loop",
+            "low",
+            "plan",
+            "high",
+            "level",
+            "stop",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000064",
+      "start_ms": 3260000,
+      "end_ms": 3315359,
+      "slide_id": "w10-1-p032",
+      "score": 0.1828,
+      "confidence": "weak",
+      "evidence_terms": [
+        "cart",
+        "checkout",
+        "pouch",
+        "switch",
+        "search",
+        "step",
+        "action",
+        "model",
+        "reasoning",
+        "task"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1828,
+          "evidence_terms": [
+            "cart",
+            "checkout",
+            "pouch",
+            "switch",
+            "search",
+            "step",
+            "action",
+            "model",
+            "reasoning",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1646,
+          "evidence_terms": [
+            "action",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1646,
+          "evidence_terms": [
+            "action",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.1488,
+          "evidence_terms": [
+            "ground",
+            "truth",
+            "zero",
+            "shot",
+            "plan",
+            "price",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000065",
+      "start_ms": 3315359,
+      "end_ms": 3336440,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1861,
+          "evidence_terms": [
+            "prompting",
+            "step"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p011",
+          "score": 0.1237,
+          "evidence_terms": [
+            "capability",
+            "web",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1142,
+          "evidence_terms": [
+            "tool",
+            "prompting",
+            "step",
+            "web",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.0927,
+          "evidence_terms": [
+            "planning",
+            "plan",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000066",
+      "start_ms": 3339440,
+      "end_ms": 3342520,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": []
+    },
+    {
+      "block_id": "b000067",
+      "start_ms": 3345520,
+      "end_ms": 3402160,
+      "slide_id": "w10-1-p033",
+      "score": 0.5816,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "annotated",
+        "hard",
+        "range",
+        "item",
+        "market",
+        "wireless",
+        "earphone",
+        "low",
+        "plan",
+        "high",
+        "price",
+        "human"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p033",
+          "score": 0.5816,
+          "evidence_terms": [
+            "annotated",
+            "hard",
+            "range",
+            "item",
+            "market",
+            "wireless",
+            "earphone",
+            "low",
+            "plan",
+            "high",
+            "price",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.5239,
+          "evidence_terms": [
+            "lowest",
+            "highest",
+            "range",
+            "item",
+            "market",
+            "wireless",
+            "earphone",
+            "loop",
+            "low",
+            "plan",
+            "high",
+            "price"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.3159,
+          "evidence_terms": [
+            "market",
+            "wireless",
+            "earphone",
+            "plan",
+            "high",
+            "price",
+            "human",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1681,
+          "evidence_terms": [
+            "planning",
+            "click",
+            "low",
+            "plan",
+            "high",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000068",
+      "start_ms": 3402160,
+      "end_ms": 3459040,
+      "slide_id": "w10-1-p034",
+      "score": 0.4189,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "correct",
+        "lowest",
+        "few",
+        "highest",
+        "range",
+        "shot",
+        "clarification",
+        "earphone",
+        "low",
+        "plan",
+        "high",
+        "price"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.4189,
+          "evidence_terms": [
+            "correct",
+            "lowest",
+            "few",
+            "highest",
+            "range",
+            "shot",
+            "clarification",
+            "earphone",
+            "low",
+            "plan",
+            "high",
+            "price"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p033",
+          "score": 0.3237,
+          "evidence_terms": [
+            "annotated",
+            "range",
+            "earphone",
+            "low",
+            "plan",
+            "high",
+            "price",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.3107,
+          "evidence_terms": [
+            "few",
+            "shot",
+            "clarification",
+            "earphone",
+            "plan",
+            "high",
+            "price",
+            "human",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1568,
+          "evidence_terms": [
+            "return",
+            "low",
+            "plan",
+            "high",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000069",
+      "start_ms": 3459040,
+      "end_ms": 3476520,
+      "slide_id": "w10-1-p034",
+      "score": 0.328,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "clarification",
+        "earphone",
+        "low",
+        "plan",
+        "high",
+        "human",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.328,
+          "evidence_terms": [
+            "clarification",
+            "earphone",
+            "low",
+            "plan",
+            "high",
+            "human",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.2857,
+          "evidence_terms": [
+            "clarification",
+            "earphone",
+            "plan",
+            "high",
+            "human",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p033",
+          "score": 0.2803,
+          "evidence_terms": [
+            "earphone",
+            "low",
+            "plan",
+            "high",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1857,
+          "evidence_terms": [
+            "low",
+            "plan",
+            "high",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000070",
+      "start_ms": 3480000,
+      "end_ms": 3537599,
+      "slide_id": "w10-1-p035",
+      "score": 0.2236,
+      "confidence": "weak",
+      "evidence_terms": [
+        "estimate",
+        "uncertainty",
+        "uncertain",
+        "clarification",
+        "plan",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.2236,
+          "evidence_terms": [
+            "estimate",
+            "uncertainty",
+            "uncertain",
+            "clarification",
+            "plan",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p034",
+          "score": 0.1254,
+          "evidence_terms": [
+            "asking",
+            "uncertain",
+            "clarification",
+            "low",
+            "plan",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1014,
+          "evidence_terms": [
+            "planning",
+            "low",
+            "plan",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.094,
+          "evidence_terms": [
+            "generate",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000071",
+      "start_ms": 3537599,
+      "end_ms": 3593920,
+      "slide_id": "w10-1-p035",
+      "score": 0.214,
+      "confidence": "weak",
+      "evidence_terms": [
+        "sampling",
+        "uncertainty",
+        "multiple",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.214,
+          "evidence_terms": [
+            "sampling",
+            "uncertainty",
+            "multiple",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.1203,
+          "evidence_terms": [
+            "output"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1031,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1031,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000072",
+      "start_ms": 3593920,
+      "end_ms": 3652319,
+      "slide_id": "w10-1-p035",
+      "score": 0.1639,
+      "confidence": "weak",
+      "evidence_terms": [
+        "sampling",
+        "uncertainty",
+        "clarification",
+        "multiple",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.1639,
+          "evidence_terms": [
+            "sampling",
+            "uncertainty",
+            "clarification",
+            "multiple",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.1046,
+          "evidence_terms": [
+            "internal",
+            "answer"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p006",
+          "score": 0.0897,
+          "evidence_terms": [
+            "probability"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.0885,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000073",
+      "start_ms": 3652319,
+      "end_ms": 3661400,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p043",
+          "score": 0.1196,
+          "evidence_terms": [
+            "token"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.1141,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.1141,
+          "evidence_terms": [
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p030",
+          "score": 0.1006,
+          "evidence_terms": [
+            "common"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000074",
+      "start_ms": 3664240,
+      "end_ms": 3715280,
+      "slide_id": "w10-1-p035",
+      "score": 0.1546,
+      "confidence": "weak",
+      "evidence_terms": [
+        "uncertain",
+        "plan",
+        "high",
+        "level",
+        "model"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1625,
+          "evidence_terms": [
+            "outcome"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1624,
+          "evidence_terms": [
+            "planning",
+            "plan",
+            "high",
+            "level",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.1546,
+          "evidence_terms": [
+            "uncertain",
+            "plan",
+            "high",
+            "level",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1277,
+          "evidence_terms": [
+            "purchase",
+            "product",
+            "search",
+            "level"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000075",
+      "start_ms": 3715280,
+      "end_ms": 3771760,
+      "slide_id": "w10-1-p036",
+      "score": 0.2561,
+      "confidence": "weak",
+      "evidence_terms": [
+        "value",
+        "click",
+        "product",
+        "search"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.2561,
+          "evidence_terms": [
+            "value",
+            "click",
+            "product",
+            "search"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.1575,
+          "evidence_terms": [
+            "value",
+            "problem",
+            "trajectory",
+            "search"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1559,
+          "evidence_terms": [
+            "within",
+            "click",
+            "product",
+            "search",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1252,
+          "evidence_terms": [
+            "certain",
+            "trajectory",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000076",
+      "start_ms": 3771760,
+      "end_ms": 3827280,
+      "slide_id": "w10-1-p037",
+      "score": 0.1706,
+      "confidence": "weak",
+      "evidence_terms": [
+        "gemini",
+        "parallel",
+        "function",
+        "trajectory",
+        "search",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.1706,
+          "evidence_terms": [
+            "gemini",
+            "parallel",
+            "function",
+            "trajectory",
+            "search",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1376,
+          "evidence_terms": [
+            "searching",
+            "function",
+            "search",
+            "action",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.1269,
+          "evidence_terms": [
+            "estimating",
+            "sampling",
+            "uncertainty",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.1236,
+          "evidence_terms": [
+            "reward",
+            "trajectory"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000077",
+      "start_ms": 3827280,
+      "end_ms": 3882799,
+      "slide_id": "w10-1-p037",
+      "score": 0.2774,
+      "confidence": "estimated",
+      "evidence_terms": [
+        "ranking",
+        "research",
+        "value",
+        "function",
+        "trajectory",
+        "search"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p037",
+          "score": 0.2774,
+          "evidence_terms": [
+            "ranking",
+            "research",
+            "value",
+            "function",
+            "trajectory",
+            "search"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p036",
+          "score": 0.1684,
+          "evidence_terms": [
+            "value",
+            "function",
+            "search"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p043",
+          "score": 0.1543,
+          "evidence_terms": [
+            "art",
+            "result",
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1443,
+          "evidence_terms": [
+            "successful",
+            "trajectory"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000078",
+      "start_ms": 3882799,
+      "end_ms": 3898200,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p028",
+          "score": 0.1261,
+          "evidence_terms": [
+            "trajectory"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1061,
+          "evidence_terms": [
+            "end"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p007",
+          "score": 0.0898,
+          "evidence_terms": [
+            "important"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p042",
+          "score": 0.0872,
+          "evidence_terms": [
+            "trajectory"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000079",
+      "start_ms": 3904559,
+      "end_ms": 3959200,
+      "slide_id": "w10-1-p038",
+      "score": 0.2071,
+      "confidence": "weak",
+      "evidence_terms": [
+        "longer",
+        "context",
+        "information",
+        "memory",
+        "model",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.2071,
+          "evidence_terms": [
+            "longer",
+            "context",
+            "information",
+            "memory",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.1272,
+          "evidence_terms": [
+            "planning",
+            "high",
+            "level",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p035",
+          "score": 0.1237,
+          "evidence_terms": [
+            "sampling",
+            "clarification",
+            "multiple",
+            "high",
+            "level",
+            "human",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p016",
+          "score": 0.1176,
+          "evidence_terms": [
+            "length",
+            "context",
+            "human",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000080",
+      "start_ms": 3959200,
+      "end_ms": 4015039,
+      "slide_id": "w10-1-p038",
+      "score": 0.4025,
+      "confidence": "weak",
+      "evidence_terms": [
+        "previous",
+        "constant",
+        "internal",
+        "context",
+        "state",
+        "information",
+        "memory",
+        "model",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.4088,
+          "evidence_terms": [
+            "internal",
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.4025,
+          "evidence_terms": [
+            "previous",
+            "constant",
+            "internal",
+            "context",
+            "state",
+            "information",
+            "memory",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p041",
+          "score": 0.392,
+          "evidence_terms": [
+            "query",
+            "constant",
+            "internal",
+            "context",
+            "state",
+            "memory",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p039",
+          "score": 0.2947,
+          "evidence_terms": [
+            "efficient",
+            "memory"
+          ],
+          "text_quality": "sparse-text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000081",
+      "start_ms": 4015039,
+      "end_ms": 4065559,
+      "slide_id": "w10-1-p041",
+      "score": 0.3606,
+      "confidence": "weak",
+      "evidence_terms": [
+        "force",
+        "keep",
+        "query",
+        "internal",
+        "context",
+        "state",
+        "step"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.4264,
+          "evidence_terms": [
+            "internal",
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p041",
+          "score": 0.3606,
+          "evidence_terms": [
+            "force",
+            "keep",
+            "query",
+            "internal",
+            "context",
+            "state",
+            "step"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.3241,
+          "evidence_terms": [
+            "previous",
+            "internal",
+            "context",
+            "state",
+            "step",
+            "information",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p044",
+          "score": 0.1458,
+          "evidence_terms": [
+            "existing",
+            "state",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000082",
+      "start_ms": 4069119,
+      "end_ms": 4080599,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p041",
+          "score": 0.1385,
+          "evidence_terms": [
+            "keep",
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p040",
+          "score": 0.1251,
+          "evidence_terms": [
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p044",
+          "score": 0.1158,
+          "evidence_terms": [
+            "multiple",
+            "state"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p048",
+          "score": 0.07,
+          "evidence_terms": [
+            "document"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000083",
+      "start_ms": 4085920,
+      "end_ms": 4142880,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Sequence candidate conflicts with substantially stronger text evidence.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p026",
+          "score": 0.3255,
+          "evidence_terms": [
+            "text",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p039",
+          "score": 0.2378,
+          "evidence_terms": [
+            "efficient",
+            "memory"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p041",
+          "score": 0.1735,
+          "evidence_terms": [
+            "keep",
+            "internal",
+            "context",
+            "memory",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p038",
+          "score": 0.1482,
+          "evidence_terms": [
+            "internal",
+            "context",
+            "memory",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000084",
+      "start_ms": 4142880,
+      "end_ms": 4199120,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.3756,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.3756,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p012",
+          "score": 0.1899,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p013",
+          "score": 0.1899,
+          "evidence_terms": [
+            "language",
+            "agent"
+          ],
+          "text_quality": "sparse-text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.1856,
+          "evidence_terms": [
+            "vision",
+            "language",
+            "model",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000085",
+      "start_ms": 4199120,
+      "end_ms": 4256800,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.3294,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.3294,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2519,
+          "evidence_terms": [
+            "fine",
+            "output",
+            "tuning",
+            "input",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.228,
+          "evidence_terms": [
+            "robotic",
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000086",
+      "start_ms": 4256800,
+      "end_ms": 4314080,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.2403,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.2403,
+          "evidence_terms": [
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1332,
+          "evidence_terms": [
+            "input",
+            "add",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p031",
+          "score": 0.114,
+          "evidence_terms": [
+            "image",
+            "action",
+            "model"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000087",
+      "start_ms": 4314080,
+      "end_ms": 4364600,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "Duplicate extracted text; exact slide build is unsupported.",
+      "ambiguity_slide_ids": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p051",
+          "score": 0.3369,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p052",
+          "score": 0.3369,
+          "evidence_terms": [
+            "vision",
+            "action",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p049",
+          "score": 0.283,
+          "evidence_terms": [
+            "robotic",
+            "trained",
+            "vision",
+            "language",
+            "model"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.18,
+          "evidence_terms": [
+            "frozen",
+            "large",
+            "input",
+            "action",
+            "language",
+            "model",
+            "task"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000088",
+      "start_ms": 4367520,
+      "end_ms": 4424640,
+      "slide_id": "w10-1-p053",
+      "score": 0.2532,
+      "confidence": "weak",
+      "evidence_terms": [
+        "digital",
+        "summary",
+        "workflow",
+        "embodied",
+        "llm",
+        "loop",
+        "human",
+        "language",
+        "agent"
+      ],
+      "reason": "Lexical evidence with page-order context; not video-frame verification.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.2532,
+          "evidence_terms": [
+            "digital",
+            "summary",
+            "workflow",
+            "embodied",
+            "llm",
+            "loop",
+            "human",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p004",
+          "score": 0.2343,
+          "evidence_terms": [
+            "output",
+            "input",
+            "reinforcement",
+            "prompting",
+            "learning",
+            "step",
+            "reasoning"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.2298,
+          "evidence_terms": [
+            "digital",
+            "workflow",
+            "embodied",
+            "llm",
+            "loop",
+            "human",
+            "language",
+            "agent"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p032",
+          "score": 0.1595,
+          "evidence_terms": [
+            "input",
+            "prompting",
+            "search",
+            "step",
+            "action",
+            "human",
+            "language",
+            "model",
+            "reasoning",
+            "agent"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    },
+    {
+      "block_id": "b000089",
+      "start_ms": 4424640,
+      "end_ms": 4450560,
+      "slide_id": null,
+      "score": null,
+      "confidence": "unmatched",
+      "evidence_terms": [],
+      "reason": "No supported sequential text match.",
+      "ambiguity_slide_ids": [],
+      "candidates": [
+        {
+          "slide_id": "w10-1-p054",
+          "score": 0.3578,
+          "evidence_terms": [
+            "midterm",
+            "project",
+            "week"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p002",
+          "score": 0.2035,
+          "evidence_terms": [
+            "midterm",
+            "project",
+            "week"
+          ],
+          "text_quality": "frontmatter"
+        },
+        {
+          "slide_id": "w10-1-p010",
+          "score": 0.1258,
+          "evidence_terms": [
+            "loop",
+            "human"
+          ],
+          "text_quality": "text"
+        },
+        {
+          "slide_id": "w10-1-p053",
+          "score": 0.1224,
+          "evidence_terms": [
+            "loop",
+            "human"
+          ],
+          "text_quality": "text"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": "w10-1-p001",
+      "deck_id": "w10-1",
+      "page": 1,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p002",
+      "deck_id": "w10-1",
+      "page": 2,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p003",
+      "deck_id": "w10-1",
+      "page": 3,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p004",
+      "deck_id": "w10-1",
+      "page": 4,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p005",
+      "deck_id": "w10-1",
+      "page": 5,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p006",
+      "deck_id": "w10-1",
+      "page": 6,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p007",
+      "deck_id": "w10-1",
+      "page": 7,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p008",
+      "deck_id": "w10-1",
+      "page": 8,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p009",
+      "deck_id": "w10-1",
+      "page": 9,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p010",
+      "deck_id": "w10-1",
+      "page": 10,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p011",
+      "deck_id": "w10-1",
+      "page": 11,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p012",
+      "deck_id": "w10-1",
+      "page": 12,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w10-1-p012",
+        "w10-1-p013"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p013",
+      "deck_id": "w10-1",
+      "page": 13,
+      "text_quality": "sparse-text",
+      "duplicate_group": [
+        "w10-1-p012",
+        "w10-1-p013"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p014",
+      "deck_id": "w10-1",
+      "page": 14,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p015",
+      "deck_id": "w10-1",
+      "page": 15,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p016",
+      "deck_id": "w10-1",
+      "page": 16,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p017",
+      "deck_id": "w10-1",
+      "page": 17,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p018",
+      "deck_id": "w10-1",
+      "page": 18,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p019",
+      "deck_id": "w10-1",
+      "page": 19,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p020",
+      "deck_id": "w10-1",
+      "page": 20,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p021",
+      "deck_id": "w10-1",
+      "page": 21,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w10-1-p021",
+        "w10-1-p029"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p022",
+      "deck_id": "w10-1",
+      "page": 22,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p023",
+      "deck_id": "w10-1",
+      "page": 23,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p024",
+      "deck_id": "w10-1",
+      "page": 24,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p025",
+      "deck_id": "w10-1",
+      "page": 25,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p026",
+      "deck_id": "w10-1",
+      "page": 26,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p027",
+      "deck_id": "w10-1",
+      "page": 27,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p028",
+      "deck_id": "w10-1",
+      "page": 28,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p029",
+      "deck_id": "w10-1",
+      "page": 29,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w10-1-p021",
+        "w10-1-p029"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p030",
+      "deck_id": "w10-1",
+      "page": 30,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p031",
+      "deck_id": "w10-1",
+      "page": 31,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p032",
+      "deck_id": "w10-1",
+      "page": 32,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p033",
+      "deck_id": "w10-1",
+      "page": 33,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p034",
+      "deck_id": "w10-1",
+      "page": 34,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p035",
+      "deck_id": "w10-1",
+      "page": 35,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p036",
+      "deck_id": "w10-1",
+      "page": 36,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p037",
+      "deck_id": "w10-1",
+      "page": 37,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p038",
+      "deck_id": "w10-1",
+      "page": 38,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p039",
+      "deck_id": "w10-1",
+      "page": 39,
+      "text_quality": "sparse-text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p040",
+      "deck_id": "w10-1",
+      "page": 40,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p041",
+      "deck_id": "w10-1",
+      "page": 41,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p042",
+      "deck_id": "w10-1",
+      "page": 42,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p043",
+      "deck_id": "w10-1",
+      "page": 43,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p044",
+      "deck_id": "w10-1",
+      "page": 44,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p045",
+      "deck_id": "w10-1",
+      "page": 45,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p046",
+      "deck_id": "w10-1",
+      "page": 46,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p047",
+      "deck_id": "w10-1",
+      "page": 47,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p048",
+      "deck_id": "w10-1",
+      "page": 48,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p049",
+      "deck_id": "w10-1",
+      "page": 49,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p050",
+      "deck_id": "w10-1",
+      "page": 50,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p051",
+      "deck_id": "w10-1",
+      "page": 51,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p052",
+      "deck_id": "w10-1",
+      "page": 52,
+      "text_quality": "text",
+      "duplicate_group": [
+        "w10-1-p051",
+        "w10-1-p052"
+      ]
+    },
+    {
+      "slide_id": "w10-1-p053",
+      "deck_id": "w10-1",
+      "page": 53,
+      "text_quality": "text",
+      "duplicate_group": []
+    },
+    {
+      "slide_id": "w10-1-p054",
+      "deck_id": "w10-1",
+      "page": 54,
+      "text_quality": "frontmatter",
+      "duplicate_group": []
+    }
+  ]
+}

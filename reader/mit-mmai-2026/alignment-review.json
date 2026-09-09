@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "overrides": [
+    {
+      "session_id": "w05-1",
+      "block_id": "b000006",
+      "slide_id": "w04-2-p015",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: the paragraph explicitly describes positive pairs in a numerator and negative pairs in the denominator; the prior deck's CLIP slide shows this InfoNCE fraction. Page 13 shows a margin loss instead. This is a topic association, not a verified screen timestamp.",
+      "evidence_terms": ["positive pairs", "numerator", "negative pairs", "InfoNCE"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000007",
+      "slide_id": "w04-2-p020",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: 'ratio of data from your joint distribution' to 'product of marginal distributions' and captured mutual information correspond to the critic-function ratio and mutual-information lower bound displayed on page 20.",
+      "evidence_terms": ["joint distribution", "marginal distributions", "mutual information", "contrastive learning"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000008",
+      "slide_id": "w04-2-p021",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: the paragraph contrasts 'enough signal' with 'too much signal and too much noise'; page 21 explicitly contrasts not enough signal, just right, and too much noise in multiview redundancy. The paragraph also contains a student question about this same diagram.",
+      "evidence_terms": ["shared space", "noise", "signal", "overlap"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000009",
+      "slide_id": "w04-2-p021",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: the speaker refers to 'this circle with the label Y inside of it' and says Y can be smaller than the shared information; the visually inspected page 21 contains those labeled overlapping circles. The paragraph ends by transitioning to fission.",
+      "evidence_terms": ["circle", "label Y", "shared information", "noise"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000010",
+      "slide_id": "w04-2-p022",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: 'two modalities' producing 'three ... representations', followed by 'more fine grain', directly describes page 22's modality-level and fine-grained representation-fission diagrams.",
+      "evidence_terms": ["fission", "three representations", "modality level", "fine grain"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000011",
+      "slide_id": "w04-2-p023",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: the speaker distinguishes shared people/objects from language syntax/grammar and visual texture/depth/perspective. The visually inspected modality-level fission slide lists the same unique and shared information. The final sentence begins the next factorized-learning topic.",
+      "evidence_terms": ["syntactic structure", "texture", "depth", "perspective", "unique"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000012",
+      "slide_id": "w04-2-p025",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: image-image augmentations, image-text contrastive learning, and text-text self-contrastive learning correspond to the three arrows labeled Self CL / Cross-modal CL / Self CL on page 25. The generic page 13 lacks these unique-information branches.",
+      "evidence_terms": ["augmentations", "self-contrastive learning", "image and text", "unique information"]
+    },
+    {
+      "session_id": "w05-1",
+      "block_id": "b000013",
+      "slide_id": "w04-2-p025",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: text augmentations and three representations for overlap, vision-only, and language-only continue the factorized contrastive-learning diagram on page 25. The earlier CLIP slide does not contain this three-way factorization.",
+      "evidence_terms": ["augmenting the text", "self-contrastive learning", "three representations", "vision only", "language only"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000007",
+      "slide_id": "w14-2-p005",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: the speaker introduces a smell-detection demo with jars of spices and oregano; page 5 visibly shows the 'Smell Sensor Detection (Oregano)' demo with spice jars. Only the PDF's still frame was checked, not the video playback timing.",
+      "evidence_terms": ["spices", "oregano", "smell sensing", "demo"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000008",
+      "slide_id": "w14-2-p006",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: 'video in static form', a blue gas-sensing chip, the substance container, and temperature sensing correspond to page 6's sensor-setup photograph and CO/temperature plots. The spoken hardware details are more specific than the extracted PDF text.",
+      "evidence_terms": ["blue chip", "container", "temperature", "sensor"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000009",
+      "slide_id": "w14-2-p006",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: 'jagged ups and downs' of gas and atmospheric time series and model predictions match page 6's CO/temperature curves and top-five prediction chart. The paragraph ends by introducing the following data-collection topic.",
+      "evidence_terms": ["time series", "temperature", "predictions", "gases"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000010",
+      "slide_id": "w14-2-p007",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: 50 substances across nuts/spices/herbs/fruits/vegetables and 10-minute, 600-reading collection correspond to the visible page 7 data-collection pipeline, including those categories and its 10-minute sensor-reading stage.",
+      "evidence_terms": ["50 substances", "10 minutes", "600 readings", "data collection"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000012",
+      "slide_id": "w14-2-p008",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: fruit-category PCA clusters that separate or overlap correspond to page 8's Fruits PCA plot; the paragraph then discusses sensor-resolution limitations in response to a question.",
+      "evidence_terms": ["PCA", "fruits", "separated", "overlapping"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000014",
+      "slide_id": "w14-2-p009",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: the discussion of transference moves explicitly to sensor representations aligned with GCMS; page 9 visibly contains the sensor-representation and GC-MS-representation branches plus modality alignment.",
+      "evidence_terms": ["transference", "sensor representations", "GCMS", "alignment"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000015",
+      "slide_id": "w14-2-p009",
+      "confidence": "estimated",
+      "reason": "Editorial topic match: the extended explanation of gas chromatography / mass spectroscopy provides background for the GC-MS data and representation branch drawn on page 9. It does not establish an exact slide transition.",
+      "evidence_terms": ["gas chromatography", "mass spectroscopy", "GCMS", "chemical components"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000016",
+      "slide_id": "w14-2-p009",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: contrastive alignment of low-cost sensor representations to corresponding GCMS representations is explicitly shown in page 9's contrastive-learning branch and similarity score.",
+      "evidence_terms": ["contrastive learning", "GCMS representations", "sensor representations", "paired data"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000017",
+      "slide_id": "w14-2-p009",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: the speaker finishes co-learning and then explains 'first order temporal difference' as relative rather than absolute sensor values. Page 9 shows this preprocessing operation; page 10 is the subsequent model-comparison results chart.",
+      "evidence_terms": ["co-learning", "first order temporal difference", "relative changes", "sensor"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000018",
+      "slide_id": "w14-2-p010",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: comparison of MLP, 1D CNN, LSTM and ScentFormer with regular versus contrastive learning corresponds to the four grouped charts and their legend on page 10.",
+      "evidence_terms": ["MLP", "CNN", "LSTM", "ScentFormer", "contrastive"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000019",
+      "slide_id": "w14-2-p011",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: peanut/no-peanut fine-tuning for allergic users corresponds to page 11 'Applications in Allergen Detection', whose still frame visibly shows peanut-butter packaging and a peanut-detection result.",
+      "evidence_terms": ["peanuts", "fine-tune", "allergic", "detection"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000022",
+      "slide_id": "w14-2-p013",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: mixtures of 12 base smells in a wearable necklace correspond to page 13's visible necklace, twelve-component ratio vector, and base-odorant diagram. This assigns a representative explanatory slide to the topic, not the blank demo still on page 12.",
+      "evidence_terms": ["12 base smells", "necklace", "mixtures", "wearable"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000023",
+      "slide_id": "w14-2-p013",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: a salad photo plus optional textual description being decomposed by a multimodal LLM correspond to the salad input and zero-shot AI-reasoning branch visible on page 13.",
+      "evidence_terms": ["salad", "photo", "description", "multimodal LLM", "12"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000024",
+      "slide_id": "w14-2-p013",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: twelve output values, eucalyptus/red-clover/sage/strawberry/onion durations, and release through a necklace match the page 13 ratio-vector and odor-sequence diagram.",
+      "evidence_terms": ["12 numbers", "eucalyptus", "red clover", "sage", "necklace"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000027",
+      "slide_id": "w14-2-p013",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: users refining an overly strong/sweet smell through language correspond to page 13's human-in-the-loop iterative-refinement branch and visible feedback example. The paragraph later transitions to the study results and vocabulary.",
+      "evidence_terms": ["refine", "too strong", "too sweet", "language", "12 base smells"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000029",
+      "slide_id": "w14-2-p015",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: comparison with human perfume mixing and saved effort/time corresponds to page 15's human-versus-AromaGen effort and demand plots.",
+      "evidence_terms": ["human mixing", "effort", "time", "AI"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000032",
+      "slide_id": "w14-2-p018",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: 'two circular things are magnets', small circuit boards, electrodes and a nose clip correspond directly to the labeled front/back/in-nose device photographs on page 18. The old anatomy-page association misses the hardware actually described.",
+      "evidence_terms": ["nose clip", "magnets", "circuit boards", "electrodes"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000033",
+      "slide_id": "w14-2-p019",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: modeling room airflow, head pose, left/right odor concentration and Bluetooth transmission match the real-time olfactory-rendering pipeline on page 19. This is the representative pipeline view, not evidence for the timing of each later animation build.",
+      "evidence_terms": ["airflow", "head pose", "left and right", "Bluetooth", "intensity"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000034",
+      "slide_id": "w14-2-p022",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: extracting a respiratory signal, lookup-table waveform selection and stimulation during inhalation match page 22's right-hand nose-clip pipeline. Pages 22-24 are related builds; page 22 is a representative topic view, not an exact-build or video-timing claim.",
+      "evidence_terms": ["respiratory signal", "lookup table", "waveform", "breathes in"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000039",
+      "slide_id": "w14-2-p030",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: the wearable at the back of the head and tubes delivering taste modulators to the left/right mouth correspond to page 30's device implementation photograph. The block subsequently transitions into the Coke demonstration.",
+      "evidence_terms": ["back of your head", "mouth", "tubes", "taste modulator"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000040",
+      "slide_id": "w14-2-p032",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: physically eating a blackberry while perceiving lemon by removing sweetness, then converting sour into sweet, corresponds to page 32's blackberry-to-lemon/strawberry transformations. Page 29 only states the general while-eating goal.",
+      "evidence_terms": ["blackberry", "lemon", "decrease sweetness", "sour into sweet"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000042",
+      "slide_id": "w14-2-p035",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: 'compress it to three props' corresponds directly to page 35's purple-circled base foods and the caption 'compressed to 3 food props'. The transcript's food names are approximate and do not establish exact frame timing.",
+      "evidence_terms": ["three props", "compress", "apple", "food"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000044",
+      "slide_id": "w14-2-p044",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: chemical stimulation of the trigeminal nerve to feel hot or cold without changing ambient temperature corresponds to page 44's nose/nerve, chemical-stimulation and capsaicin illustration. The opening sentence continues the previous heat-lamp discussion.",
+      "evidence_terms": ["trigeminal nerve", "chemical stimulation", "temperature", "spicy"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000045",
+      "slide_id": "w14-2-p045",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: emitting capsaicin for heat and eucalyptol for cooling corresponds to the two labeled chemical channels next to the wearable in page 45's demonstration still.",
+      "evidence_terms": ["capsaicin", "eucalyptol", "cooling", "hot sensation"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000046",
+      "slide_id": "w14-2-p050",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: a wearable schedule for capsaicin/eucalyptol pulses using only one microlitre corresponds to page 50's scheduler, two chemical reservoirs and explicit 'using only 1µL' result. Later video-demo content in this block is not separately timed.",
+      "evidence_terms": ["schedule", "capsaicin", "eucalyptol", "one microlitre"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000053",
+      "slide_id": "w14-2-p057",
+      "confidence": "estimated",
+      "reason": "Editorial visual/topic match: introducing wearable touch-sensing gloves corresponds to page 57 'AI for Touch' and its personalized tactile-sensing glove cover. The detailed resistance explanation is spoken elaboration rather than visible slide text.",
+      "evidence_terms": ["touch", "gloves", "sensors", "pressure"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000058",
+      "slide_id": "w14-2-p004",
+      "confidence": "estimated",
+      "reason": "Editorial recap association: 'bring it back to this ... image' and a loop of multimodal sensing, representation, generation and users correspond to the loop illustration on page 4. This deliberately revisits an early slide and is not a verified screen timestamp.",
+      "evidence_terms": ["loop", "sensing", "representations", "generation", "people"]
+    },
+    {
+      "session_id": "w14-2",
+      "block_id": "b000059",
+      "slide_id": "w14-2-p004",
+      "confidence": "estimated",
+      "reason": "Editorial recap association: generating sensory outputs over multiple reasoning and interaction steps continues the multimodal human-AI loop on page 4. The final portion is closing remarks; this does not associate the unlectured safety/ethics appendix with the closing speech.",
+      "evidence_terms": ["generating", "multiple steps", "interaction", "user"]
+    }
+  ],
+  "notes": [
+    "All overrides are editorial text/diagram correspondences inferred by the assistant from the original English paragraphs and rendered PDF pages. They are estimated, not human-verified, video-frame-verified, calibrated probabilities, or exact slide-change timestamps.",
+    "A paragraph can cover several slide topics or span a transition. The chosen page is a useful representative for preview; no proportional time-to-page interpolation or unsupported gap filling was used.",
+    "w14-2 was reviewed using its original 59 English blocks and rendered slide photographs/diagrams. Pages 66-87 have no support in the available lecture transcript and should remain slide-only. Audience discussion, broad wrap-ups, blank demo stills and ambiguous picture/build pages remain unassigned unless an explicit visual/topic anchor is recorded above.",
+    "Image-heavy w14-2 corrections include b000032 -> p018 (magnets/nose-clip hardware), b000034 -> p022 (respiration-synchronized waveform lookup), b000040 -> p032 (blackberry transformed into lemon/strawberry), and b000046 -> p050 (1µL temperature stimulation). Each was visually compared with the actual page, not inferred only from its numeric position.",
+    "w14-2 b000033 -> p019 and b000034 -> p022 intentionally select representative views within an animated pipeline sequence. This does not identify which related build was visible at any particular moment.",
+    "w14-2 b000058 and b000059 explicitly recap the multimodal human-AI overview; their p004 association is intentionally nonmonotonic and must not be converted into a forward jump to the unlectured appendix.",
+    "Cross-deck w04-2 spot checks support b000003 -> w04-1-p004 (raw versus abstract fusion), b000014 -> w04-1-p025 (asymmetric primary-language gating), and b000038 -> w04-1-p030 (summary of additive, multiplicative, tensor, gated and early/late fusion). The transition to the planned alignment lecture starts in b000045, after the long fusion recap.",
+    "w04-2 b000043 -> w04-1-p030 is at best a broad related-topic association: the paragraph discusses a proposed information/synergy-based framework that the summary slide does not explicitly depict. It should retain weak confidence, not be upgraded to exact or strongly supported synchronization.",
+    "Cross-deck w05-1 spot checks support b000018 -> w04-2-p027 (linear-programming assignment and simplex), b000020 -> w04-2-p028 (soft optimal transport), b000026 -> w04-2-p036 (quantized visual tokens), and b000036 -> w04-2-p040 (kernel similarity). Eight early recap overrides above correct or fill more specific InfoNCE, mutual-information, redundancy and factorized-learning correspondences.",
+    "In particular w05-1 b000012/b000013 belong to factorized contrastive learning with two Self CL branches on w04-2-p025. Matching them to generic contrastive loss on p013 or CLIP on p015 misses the spoken distinction between shared and unique representations."
+  ]
+}
