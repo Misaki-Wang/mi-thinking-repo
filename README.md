@@ -6,6 +6,7 @@
 - [Course · 课程](course/README.md)
 - [Blog · 思考](blog/README.md)
 - [Paper · 论文](paper/README.md)
+- [Video · 视频](video/README.md)
 
 ## 当前归档
 
@@ -17,9 +18,11 @@
 - [全文讲稿与翻译说明](course/mit-mmai-2026/TRANSLATION.md)
 - [来源、勘误与完整性](course/mit-mmai-2026/SOURCES.md)
 
+[张小珺商业访谈录 · 10 期视频学习归档](video/bilibili-280780745/README.md)：2026-09-10 获取的近十期快照，包含 Kimi K3 技术报告领读。每期独立提供预览、学习问题和带原视频时间位置的中文 Markdown 自动讲稿；专业术语与识别局限见各页说明。
+
 ## 更新与预览
 
-内容保存在 Markdown 文件中，网站由 Python 标准库构建，无额外运行依赖。课程放入 `course/`，独立思考放入 `blog/`，论文阅读放入 `paper/`。新增 Markdown 文件后，网站会自动生成页面、导航与搜索记录。
+内容保存在 Markdown 文件中，网站由 Python 标准库构建，无额外运行依赖。课程放入 `course/`，独立思考放入 `blog/`，论文阅读放入 `paper/`，视频学习归档放入 `video/`。新增 Markdown 文件后，网站会自动生成页面、导航与搜索记录。完整视频讲稿另需明确授权和 manifest 中匹配的文件哈希，才会公开。
 
 ```sh
 python3 scripts/build_site.py

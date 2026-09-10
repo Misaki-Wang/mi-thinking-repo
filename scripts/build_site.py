@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 from html.parser import HTMLParser
 import json
@@ -29,6 +30,10 @@ TRANSCRIPT_FORMATS = (
     ("transcript.zh-CN.md", "中文"),
     ("transcript.bilingual.md", "双语"),
 )
+VIDEO_STYLES = """/* Loaded only when the video collection is present. */
+@media(max-width:680px){.top-nav{gap:12px}}
+@media(max-width:480px){.brand>span:last-child{display:none}}
+"""
 
 
 def esc(value: object) -> str:
@@ -301,6 +306,7 @@ class Site:
         self.sources: dict[PurePosixPath, str] = {}
         self.catalogs: dict[str, dict] = {}
         self.public_transcripts: set[tuple[str, str]] = set()
+        self.public_video_transcripts: set[PurePosixPath] = set()
         self.generated: set[str] = set()
         self.search: list[dict] = []
 
@@ -326,11 +332,20 @@ class Site:
         candidates = [self.root / "README.md"]
         for section in ("course", "blog", "paper"):
             candidates.extend(sorted((self.root / section).glob("**/*.md")))
+        video_index = self.root / "video" / "README.md"
+        if self.video_source_allowed(video_index):
+            self.collect_video_transcripts()
+            candidates.extend(sorted((self.root / "video").glob("**/*.md")))
         for path in candidates:
             if path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(self.root):
                 relative = PurePosixPath(path.relative_to(self.root).as_posix())
                 if relative.name.startswith("transcript.") and relative.parts[0] == "course":
                     if len(relative.parts) < 4 or (relative.parts[1], relative.parts[2]) not in self.public_transcripts:
+                        continue
+                if relative.parts[0] == "video":
+                    if not self.video_source_allowed(path):
+                        continue
+                    if relative.name.startswith("transcript") and relative not in self.public_video_transcripts:
                         continue
                 if not any(part.startswith(".") for part in relative.parts):
                     self.sources[relative] = path.read_text(encoding="utf-8")
@@ -341,6 +356,41 @@ class Site:
             if isinstance(data, list):
                 data = {"title": path.parent.name, "sessions": data}
             self.catalogs[path.parent.name] = data
+
+    def video_source_allowed(self, path: Path) -> bool:
+        return (path.is_file() and path.resolve().is_relative_to(self.root)
+                and not any(part.is_symlink() for part in (path, *path.parents) if part != self.root))
+
+    def collect_video_transcripts(self) -> None:
+        """Publish only the exact Chinese artifact declared by each video entry."""
+        for path in sorted((self.root / "video").glob("*/manifest.json")):
+            if not self.video_source_allowed(path) or path.parent.name.startswith("."):
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if not isinstance(data, dict) or data.get("publication_authorized") is not True:
+                continue
+            entries = data.get("videos", [])
+            if not isinstance(entries, list):
+                raise ValueError(f"Video manifest videos must be a list: {path}")
+            seen = set()
+            for entry in entries:
+                if not isinstance(entry, dict):
+                    raise ValueError(f"Invalid video manifest entry: {path}")
+                if entry.get("public_transcripts") is not True:
+                    continue
+                bvid = entry.get("bvid")
+                if not isinstance(bvid, str) or not re.fullmatch(r"BV[0-9A-Za-z]{10}", bvid) or bvid in seen:
+                    raise ValueError(f"Invalid or duplicate public video ID: {bvid!r}")
+                seen.add(bvid)
+                transcript = path.parent / bvid / "transcript.zh-CN.md"
+                if not self.video_source_allowed(transcript):
+                    raise ValueError(f"Missing or unsafe public video transcript: {transcript}")
+                expected = entry.get("transcript_sha256")
+                if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-fA-F]{64}", expected):
+                    raise ValueError(f"Missing or invalid video transcript SHA-256: {bvid}")
+                if hashlib.sha256(transcript.read_bytes()).hexdigest() != expected.lower():
+                    raise ValueError(f"Video transcript SHA-256 mismatch: {bvid}")
+                self.public_video_transcripts.add(PurePosixPath(transcript.relative_to(self.root).as_posix()))
 
     def has(self, path: str | PurePosixPath) -> bool:
         return PurePosixPath(path) in self.sources
@@ -361,10 +411,13 @@ class Site:
 
     def section_nav(self, current: str) -> str:
         links = [("", "首页", "home"), ("course/index.html", "Course", "course"), ("blog/index.html", "Blog", "blog"), ("paper/index.html", "Paper", "paper")]
+        if self.has("video/README.md"):
+            links.append(("video/index.html", "视频", "video"))
         return "".join(f'<a href="{self.url(path)}" class="{"active" if key == current else ""}">{name}</a>' for path, name, key in links)
 
     def shell(self, title: str, body: str, section: str = "home", sidebar: str = "", toc: str = "") -> str:
         layout = "reading-layout" if sidebar else "wide-layout"
+        video_style = f'\n<link rel="stylesheet" href="{self.url("assets/video.css")}">' if self.has("video/README.md") else ""
         return f'''<!doctype html>
 <html lang="zh-CN">
 <head>
@@ -373,7 +426,7 @@ class Site:
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
 <meta name="color-scheme" content="light"><title>{esc(title)} · MI Thinking</title>
 <link rel="icon" href="{self.url('assets/favicon.svg')}" type="image/svg+xml">
-<link rel="stylesheet" href="{self.url('assets/site.css')}">
+<link rel="stylesheet" href="{self.url('assets/site.css')}">{video_style}
 <script src="{self.url('assets/site.js')}" defer></script>
 </head>
 <body data-base="{esc(self.base)}">
@@ -476,6 +529,7 @@ class Site:
                 rendered = header + divider + body
         heading = next((text for level, text, _ in renderer.headings if level == 1), source.stem)
         section = source.parts[0] if len(source.parts) > 1 else "home"
+        document_kind = "视频预览" if section == "video" and source.name == "preview.md" else DOCUMENT_NAMES.get(source.name, section.title())
         course = source.parts[1] if section == "course" and len(source.parts) > 2 else None
         output = page_path(source)
         downloads = PurePosixPath("markdown") / source
@@ -493,6 +547,14 @@ class Site:
                     if self.has(target):
                         links.append(f'<a class="{"active" if target == source else ""}" href="{self.url(page_path(target))}">{label}</a>')
                 tabs = '<nav class="document-tabs" aria-label="本章材料">' + "".join(links) + "</nav>"
+            elif section == "video" and len(source.parts) == 4:
+                links = []
+                for filename, label in (("preview.md", "视频预览"), ("transcript.zh-CN.md", "中文讲稿")):
+                    target = source.with_name(filename)
+                    if self.has(target):
+                        links.append(f'<a class="{"active" if target == source else ""}" href="{self.url(page_path(target))}">{label}</a>')
+                if links:
+                    tabs = '<nav class="document-tabs" aria-label="本期视频材料">' + "".join(links) + "</nav>"
             source_links = []
             if session:
                 for key, label in (("slides_url", "Slides ↗"), ("video_url", "Video ↗")):
@@ -506,14 +568,19 @@ class Site:
             breadcrumbs = f'<div class="breadcrumb"><a href="{self.url(section + "/index.html") if section != "home" else self.url()}">{esc(section.title())}</a>'
             if course:
                 breadcrumbs += f'<span>/</span><a href="{self.url(PurePosixPath("course", course, "index.html"))}">MMAI 2026</a>'
-            breadcrumbs += f'<span>/</span><span>{esc(DOCUMENT_NAMES.get(source.name, "笔记"))}</span></div>'
+            if section == "video" and len(source.parts) > 3:
+                collection = PurePosixPath(*source.parts[:2], "README.md")
+                if self.has(collection):
+                    collection_title = next((line.lstrip("# ") for line in self.sources[collection].splitlines() if line.startswith("# ")), source.parts[1])
+                    breadcrumbs += f'<span>/</span><a href="{self.url(page_path(collection))}">{esc(collection_title)}</a>'
+            breadcrumbs += f'<span>/</span><span>{esc(document_kind if section == "video" else DOCUMENT_NAMES.get(source.name, "笔记"))}</span></div>'
             article_class = "prose transcript-prose" if source.name.startswith("transcript.") else "prose"
             body = breadcrumbs + tabs + '<div class="document-tools">' + "".join(source_links) + f'</div><article class="{article_class}">' + rendered + "</article>"
             toc_links = "".join(f'<a class="toc-level-{level}" href="#{quote(slug)}">{esc(text)}</a>' for level, text, slug in renderer.headings if 2 <= level <= 3)
             toc = f'<aside class="toc" aria-label="本页目录"><p>ON THIS PAGE</p>{toc_links}</aside>' if toc_links and course else ""
             page = self.shell(heading, body, section, self.sidebar(course, source) if course in self.catalogs else "", toc)
         self.write(output, page)
-        self.search.append({"title": heading, "kind": DOCUMENT_NAMES.get(source.name, section.title()), "url": self.url(output), "headings": " · ".join(h[1] for h in renderer.headings), "text": clean_text(markdown)})
+        self.search.append({"title": heading, "kind": document_kind, "url": self.url(output), "headings": " · ".join(h[1] for h in renderer.headings), "text": clean_text(markdown)})
 
     def course_tiles(self) -> str:
         tiles = []
@@ -527,6 +594,8 @@ class Site:
         body = f'''<section class="home-hero"><p class="eyebrow"><span class="live-dot"></span> A NOTEBOOK IN PROGRESS</p><h1>Learning, one<br><em>connection</em> at a time.</h1><p>把课程里的问题、论文中的洞见，<br>和自己的思考，慢慢连在一起。</p><a class="button" href="{self.url('course/index.html')}">进入课程笔记 <span>↗</span></a><div class="hero-coordinate" aria-hidden="true">READ.<br>THINK.<br>CONNECT.</div></section>
 <section class="home-courses"><div class="section-heading"><div><p class="eyebrow">CURRENTLY EXPLORING</p><h2>沿着课程，建立理解。</h2></div><a class="quiet-link" href="{self.url('course/index.html')}">所有课程 ↗</a></div>{tiles}</section>
 <section class="notebook-spaces"><a href="{self.url('blog/index.html')}"><span class="space-number">01 / BLOG</span><h2>想法的草稿纸 <span>↗</span></h2><p>记录学习中的观察、问题与阶段性思考。</p></a><a href="{self.url('paper/index.html')}"><span class="space-number">02 / PAPER</span><h2>论文的边注 <span>↗</span></h2><p>留住值得重读的方法、实验和未解的问题。</p></a></section>'''
+        if self.has("video/README.md"):
+            body += f'<section class="notebook-spaces"><a href="{self.url("video/index.html")}"><span class="space-number">03 / VIDEO</span><h2>视频里的思考 <span>↗</span></h2><p>按主题回看视频笔记、预览与讲稿。</p></a></section>'
         self.write("index.html", self.shell("学习，在连接中发生", body))
         if not self.has("course/README.md"):
             body = f'<section class="collection-hero"><p class="eyebrow">THE COURSE SHELF</p><h1>Course</h1><p>系统地学习，也留出自己的思考空间。</p></section>{tiles}'
@@ -555,6 +624,8 @@ class Site:
             if not path.is_file() or path.is_symlink():
                 raise ValueError(f"missing asset: {path}")
             self.write(PurePosixPath("assets", name), path.read_text(encoding="utf-8"))
+        if self.has("video/README.md"):
+            self.write("assets/video.css", VIDEO_STYLES)
         self.write("search-index.json", json.dumps(self.search, ensure_ascii=False, separators=(",", ":")))
         self.write(".nojekyll", "")
         previous_manifest = self.output / "build-manifest.json"

@@ -1,6 +1,7 @@
 """Behavioral tests for the zero-dependency site builder."""
 
 import importlib.util
+import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import shutil
@@ -272,6 +273,127 @@ class BuildTests(unittest.TestCase):
         self.write("course/demo/w01-1/readings.md", "# Reading\n\n[Missing anchor](preview.md#not-here)")
         with self.assertRaisesRegex(ValueError, "missing anchor"):
             self.build()
+
+    def video_fixture(self):
+        self.write("video/README.md", "# Video\n\n[创作者视频](bilibili-280780745/README.md)\n")
+        self.write("video/bilibili-280780745/README.md", "# 创作者视频\n\n[本期预览](BV1KZ8X6uEPL/preview.md)\n")
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/preview.md", "# 本期视频预览\n\n原创学习笔记，保留 MoE 专业术语。\n")
+        transcript = "# 中文讲稿\n\n## 00:00\n\n视频讲稿的独特检索词 <script>unsafe()</script>。\n"
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md", transcript)
+        return {
+            "publication_authorized": True,
+            "videos": [{"bvid": "BV1KZ8X6uEPL", "public_transcripts": True,
+                        "transcript_sha256": hashlib.sha256(transcript.encode()).hexdigest()}],
+        }
+
+    def test_video_without_root_readme_preserves_baseline_bytes(self):
+        _, output = self.build()
+        before = {str(path.relative_to(output)): path.read_bytes() for path in output.rglob("*") if path.is_file()}
+        aggregate = hashlib.sha256()
+        for name, content in sorted(before.items()):
+            aggregate.update(name.encode())
+            aggregate.update(b"\0")
+            aggregate.update(content)
+            aggregate.update(b"\0")
+        # Captured from the existing site builder before video support was added.
+        self.assertEqual(aggregate.hexdigest(), "87a20c85f5d8b241ca4dfa4262821ca27ae4ffabaff30e7efa153678b53578cc")
+        self.write("video/unlisted/README.md", "# Not enabled\n")
+        self.write("video/unlisted/BV1KZ8X6uEPL/transcript.zh-CN.md", "Unlisted transcript.")
+        _, output = self.build()
+        after = {str(path.relative_to(output)): path.read_bytes() for path in output.rglob("*") if path.is_file()}
+        self.assertEqual(after, before)
+        self.assertNotIn("video/index.html", (output / "index.html").read_text())
+
+    def test_video_transcripts_withheld_by_default_and_both_permission_flags(self):
+        manifest = self.video_fixture()
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/transcript.draft.md", "PRIVATE DRAFT")
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/audio.wav", "PRIVATE AUDIO")
+        self.write("video/bilibili-280780745/.work/raw.md", "PRIVATE RAW")
+        for authorization, public in ((None, None), (False, True), (True, False), ("true", True), (True, "true")):
+            with self.subTest(authorization=authorization, public=public):
+                manifest["publication_authorized"] = authorization
+                manifest["videos"][0]["public_transcripts"] = public
+                if authorization is not None:
+                    self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+                _, output = self.build()
+                all_text = "\n".join(path.read_text() for path in output.rglob("*") if path.is_file())
+                for secret in ("视频讲稿的独特检索词", "PRIVATE DRAFT", "PRIVATE AUDIO", "PRIVATE RAW"):
+                    self.assertNotIn(secret, all_text)
+                self.assertIn("原创学习笔记", all_text)
+                self.assertTrue((output / "video/index.html").is_file())
+                self.assertFalse((output / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.html").exists())
+
+    def test_authorized_video_is_searchable_downloadable_and_not_a_course(self):
+        manifest = self.video_fixture()
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/transcript.en.md", "UNLISTED FORMAT")
+        _, output = self.build()
+        page = (output / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.html").read_text()
+        self.assertIn('/notebook/video/index.html', page)
+        self.assertIn('/notebook/video/bilibili-280780745/index.html', page)
+        self.assertIn('aria-label="本期视频材料"', page)
+        self.assertIn("视频预览", page)
+        self.assertNotIn("MMAI 2026", page)
+        self.assertNotIn("课程预览", page.split('<main id="main">', 1)[1].split("</main>", 1)[0])
+        self.assertNotIn("<script>unsafe()", page)
+        self.assertIn("&lt;script&gt;unsafe()&lt;/script&gt;", page)
+        self.assertNotIn("UNLISTED FORMAT", page)
+        self.assertFalse((output / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.en.html").exists())
+        download = output / "markdown/video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md"
+        self.assertEqual(download.read_bytes(), (self.root / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md").read_bytes())
+        index = json.loads((output / "search-index.json").read_text())
+        self.assertTrue(any(item["kind"] == "中文讲稿" and "视频讲稿的独特检索词" in item["text"] for item in index))
+        self.assertTrue(any(item["kind"] == "视频预览" for item in index))
+        home = (output / "index.html").read_text()
+        self.assertIn('>视频</a>', home)
+        self.assertIn('03 / VIDEO', home)
+        self.assertIn('/notebook/assets/video.css', home)
+        self.assertTrue((output / "assets/video.css").is_file())
+        self.assertEqual(site.validate_links(output, "/notebook/"), [])
+
+    def test_public_video_hash_missing_file_and_unsafe_path_fail_closed(self):
+        manifest = self.video_fixture()
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        self.write("video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md", "Tampered source")
+        with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
+            self.build()
+        manifest["videos"][0]["transcript_sha256"] = "invalid"
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError, "Missing or invalid video transcript SHA-256"):
+            self.build()
+        manifest["videos"][0].pop("transcript_sha256")
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError, "Missing or invalid video transcript SHA-256"):
+            self.build()
+        manifest["videos"][0]["bvid"] = "../../private"
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        with self.assertRaisesRegex(ValueError, "Invalid or duplicate public video ID"):
+            self.build()
+        manifest["videos"][0]["bvid"] = "BV1KZ8X6uEPL"
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        transcript = self.root / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md"
+        transcript.unlink()
+        with self.assertRaisesRegex(ValueError, "Missing or unsafe public video transcript"):
+            self.build()
+        transcript.symlink_to(self.root / "README.md")
+        with self.assertRaisesRegex(ValueError, "Missing or unsafe public video transcript"):
+            self.build()
+
+    def test_video_publication_revocation_removes_html_downloads_and_search(self):
+        manifest = self.video_fixture()
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        _, output = self.build()
+        self.assertTrue((output / "video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.html").is_file())
+        manifest["publication_authorized"] = False
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(manifest))
+        _, output = self.build()
+        self.assertFalse(any(path.name.startswith("transcript") for path in output.rglob("*")))
+        self.assertNotIn("视频讲稿的独特检索词", (output / "search-index.json").read_text())
+        (self.root / "video/README.md").unlink()
+        _, output = self.build()
+        self.assertFalse((output / "video/index.html").exists())
+        self.assertFalse((output / "assets/video.css").exists())
+        self.assertNotIn("video/index.html", (output / "index.html").read_text())
 
 
 if __name__ == "__main__":
