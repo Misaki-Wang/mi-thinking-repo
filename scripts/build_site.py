@@ -604,7 +604,9 @@ class Site:
             if not self.has(PurePosixPath("course", course, "README.md")):
                 self.write(PurePosixPath("course", course, "index.html"), self.shell(self.catalogs[course].get("title", course), self.course_landing(course), "course"))
         for section, title, copy in (("blog", "Blog", "这里会记录学习中的问题、观察和阶段性思考。"), ("paper", "Paper", "这里会收藏独立的论文阅读笔记；课程配套阅读见各章的阅读指引。")):
-            posts = [(source, text) for source, text in self.sources.items() if source.parts[0] == section and source.name.lower() != "readme.md"]
+            posts = [(source, text) for source, text in self.sources.items()
+                     if source.parts[0] == section and (len(source.parts) > 2 or source.name.lower() != "readme.md")]
+            posts.sort(key=lambda item: (str(item[0].parent), item[0].name.lower() != "readme.md", item[0].name))
             cards = "".join(f'<a class="note-card" href="{self.url(page_path(source))}"><h2>{esc(next((line.lstrip("# ") for line in text.splitlines() if line.startswith("# ")), source.stem))}</h2><p>{esc(clean_text(text)[:150])}</p><span>阅读笔记 →</span></a>' for source, text in posts)
             empty = '<div class="empty-state"><span aria-hidden="true">＋</span><h2>为下一次思考留一页。</h2><p>尚未发布独立笔记。</p></div>'
             body = f'<section class="collection-hero"><p class="eyebrow">PERSONAL NOTEBOOK</p><h1>{title}</h1><p>{copy}</p></section><div class="note-grid">{cards}</div>' if posts else f'<section class="collection-hero"><p class="eyebrow">PERSONAL NOTEBOOK</p><h1>{title}</h1><p>{copy}</p></section>{empty}'

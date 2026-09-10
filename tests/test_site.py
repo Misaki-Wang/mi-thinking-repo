@@ -126,6 +126,16 @@ class BuildTests(unittest.TestCase):
         _, output = self.build("/mi-thinking-repo/")
         self.assertEqual(site.validate_links(output, "/mi-thinking-repo/"), [])
 
+    def test_nested_blog_collection_overview_precedes_its_supporting_notes(self):
+        self.write("blog/monthly/README.md", "# Monthly selection\n\n[Guidance](GUIDANCE.md)\n")
+        self.write("blog/monthly/GUIDANCE.md", "# Reading route\n")
+        _, output = self.build()
+        page = (output / "blog/index.html").read_text()
+        self.assertIn('href="/notebook/blog/monthly/index.html"', page)
+        self.assertLess(page.index('/notebook/blog/monthly/index.html'),
+                        page.index('/notebook/blog/monthly/GUIDANCE.html'))
+        self.assertNotIn('<h2>Blog</h2>', page)
+
     def test_unavailable_slides_have_no_toolbar_button_but_keep_provenance(self):
         self.write("course/demo/w01-1/readings.md", "# 阅读指引\n\n[原始来源（已失效）](https://example.com/broken.pdf)")
         catalog_path = self.root / "course/demo/catalog.json"

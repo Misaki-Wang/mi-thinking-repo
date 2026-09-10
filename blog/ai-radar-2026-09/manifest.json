@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "title": "AI 研究与工程近月精选",
+  "window_start": "2026-08-10",
+  "window_end": "2026-09-10",
+  "date_policy": "Inclusive calendar dates; visible publication date, not crawl or code update date.",
+  "verified_on": "2026-09-10",
+  "focus": "research_and_technology_with_industry_context",
+  "mode": "static_curated_snapshot",
+  "automatic_updates": false,
+  "selection": "editorial and non-exhaustive; priority is not an accuracy score",
+  "core_count": 12,
+  "extra_count": 7,
+  "source_count": 12,
+  "source_ids": [
+    "google_research",
+    "dwarkesh",
+    "google_deepmind",
+    "anthropic",
+    "vllm",
+    "sglang",
+    "nvidia",
+    "interconnects",
+    "xiaojun",
+    "silicon101",
+    "pytorch",
+    "latent_space"
+  ],
+  "items": [
+    {
+      "id": "R01",
+      "tier": "core",
+      "category": "研究",
+      "source_id": "google_research",
+      "source": "Google Research",
+      "date": "2026-08-12",
+      "title": "Empty shelves or lost keys? Recall is the bottleneck for parametric factuality",
+      "author": "Nitay Calderon; Gal Yona",
+      "url": "https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/",
+      "name": "知识被编码了，为什么仍然答不出来？",
+      "basis": "研究团队正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "R02",
+      "tier": "core",
+      "category": "研究",
+      "source_id": "dwarkesh",
+      "source": "Dwarkesh",
+      "date": "2026-09-08",
+      "title": "Pretraining progress is mostly coming from data",
+      "author": "Dwarkesh Patel; Jerry Han",
+      "url": "https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data",
+      "name": "把 data 与 model recipe 的贡献拆开测量",
+      "basis": "作者原创实验与方法附录",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "R03",
+      "tier": "core",
+      "category": "研究",
+      "source_id": "google_deepmind",
+      "source": "Google DeepMind",
+      "date": "2026-09-01",
+      "title": "Introducing agentic video understanding with Gemini",
+      "author": "Rohan Doshi; Mario Lučić",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+      "name": "从固定抽帧到主动检索视频片段",
+      "basis": "团队技术与产品说明",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "R04",
+      "tier": "core",
+      "category": "研究",
+      "source_id": "anthropic",
+      "source": "Anthropic Research",
+      "date": "2026-09-09",
+      "title": "An alignment assessment of recent cybersecurity incidents",
+      "author": "Anthropic",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "name": "环境边界失效后，怎样分析模型行为？",
+      "basis": "厂商事故分析相关章节",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "S01",
+      "tier": "core",
+      "category": "工程",
+      "source_id": "vllm",
+      "source": "vLLM",
+      "date": "2026-09-08",
+      "title": "vLLM x AgentX: Optimizing for Real-World Agentic Serving",
+      "author": "vLLM Team; Inferact",
+      "url": "https://vllm.ai/blog/2026-09-08-vllm-agentx",
+      "name": "真实 Agent workload 与单请求吞吐不一样",
+      "basis": "项目团队技术正文",
+      "resources": [
+        {
+          "label": "AgentX harness",
+          "url": "https://github.com/SemiAnalysisAI/agentx-harness"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "S02",
+      "tier": "core",
+      "category": "工程",
+      "source_id": "sglang",
+      "source": "SGLang / LMSYS",
+      "date": "2026-08-11",
+      "title": "Unified Radix Cache: One Tree for Hybrid Model Prefix Caching",
+      "author": "Zhangheng Huang 等",
+      "url": "https://www.lmsys.org/blog/2026-08-11-unified-radix-cache/",
+      "name": "Hybrid model 的缓存首先要复用正确",
+      "basis": "项目团队技术正文",
+      "resources": [
+        {
+          "label": "实现 PR #21206",
+          "url": "https://github.com/sgl-project/sglang/pull/21206"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "S03",
+      "tier": "core",
+      "category": "工程",
+      "source_id": "nvidia",
+      "source": "NVIDIA Technical Blog",
+      "date": "2026-09-09",
+      "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+      "author": "Jesse Gu; Ryan McCormick; Akshatha Kamath",
+      "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+      "name": "多模态服务何时值得拆开 encoder、prefill 与 decode？",
+      "basis": "团队技术正文，非顶部自动摘要",
+      "resources": [
+        {
+          "label": "Dynamo EPD experiments",
+          "url": "https://github.com/ai-dynamo/dynamo/tree/release/1.5.0/benchmarks/multimodal/sweep/experiments/epd"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "S04",
+      "tier": "core",
+      "category": "工程",
+      "source_id": "vllm",
+      "source": "vLLM",
+      "date": "2026-08-22",
+      "title": "Large-Scale Sharded Weight Transfer with Ray Direct Transport (RDT) in vLLM",
+      "author": "Aaron Hao 等",
+      "url": "https://vllm.ai/blog/2026-08-22-rdt-weight-transfer",
+      "name": "Online RL 的瓶颈可能在权重同步",
+      "basis": "项目团队技术正文",
+      "resources": [
+        {
+          "label": "SkyRL 示例",
+          "url": "https://github.com/NovaSky-AI/SkyRL/tree/main/examples/train/megatron/sharded_rdt"
+        },
+        {
+          "label": "vLLM 文档",
+          "url": "https://docs.vllm.ai/en/latest/training/weight_transfer/sharded_rdt/"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "L01",
+      "tier": "core",
+      "category": "解读",
+      "source_id": "interconnects",
+      "source": "Interconnects",
+      "date": "2026-08-10",
+      "title": "5 useful things you'll learn in my new post-training textbook (shipping now!)",
+      "author": "Nathan Lambert",
+      "url": "https://www.interconnects.ai/p/5-useful-things-youll-learn-in-my",
+      "name": "把 post-training 新闻放回技术框架",
+      "basis": "作者教材导读正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "V01",
+      "tier": "core",
+      "category": "视频",
+      "source_id": "xiaojun",
+      "source": "张小珺商业访谈录",
+      "date": "2026-08-26",
+      "title": "领读Kimi K3技术报告：从架构创新聊起，注意力美学、多教师蒸馏和开源MoE",
+      "author": "张小珺商业访谈录",
+      "url": "https://www.bilibili.com/video/BV1KZ8X6uEPL/",
+      "name": "Kimi K3 架构领读：连接模型与系统",
+      "basis": "作者简介与既有 ASR 片段抽查",
+      "resources": [
+        {
+          "label": "本站主题预览",
+          "url": "../../video/bilibili-280780745/BV1KZ8X6uEPL/preview.md"
+        },
+        {
+          "label": "已有自动讲稿",
+          "url": "../../video/bilibili-280780745/BV1KZ8X6uEPL/transcript.zh-CN.md"
+        }
+      ],
+      "access": "public_video",
+      "publication_date_basis": "Bilibili public metadata snapshot",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "V02",
+      "tier": "core",
+      "category": "视频",
+      "source_id": "silicon101",
+      "source": "硅谷101",
+      "date": "2026-08-27",
+      "title": "AI可解释性与对齐：J-Space，思维链，AI人格，幻觉，与金门大桥【101视频播客】",
+      "author": "硅谷101；嘉宾 Aryaman Arora；主持 Yiwen",
+      "url": "https://www.bilibili.com/video/BV1gyhF6wEDD/",
+      "name": "用可解释性访谈提出研究问题",
+      "basis": "仅作者简介，未阅读全文讲稿或完整回看",
+      "resources": [
+        {
+          "label": "本站简介预览",
+          "url": "../../video/bilibili-508452265/BV1gyhF6wEDD/preview.md"
+        }
+      ],
+      "access": "public_video",
+      "publication_date_basis": "Bilibili public metadata snapshot",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "I01",
+      "tier": "core",
+      "category": "产业",
+      "source_id": "dwarkesh",
+      "source": "Dwarkesh",
+      "date": "2026-08-25",
+      "title": "Dylan Patel – Anthropic & OpenAI will have most of the world’s compute by 2028",
+      "author": "Dwarkesh Patel；嘉宾 Dylan Patel",
+      "url": "https://www.dwarkesh.com/p/dylan-patel-3",
+      "name": "用算力供给约束检查技术预期",
+      "basis": "官方讲稿相关章节",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E01",
+      "tier": "extra",
+      "category": "研究",
+      "source_id": "google_research",
+      "source": "Google Research",
+      "date": "2026-08-31",
+      "title": "TimesFM-3: A zero-shot foundation model for multivariate forecasting",
+      "author": "Ayush Jain; Rajat Sen",
+      "url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+      "name": "TimesFM-3：跨变量与时间的 Attention",
+      "basis": "研究团队正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E02",
+      "tier": "extra",
+      "category": "研究",
+      "source_id": "google_deepmind",
+      "source": "Google DeepMind",
+      "date": "2026-08-27",
+      "title": "Piloting the world's first double-blind AI evaluations",
+      "author": "William Isaac; Sol Messing; Kristian Lum",
+      "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+      "name": "双盲评估：保护模型与测试集",
+      "basis": "团队试点说明正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E03",
+      "tier": "extra",
+      "category": "工程",
+      "source_id": "sglang",
+      "source": "SGLang / LMSYS",
+      "date": "2026-08-17",
+      "title": "Advanced CUDA Graph Techniques in SGLang",
+      "author": "SGLang Team 与 Meta 贡献者",
+      "url": "https://www.lmsys.org/blog/2026-08-17-advanced-cuda-graph/",
+      "name": "CUDA Graph：动态形状、capture 与显存",
+      "basis": "项目团队技术正文",
+      "resources": [
+        {
+          "label": "Breakable CUDA Graphs",
+          "url": "https://github.com/meta-pytorch/breakable-cuda-graphs"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E04",
+      "tier": "extra",
+      "category": "工程",
+      "source_id": "pytorch",
+      "source": "PyTorch Blog",
+      "date": "2026-08-13",
+      "title": "FP8 Training on AMD GPUs with TorchTitan and TorchAO: Upstreaming Performance Improvements",
+      "author": "AMD 与 Meta / TorchAO / TorchTitan 贡献者",
+      "url": "https://pytorch.org/blog/fp8-training-on-amd-gpus-with-torchtitan-and-torchao-upstreaming-performance-improvements/",
+      "name": "FP8 不只是低精度 GEMM",
+      "basis": "贡献团队技术正文",
+      "resources": [
+        {
+          "label": "TorchAO fusion PR",
+          "url": "https://github.com/pytorch/ao/pull/4311"
+        }
+      ],
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E05",
+      "tier": "extra",
+      "category": "解读",
+      "source_id": "interconnects",
+      "source": "Interconnects",
+      "date": "2026-08-14",
+      "title": "GLM-5.3: How Chinese labs keep stride with the frontier",
+      "author": "Nathan Lambert",
+      "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride",
+      "name": "把模型进步的解释当作待检验假说",
+      "basis": "作者分析正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E06",
+      "tier": "extra",
+      "category": "解读",
+      "source_id": "dwarkesh",
+      "source": "Dwarkesh",
+      "date": "2026-08-11",
+      "title": "Ryan Greenblatt – What happens once AI can automate AI research?",
+      "author": "Dwarkesh Patel；嘉宾 Ryan Greenblatt",
+      "url": "https://www.dwarkesh.com/p/ryan-greenblatt",
+      "name": "AI 自动化研究的瓶颈在哪里？",
+      "basis": "官方讲稿相关章节",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    },
+    {
+      "id": "E07",
+      "tier": "extra",
+      "category": "研究",
+      "source_id": "latent_space",
+      "source": "Latent.Space",
+      "date": "2026-09-07",
+      "title": "The Frontier AEO Tracker: What Astra Chooses (and every other frontier model, and what you can do about it)",
+      "author": "Latent.Space（未核实个人署名）",
+      "url": "https://www.latent.space/p/aeo",
+      "name": "推荐稳定性与 prompt sensitivity 的测量案例",
+      "basis": "机构原创测量正文",
+      "access": "public_article_or_official_transcript",
+      "publication_date_basis": "visible source-page publication date",
+      "verified_on": "2026-09-10"
+    }
+  ]
+}

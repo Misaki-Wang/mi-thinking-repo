@@ -10,6 +10,8 @@
 
 ## 当前归档
 
+[AI 研究与工程 · 近月精选](blog/ai-radar-2026-09/README.md)：聚焦 2026-08-10 至 2026-09-10，12 个来源、12 条核心资料与 7 条延伸阅读；附原创摘要、证据边界、信息源目录和学习路线。
+
 [MIT Modeling: MultiModal AI · Spring 2026](course/mit-mmai-2026/README.md)：24 个教学单元的入口、23 份可获取教学材料的原创预览、逐讲 Readings guidance、全课学习路线与中英术语表。13 个公开视频的 1,089 段已全部完成中文翻译，提供 39 份英文、中文和双语 Markdown。唯一缺失的 Agents tutorial 保留明确的资料缺口与准备建议。
 
 - [先读 GUIDANCE](course/mit-mmai-2026/GUIDANCE.md)
