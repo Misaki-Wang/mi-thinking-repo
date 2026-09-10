@@ -134,6 +134,23 @@ class BilibiliExportTests(unittest.TestCase):
             export.main()
         self.assertFalse(destination.exists())
 
+    def test_cli_does_not_overwrite_another_creators_collection(self):
+        destination = self.root / "existing-collection"
+        destination.mkdir()
+        self.save(destination / "manifest.json", {"uploader_id": "508452265"})
+        (destination / "QUALITY.md").write_text("Existing creator's quality record\n")
+        before = {p.name: p.read_bytes() for p in destination.iterdir()}
+        with mock.patch.object(sys, "argv", self.cli_args(destination)), self.assertRaisesRegex(ValueError, "creator"):
+            export.main()
+        self.assertEqual(before, {p.name: p.read_bytes() for p in destination.iterdir()})
+
+    def test_cli_can_refresh_the_same_creators_collection(self):
+        destination = self.root / "same-creator"
+        with mock.patch.object(sys, "argv", self.cli_args(destination)), contextlib.redirect_stdout(io.StringIO()):
+            export.main()
+            export.main()
+        self.assertEqual(json.loads((destination / "manifest.json").read_text())["uploader_id"], "280780745")
+
     def test_absent_partial_false_or_string_authorization_is_rejected(self):
         variants = [{}, dict(self.authorization, confirmed=False),
                     dict(self.authorization, confirmed="true"),

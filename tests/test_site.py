@@ -395,6 +395,106 @@ class BuildTests(unittest.TestCase):
         self.assertFalse((output / "assets/video.css").exists())
         self.assertNotIn("video/index.html", (output / "index.html").read_text())
 
+    def second_video_fixture(self):
+        # Reuse the ID deliberately: publication must be scoped to the collection.
+        self.write("video/README.md", "# Video\n\n[创作者视频](bilibili-280780745/README.md)\n\n[第二创作者](bilibili-508452265/README.md)\n")
+        self.write("video/bilibili-508452265/README.md", "# 第二创作者测试集\n\n[第二期预览](BV1KZ8X6uEPL/preview.md)\n")
+        self.write("video/bilibili-508452265/BV1KZ8X6uEPL/preview.md", "# 第二创作者预览\n\nSynthetic study notes.\n")
+        transcript = "# 第二创作者中文讲稿\n\n## 00:00\n\n第二系列独有测试讲稿。\n"
+        self.write("video/bilibili-508452265/BV1KZ8X6uEPL/transcript.zh-CN.md", transcript)
+        return {
+            "publication_authorized": True,
+            "videos": [{"bvid": "BV1KZ8X6uEPL", "public_transcripts": True,
+                        "transcript_sha256": hashlib.sha256(transcript.encode()).hexdigest()}],
+        }
+
+    def test_two_video_collections_require_independent_publication_permissions(self):
+        manifests = {"bilibili-280780745": self.video_fixture(),
+                     "bilibili-508452265": self.second_video_fixture()}
+        permission_cases = ((True, True, False, True), (True, True, True, False),
+                            (False, True, True, True), (True, False, True, True),
+                            (True, True, True, True))
+        for flags in permission_cases:
+            with self.subTest(permissions=flags):
+                for index, (collection, manifest) in enumerate(manifests.items()):
+                    manifest["publication_authorized"] = flags[2 * index]
+                    manifest["videos"][0]["public_transcripts"] = flags[2 * index + 1]
+                    self.write(f"video/{collection}/manifest.json", json.dumps(manifest))
+                _, output = self.build()
+                search = json.loads((output / "search-index.json").read_text())
+                for index, collection in enumerate(manifests):
+                    public = flags[2 * index] and flags[2 * index + 1]
+                    relative = f"video/{collection}/BV1KZ8X6uEPL/transcript.zh-CN"
+                    self.assertEqual((output / f"{relative}.html").is_file(), public)
+                    self.assertEqual((output / f"markdown/{relative}.md").is_file(), public)
+                    self.assertEqual(any(item["url"] == f"/notebook/{relative}.html" for item in search), public)
+                self.assertEqual(site.validate_links(output, "/notebook/"), [])
+
+    def test_two_video_collections_cannot_borrow_each_others_transcript_hash(self):
+        manifests = {"bilibili-280780745": self.video_fixture(),
+                     "bilibili-508452265": self.second_video_fixture()}
+        hashes = {collection: manifest["videos"][0]["transcript_sha256"] for collection, manifest in manifests.items()}
+        for collection, manifest in manifests.items():
+            self.write(f"video/{collection}/manifest.json", json.dumps(manifest))
+        _, output = self.build()
+        published = {str(path.relative_to(output)): path.read_bytes() for path in output.rglob("*") if path.is_file()}
+        for collection, manifest in manifests.items():
+            with self.subTest(tampered_collection=collection):
+                other_collection = next(name for name in manifests if name != collection)
+                manifest["videos"][0]["transcript_sha256"] = hashes[other_collection]
+                self.write(f"video/{collection}/manifest.json", json.dumps(manifest))
+                with self.assertRaisesRegex(ValueError, "Video transcript SHA-256 mismatch"):
+                    self.build()
+                self.assertEqual({str(path.relative_to(output)): path.read_bytes() for path in output.rglob("*") if path.is_file()}, published)
+                manifest["videos"][0]["transcript_sha256"] = hashes[collection]
+                self.write(f"video/{collection}/manifest.json", json.dumps(manifest))
+
+    def test_second_video_collection_links_and_revocation_preserve_existing_content(self):
+        first_manifest = self.video_fixture()
+        self.write("video/bilibili-280780745/manifest.json", json.dumps(first_manifest))
+        self.write("reader/demo/index.html", "<!doctype html><html><body>Original reader source</body></html>")
+        self.write("docs/reader/demo/index.html", "<!doctype html><html><body>Original published reader</body></html>")
+        self.write("docs/reader/demo/data.json", '{"original":true}')
+        _, output = self.build()
+        protected_sources = {str(path.relative_to(self.root)): path.read_bytes()
+                             for folder in ("course", "reader")
+                             for path in (self.root / folder).rglob("*") if path.is_file()}
+        protected_outputs = {str(path.relative_to(output)): path.read_bytes()
+                             for folder in ("course", "markdown/course", "reader", "video/bilibili-280780745", "markdown/video/bilibili-280780745")
+                             for path in (output / folder).rglob("*") if path.is_file()}
+        first_search = [item for item in json.loads((output / "search-index.json").read_text())
+                        if item["url"].startswith("/notebook/video/bilibili-280780745/")]
+
+        second_manifest = self.second_video_fixture()
+        self.write("video/bilibili-508452265/manifest.json", json.dumps(second_manifest))
+        for authorized in (True, False):
+            with self.subTest(second_collection_authorized=authorized):
+                second_manifest["publication_authorized"] = authorized
+                self.write("video/bilibili-508452265/manifest.json", json.dumps(second_manifest))
+                _, output = self.build()
+                for name, content in protected_sources.items():
+                    self.assertEqual((self.root / name).read_bytes(), content, name)
+                for name, content in protected_outputs.items():
+                    self.assertEqual((output / name).read_bytes(), content, name)
+                search = json.loads((output / "search-index.json").read_text())
+                self.assertEqual([item for item in search if item["url"].startswith("/notebook/video/bilibili-280780745/")], first_search)
+                second = "video/bilibili-508452265/BV1KZ8X6uEPL"
+                self.assertEqual((output / second / "transcript.zh-CN.html").is_file(), authorized)
+                self.assertEqual((output / "markdown" / second / "transcript.zh-CN.md").is_file(), authorized)
+                self.assertEqual(any("第二系列独有测试讲稿" in item["text"] for item in search), authorized)
+                preview = (output / second / "preview.html").read_text()
+                self.assertIn('href="/notebook/video/bilibili-508452265/index.html">第二创作者测试集</a>', preview)
+                self.assertIn(f'href="/notebook/{second}/preview.html"', preview)
+                self.assertNotIn("bilibili-280780745", preview)
+                self.assertEqual("transcript.zh-CN.html" in preview, authorized)
+                if authorized:
+                    transcript = (output / second / "transcript.zh-CN.html").read_text()
+                    self.assertIn('href="/notebook/video/bilibili-508452265/index.html">第二创作者测试集</a>', transcript)
+                    self.assertIn(f'href="/notebook/{second}/preview.html"', transcript)
+                    self.assertIn(f'href="/notebook/markdown/{second}/transcript.zh-CN.md" download', transcript)
+                    self.assertNotIn("bilibili-280780745", transcript)
+                self.assertEqual(site.validate_links(output, "/notebook/"), [])
+
 
 if __name__ == "__main__":
     unittest.main()

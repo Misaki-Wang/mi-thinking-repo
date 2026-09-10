@@ -159,6 +159,12 @@ def main() -> None:
         path = args.output / relative
         if any(parent.is_symlink() for parent in (path, *path.parents)):
             raise ValueError(f"Symlink export destination rejected: {relative}")
+    previous_manifest = args.output / "manifest.json"
+    if previous_manifest.exists():
+        previous = read_json(previous_manifest)
+        if (not isinstance(previous, dict)
+                or str(previous.get("uploader_id")) != str(manifest["uploader_id"])):
+            raise ValueError("Export destination belongs to another or unknown creator; choose a separate collection")
     for relative, content in outputs.items():
         write_atomic(args.output / relative, content)
     print(json.dumps({"videos": manifest["video_count"], "paragraphs": manifest["paragraph_count"],

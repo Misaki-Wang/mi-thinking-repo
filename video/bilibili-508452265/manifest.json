@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "uploader": "硅谷101",
+  "uploader_id": "508452265",
+  "source_url": "https://space.bilibili.com/508452265",
+  "snapshot_at": "2026-09-10T18:37:51.512594+08:00",
+  "publication_authorized": false,
+  "publication_mode": "original_previews_and_guidance",
+  "video_count": 10,
+  "video_duration_seconds": 34389,
+  "quality_note": "Original previews based on publisher descriptions; no full transcripts published.",
+  "videos": [
+    {
+      "bvid": "BV1bYY463EHT",
+      "cid": 41721136629,
+      "title": "AI开始预测人类：83亿虚拟人格、数字社会，与一门押注未来的生意【硅谷101】",
+      "published_at": "2026-09-09T17:00:00+08:00",
+      "duration": 1787,
+      "source_url": "https://www.bilibili.com/video/BV1bYY463EHT/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV11XbJ6zEhu",
+      "cid": 41627880944,
+      "title": "让机器人学习“人类的第一语言”：触觉，如何成为具身智能的关键能力？【硅谷101】",
+      "published_at": "2026-09-07T11:00:00+08:00",
+      "duration": 2565,
+      "source_url": "https://www.bilibili.com/video/BV11XbJ6zEhu/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1aZtc68EzJ",
+      "cid": 41540519373,
+      "title": "mRNA的第二战场：拆解人类首个肿瘤疫苗三期突破｜对话艾博生物CEO英博【101视频播客】",
+      "published_at": "2026-08-28T13:35:06+08:00",
+      "duration": 4874,
+      "source_url": "https://www.bilibili.com/video/BV1aZtc68EzJ/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1gyhF6wEDD",
+      "cid": 41309112548,
+      "title": "AI可解释性与对齐：J-Space，思维链，AI人格，幻觉，与金门大桥【101视频播客】",
+      "published_at": "2026-08-27T10:51:46+08:00",
+      "duration": 3187,
+      "source_url": "https://www.bilibili.com/video/BV1gyhF6wEDD/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1y58q6pEnX",
+      "cid": 41197046693,
+      "title": "“消失”的万亿债务：深扒数据中心“影子借贷”、GPU金融化与次贷风险【硅谷101】",
+      "published_at": "2026-08-21T17:11:09+08:00",
+      "duration": 3168,
+      "source_url": "https://www.bilibili.com/video/BV1y58q6pEnX/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1GQgg6yEy5",
+      "cid": 40925595176,
+      "title": "对话前DeepMind曹原：AI for Science爆发，一个新时代到来了【101视频播客】",
+      "published_at": "2026-08-15T11:53:42+08:00",
+      "duration": 6562,
+      "source_url": "https://www.bilibili.com/video/BV1GQgg6yEy5/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1KBgE6xEqf",
+      "cid": 40861173200,
+      "title": "从DeepSeek、Kimi到“黄仁勋联盟”：AI模型开源，到底“开”了什么？【硅谷101】",
+      "published_at": "2026-08-13T11:00:17+08:00",
+      "duration": 1391,
+      "source_url": "https://www.bilibili.com/video/BV1KBgE6xEqf/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1UZu46UErq",
+      "cid": 40670725158,
+      "title": "挑战GPU、绕过HBM，深挖史上最大芯片背后的Cerebras【硅谷101】",
+      "published_at": "2026-08-07T10:47:05+08:00",
+      "duration": 2665,
+      "source_url": "https://www.bilibili.com/video/BV1UZu46UErq/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1GaM968E6T",
+      "cid": 40555644556,
+      "title": "对话盛颖：xAI，Infra的浪漫，SGLang，开源，平权与“甄嬛传”【101视频播客】",
+      "published_at": "2026-08-03T16:20:00+08:00",
+      "duration": 6462,
+      "source_url": "https://www.bilibili.com/video/BV1GaM968E6T/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    },
+    {
+      "bvid": "BV1FnGA66EPP",
+      "cid": 40468024999,
+      "title": "“榨”出硅的极限：怎么让GPU不“闲着”？｜与SGLang、RadixArk深聊AI Infra技术与千亿美元市场",
+      "published_at": "2026-07-31T16:41:16+08:00",
+      "duration": 1728,
+      "source_url": "https://www.bilibili.com/video/BV1FnGA66EPP/",
+      "public_transcripts": false,
+      "transcript_status": "not_published"
+    }
+  ]
+}
