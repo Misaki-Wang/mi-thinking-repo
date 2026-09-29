@@ -511,13 +511,13 @@ class Site:
         source_link = f'<a class="quiet-link" href="{esc(source)}">官方课程 ↗</a>' if source else ""
         description = catalog.get("reader_description") or catalog.get("description_zh") or "围绕多模态数据、融合、对齐、生成、推理与交互，结合课堂材料与论文，建立一条可回看的学习路径。"
         details = f'<details class="archive-details"><summary>关于这份课程归档</summary><div class="prose">{intro}</div></details>' if intro else ""
-        term_label = catalog.get("term_label", "Spring 2026")
-        hero_eyebrow = catalog.get("hero_eyebrow", f"COURSE NOTEBOOK / {term_label.upper()}")
+        hero_eyebrow = catalog.get("hero_eyebrow")
+        hero_eyebrow_markup = f'<p class="eyebrow">{esc(hero_eyebrow)}</p>' if hero_eyebrow else '<p class="eyebrow">COURSE NOTEBOOK <span> / </span> SPRING 2026</p>'
         hero_mark = catalog.get("hero_mark")
         hero_symbol = (f'<span>{esc(hero_mark)}</span>' if hero_mark else '<span>m<span>×</span>m</span>')
         hero_tagline = catalog.get("hero_tagline", "CONNECT THE MODALITIES")
         return f'''<div class="breadcrumb"><a href="{self.url('course/index.html')}">Course</a><span>/</span><span>课程归档</span></div>
-<section class="course-hero"><div class="hero-copy"><p class="eyebrow">{esc(hero_eyebrow)}</p><h1>{esc(catalog.get('title', course))}</h1><p class="hero-description">{esc(description)}</p><div class="hero-actions">{action}{source_link}</div></div><div class="course-emblem" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>{hero_symbol}<small>{esc(hero_tagline)}</small></div></section>
+<section class="course-hero"><div class="hero-copy">{hero_eyebrow_markup}<h1>{esc(catalog.get('title', course))}</h1><p class="hero-description">{esc(description)}</p><div class="hero-actions">{action}{source_link}</div></div><div class="course-emblem" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>{hero_symbol}<small>{esc(hero_tagline)}</small></div></section>
 <div class="course-stats"><div><strong>{len(sessions):02d}</strong><span>学习章节</span></div><div><strong>{previews:02d}</strong><span>章节入口</span></div><div><strong>{videos:02d}</strong><span>公开视频</span></div><div><strong>{readings:02d}</strong><span>阅读指引</span></div></div>
 {transcript_summary}
 <section class="library-section" aria-labelledby="chapters-heading"><div class="section-heading"><div><p class="eyebrow">THE LEARNING PATH</p><h2 id="chapters-heading">从一个问题，到下一层理解。</h2></div><p>预览 → Slides / Video → Readings → 自己的笔记</p></div>
@@ -572,7 +572,7 @@ class Site:
             source_links.append(f'<a href="{self.url(downloads)}" download>下载 Markdown ↓</a>')
             breadcrumbs = f'<div class="breadcrumb"><a href="{self.url(section + "/index.html") if section != "home" else self.url()}">{esc(section.title())}</a>'
             if course:
-                course_label = self.catalogs.get(course, {}).get("short_title", self.catalogs.get(course, {}).get("title", course))
+                course_label = self.catalogs.get(course, {}).get("short_title", "MMAI 2026")
                 breadcrumbs += f'<span>/</span><a href="{self.url(PurePosixPath("course", course, "index.html"))}">{esc(course_label)}</a>'
             if section == "video" and len(source.parts) > 3:
                 collection = PurePosixPath(*source.parts[:2], "README.md")
@@ -592,10 +592,11 @@ class Site:
         tiles = []
         for course, catalog in self.catalogs.items():
             sessions = [s for s in catalog.get("sessions", []) if s.get("instructional", True)]
-            tile_eyebrow = catalog.get("tile_eyebrow", "MIT / SPRING 2026")
+            tile_eyebrow = catalog.get("tile_eyebrow")
+            tile_eyebrow_markup = f'<p class="eyebrow">{esc(tile_eyebrow)}</p>' if tile_eyebrow else '<p class="eyebrow">MIT <span> / </span> SPRING 2026</p>'
             tile_mark = catalog.get("hero_mark")
             tile_symbol = (f'<span>{esc(tile_mark)}</span>' if tile_mark else '<span>m</span><span>×</span><span>m</span>')
-            tiles.append(f'''<a class="course-tile" href="{self.url(PurePosixPath('course', course, 'index.html'))}"><div class="tile-symbol" aria-hidden="true">{tile_symbol}</div><div class="tile-copy"><p class="eyebrow">{esc(tile_eyebrow)}</p><h2>{esc(catalog.get('title', course))}</h2><p>课程预览 · Readings 指引 · 术语表</p><span class="tile-meta">{len(sessions)} 个章节 <span>↗</span></span></div></a>''')
+            tiles.append(f'''<a class="course-tile" href="{self.url(PurePosixPath('course', course, 'index.html'))}"><div class="tile-symbol" aria-hidden="true">{tile_symbol}</div><div class="tile-copy">{tile_eyebrow_markup}<h2>{esc(catalog.get('title', course))}</h2><p>课程预览 · Readings 指引 · 术语表</p><span class="tile-meta">{len(sessions)} 个章节 <span>↗</span></span></div></a>''')
         return "".join(tiles)
 
     def landing_pages(self) -> None:
