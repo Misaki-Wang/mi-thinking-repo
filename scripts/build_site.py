@@ -503,7 +503,13 @@ class Site:
                 f"{label} {count} 讲" for label, count in transcript_counts
             ) + "</p>"
         guidance = PurePosixPath("course", course, "GUIDANCE.md")
-        action = f'<a class="button" href="{self.url(page_path(guidance))}">从学习指南开始 <span>→</span></a>' if self.has(guidance) else ""
+        reader_url = safe_link(str(catalog.get("reader_url", "")), PurePosixPath("README.md"), self.base)
+        if reader_url:
+            action = f'<a class="button" href="{esc(reader_url)}">开始双向同步阅读 <span>→</span></a>'
+            if self.has(guidance):
+                action += f'<a class="quiet-link" href="{self.url(page_path(guidance))}">学习指南</a>'
+        else:
+            action = f'<a class="button" href="{self.url(page_path(guidance))}">从学习指南开始 <span>→</span></a>' if self.has(guidance) else ""
         transcript_index = PurePosixPath("course", course, "TRANSCRIPTS.md")
         if self.has(transcript_index):
             action += f'<a class="quiet-link" href="{self.url(page_path(transcript_index))}">全部讲稿 →</a>'
@@ -592,11 +598,14 @@ class Site:
         tiles = []
         for course, catalog in self.catalogs.items():
             sessions = [s for s in catalog.get("sessions", []) if s.get("instructional", True)]
+            reader_url = safe_link(str(catalog.get("reader_url", "")), PurePosixPath("README.md"), self.base)
+            tile_url = esc(reader_url) if reader_url else self.url(PurePosixPath("course", course, "index.html"))
             tile_eyebrow = catalog.get("tile_eyebrow")
             tile_eyebrow_markup = f'<p class="eyebrow">{esc(tile_eyebrow)}</p>' if tile_eyebrow else '<p class="eyebrow">MIT <span> / </span> SPRING 2026</p>'
             tile_mark = catalog.get("hero_mark")
             tile_symbol = (f'<span>{esc(tile_mark)}</span>' if tile_mark else '<span>m</span><span>×</span><span>m</span>')
-            tiles.append(f'''<a class="course-tile" href="{self.url(PurePosixPath('course', course, 'index.html'))}"><div class="tile-symbol" aria-hidden="true">{tile_symbol}</div><div class="tile-copy">{tile_eyebrow_markup}<h2>{esc(catalog.get('title', course))}</h2><p>课程预览 · Readings 指引 · 术语表</p><span class="tile-meta">{len(sessions)} 个章节 <span>↗</span></span></div></a>''')
+            tile_description = "双向同步阅读 · Slides · 逐字稿" if reader_url else "课程预览 · Readings 指引 · 术语表"
+            tiles.append(f'''<a class="course-tile" href="{tile_url}"><div class="tile-symbol" aria-hidden="true">{tile_symbol}</div><div class="tile-copy">{tile_eyebrow_markup}<h2>{esc(catalog.get('title', course))}</h2><p>{tile_description}</p><span class="tile-meta">{len(sessions)} 个章节 <span>↗</span></span></div></a>''')
         return "".join(tiles)
 
     def landing_pages(self) -> None:

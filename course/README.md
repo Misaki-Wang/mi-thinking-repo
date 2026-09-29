@@ -4,7 +4,7 @@
 
 ## 已归档
 
-- [Stanford CME 295 · Transformers & Large Language Models · Autumn 2025](stanford-cme295-2025/README.md)
+- [Stanford CME 295 · Autumn 2025 · 双向同步阅读](https://misaki-wang.github.io/mi-thinking-repo/reader/stanford-cme295-2025/index.html) · [课程归档详情](stanford-cme295-2025/README.md)
 
 [MIT Modeling: MultiModal AI · Spring 2026](mit-mmai-2026/README.md)
 
