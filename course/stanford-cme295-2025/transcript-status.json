@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-29T16:19:57+00:00",
+  "english_source_policy": "Official Stanford Online YouTube manual English captions; no ASR required",
+  "translation_policy": "Complete Codex translation per aligned caption block; retain technical terms in English",
+  "publication_policy": "User-attested authorization for these exact nine videos; source rights metadata is not represented as Creative Commons",
+  "counts": {
+    "sessions": 9,
+    "instructional": 9,
+    "videos": 9,
+    "duration_ms": 58239000,
+    "english_blocks": 1885,
+    "translated_blocks": 1885,
+    "codex_complete": 9,
+    "public_transcripts": 9
+  },
+  "sessions": [
+    {
+      "session_id": "l01",
+      "video_id": "Ub3GoFaUcds",
+      "title": "Transformer",
+      "video_url": "https://www.youtube.com/watch?v=Ub3GoFaUcds",
+      "duration_ms": 6119000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 208,
+      "translated_blocks": 208,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/Ub3GoFaUcds",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "a787c5f3f4bc753de47a6ac0669496718792b8fd91861ef3bb2909b1b1e4766e",
+          "bytes": 86230
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "76ae7c1f5dc7bc3c45d0883f03d7aaf30054894ca5b5c1140c08f6a468a66026",
+          "bytes": 79508
+        },
+        "transcript.bilingual.md": {
+          "sha256": "3624574b2e38e240b36721117d953adce3ece9efe5c857d2275ded562ccfdcc1",
+          "bytes": 154453
+        }
+      }
+    },
+    {
+      "session_id": "l02",
+      "video_id": "yT84Y5zCnaA",
+      "title": "Transformer-Based Models & Tricks",
+      "video_url": "https://www.youtube.com/watch?v=yT84Y5zCnaA",
+      "duration_ms": 6439000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 217,
+      "translated_blocks": 217,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/yT84Y5zCnaA",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "21c78a296f941e53b88c24691e35874a55ed54ef22a772f45c4c23ba0f8a6b24",
+          "bytes": 88247
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "3407c9e0bbba8de6a1a1f8281e8b79016341cf734ddafd2b71e69def340cc411",
+          "bytes": 80097
+        },
+        "transcript.bilingual.md": {
+          "sha256": "e93375ac88a5bedddd647968a0836d93f65a27bd106b7f74fbe190dcf9fd0f65",
+          "bytes": 156538
+        }
+      }
+    },
+    {
+      "session_id": "l03",
+      "video_id": "Q5baLehv5So",
+      "title": "Large Language Models",
+      "video_url": "https://www.youtube.com/watch?v=Q5baLehv5So",
+      "duration_ms": 6525000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 217,
+      "translated_blocks": 217,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/Q5baLehv5So",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "525b6bd6153dd98d5ae4811c4dff75e4c2c8889f265c3dbf6450b72e8ec1fcb6",
+          "bytes": 89466
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "a3c17ae6464cbb154f37c5208b0eb65bf9b310baf2c495d10998cae77324a389",
+          "bytes": 81633
+        },
+        "transcript.bilingual.md": {
+          "sha256": "374ff0a483c95c40f54b139d6e0a8c45d95aa851b11e42627c5d17857cca0efd",
+          "bytes": 159295
+        }
+      }
+    },
+    {
+      "session_id": "l04",
+      "video_id": "VlA_jt_3Qc4",
+      "title": "LLM Training",
+      "video_url": "https://www.youtube.com/watch?v=VlA_jt_3Qc4",
+      "duration_ms": 6447000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 209,
+      "translated_blocks": 209,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/VlA_jt_3Qc4",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "85c1884bcf5447d9a9a5329c3cf3554fd1e521e4b40521c443695d0f223bdbcd",
+          "bytes": 91877
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "f6bbdc49e634119931b60b61b3af2789fe9745da0490a455dbcffe66b1d46947",
+          "bytes": 84431
+        },
+        "transcript.bilingual.md": {
+          "sha256": "f007afb947d781a20b7ba594526cb612f23d5dbd2b9059e9113b23655ca517e5",
+          "bytes": 164950
+        }
+      }
+    },
+    {
+      "session_id": "l05",
+      "video_id": "PmW_TMQ3l0I",
+      "title": "LLM Tuning",
+      "video_url": "https://www.youtube.com/watch?v=PmW_TMQ3l0I",
+      "duration_ms": 6461000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 221,
+      "translated_blocks": 221,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/PmW_TMQ3l0I",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "cd3546e59cd535228e910d91e736438915c0bc751b274385a52f455ee5d7a6ac",
+          "bytes": 87970
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "61c15feec7b714b9cc48bbc2075c7d930fda42219e9950f937471d473b4e5777",
+          "bytes": 80385
+        },
+        "transcript.bilingual.md": {
+          "sha256": "5ee61d96c79c92d10ea1bf9a888ecda76a9a8b4052513a826156c43b2923a769",
+          "bytes": 156361
+        }
+      }
+    },
+    {
+      "session_id": "l06",
+      "video_id": "k5Fh-UgTuCo",
+      "title": "LLM Reasoning",
+      "video_url": "https://www.youtube.com/watch?v=k5Fh-UgTuCo",
+      "duration_ms": 6430000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 184,
+      "translated_blocks": 184,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/k5Fh-UgTuCo",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "5b042aba1fa6dc2a53ea4ca17c124aee7b79cebf38a411911c5a0cfaa3d14069",
+          "bytes": 84767
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "f0956974337359879ac682f3981642aea26f47524cbde143285218c1b04da4b6",
+          "bytes": 76443
+        },
+        "transcript.bilingual.md": {
+          "sha256": "a73a41b0e55d0c95d364d1ab2e58d2f4f83ba7e7c5282cfedad51f3c8c671966",
+          "bytes": 151167
+        }
+      }
+    },
+    {
+      "session_id": "l07",
+      "video_id": "h-7S6HNq0Vg",
+      "title": "Agentic LLMs",
+      "video_url": "https://www.youtube.com/watch?v=h-7S6HNq0Vg",
+      "duration_ms": 6562000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 218,
+      "translated_blocks": 218,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/h-7S6HNq0Vg",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "e69c50f60ecdf2384819f7b9adf73ace7dd3211b489d26327bdf435cc5393d2a",
+          "bytes": 91561
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "a07cd16c1d06fdf0b43fb32f4bea2496cfe290d234b72431fb5c36cfd0194d23",
+          "bytes": 84123
+        },
+        "transcript.bilingual.md": {
+          "sha256": "eb11c016cd970c14ead2b155606166eadcfe4a1d19ce008319caf5cc3b545c83",
+          "bytes": 163837
+        }
+      }
+    },
+    {
+      "session_id": "l08",
+      "video_id": "8fNP4N46RRo",
+      "title": "LLM Evaluation",
+      "video_url": "https://www.youtube.com/watch?v=8fNP4N46RRo",
+      "duration_ms": 6565000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 208,
+      "translated_blocks": 208,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/8fNP4N46RRo",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "f3be48eba52626437af640efdc15a50c5ddf72ea4cb42094afe5133bdd011837",
+          "bytes": 90095
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "f5cfa753f7ce2bb7e9eb77fd949126d5015eceb550009de0446ba5f65855a572",
+          "bytes": 81226
+        },
+        "transcript.bilingual.md": {
+          "sha256": "38fe99cf301fe0e554b6c20f071c08e00c7fff299df27a84b6044b94d2f9eb66",
+          "bytes": 160008
+        }
+      }
+    },
+    {
+      "session_id": "l09",
+      "video_id": "Q86qzJ1K1Ss",
+      "title": "Recap & Current Trends",
+      "video_url": "https://www.youtube.com/watch?v=Q86qzJ1K1Ss",
+      "duration_ms": 6691000,
+      "source_kind": "manual",
+      "caption_track": "en-US",
+      "english_blocks": 203,
+      "translated_blocks": 203,
+      "translation_provider": "codex",
+      "full_translation_status": "complete",
+      "rights_evidence": {
+        "kind": "user_attestation",
+        "date": "2026-09-29",
+        "statement": "已获得",
+        "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+        "verification_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+      },
+      "public_transcripts": true,
+      "publication_status": "authorized",
+      "local_work_dir": ".work/stanford-cme295-2025/ytlearn/Q86qzJ1K1Ss",
+      "artifacts": {
+        "transcript.en.md": {
+          "sha256": "01c57099284dabc4b0038eb68ec622bba893a9333abaaafe8b7a6c60909b7e88",
+          "bytes": 91497
+        },
+        "transcript.zh-CN.md": {
+          "sha256": "3809d9980c70d2ae2441050dc61623df52a8fd54af7589630a4ffbf6632a989a",
+          "bytes": 84243
+        },
+        "transcript.bilingual.md": {
+          "sha256": "3dead4190767ddca614b7dd5ce14d04b83b728644489906fb7eef1ac5bc2cb4a",
+          "bytes": 164676
+        }
+      }
+    }
+  ]
+}

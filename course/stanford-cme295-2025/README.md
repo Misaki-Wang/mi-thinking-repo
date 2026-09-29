@@ -4,7 +4,7 @@
 
 课程面向具备 calculus、linear algebra 和基础 machine learning 知识的学习者。9 段视频合计约 **16 小时 11 分钟**。此处保留历史课程日历，不将 YouTube 后续上传日期当成授课日期。
 
-[官方 2025 syllabus](https://cme295.stanford.edu/syllabus/2025/) · [Stanford Online 课程 playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) · [全课学习路线](GUIDANCE.md) · [来源与整理方法](SOURCES.md)
+[官方 2025 syllabus](https://cme295.stanford.edu/syllabus/2025/) · [Stanford Online 课程 playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy) · [全课学习路线](GUIDANCE.md) · [九讲逐字稿 · English / 中文 / 双语](TRANSCRIPTS.md) · [来源与整理方法](SOURCES.md)
 
 > 本归档按 2025 syllabus 版本整理。课程主页当前会展示新学期信息；下方日期和讲次标题均对应 2025 秋季课表。视频章节时间来自对应官方 playlist 项目。
 
@@ -32,4 +32,4 @@ YouTube 实际上传日期与 syllabus 的授课日期可能不同；本表保�
 
 ## 整理范围
 
-共 9 套官方 slides 和 9 个 Stanford Online 视频。中文预览按课件结构和视频章节导航编写，保留 Transformer、RoPE、LoRA、GRPO 等技术术语。当前归档不含自动语音转写稿；课程视频与 slides 仍请通过上方官方链接访问。
+共 9 套官方 slides 和 9 个 Stanford Online 视频。每讲另提供英文字幕原稿、Codex 中文翻译及双语逐段对照，合计 1,885 个时间戳段落。字幕来自视频页提供的 `en-US` manual caption 轨；技术术语保留英文。字幕可能含来源本身的编辑或识别误差，译文未逐句人工校订。课程视频与 slides 仍请通过上方官方链接访问。

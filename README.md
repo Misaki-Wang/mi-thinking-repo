@@ -10,7 +10,7 @@
 
 ## 当前归档
 
-[Stanford CME 295 · Transformers & Large Language Models · Autumn 2025](course/stanford-cme295-2025/README.md)：9 讲官方 slides 与 Stanford Online 视频章节对应的中文预览、按课件引用整理的补充阅读和全课学习路线。
+[Stanford CME 295 · Transformers & Large Language Models · Autumn 2025](course/stanford-cme295-2025/README.md)：9 讲中文预览、补充阅读与学习路线；另有 1,885 个时间戳段落的 English、Codex 中文、双语逐字稿。
 
 [AI 研究与工程 · 近月精选](blog/ai-radar-2026-09/README.md)：聚焦 2026-08-10 至 2026-09-10，12 个来源、12 条核心资料与 7 条延伸阅读；附原创摘要、证据边界、信息源目录和学习路线。
 

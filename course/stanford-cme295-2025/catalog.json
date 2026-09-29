@@ -19,6 +19,13 @@
   "schedule_access_note": "The requested 2025 schedule snapshot was indexed by the public search source; all nine linked slide PDFs and all nine Stanford Online playlist videos were independently checked and matched by lecture title.",
   "course_description": "Course content and schedule are from the Stanford CME 295 Autumn 2025 syllabus. The 2025 archive is preserved as the requested version even though the live syllabus now defaults to 2026.",
   "syllabus_readings_note": "The syllabus does not publish a separate per-lecture reading list. Each readings.md below is an optional guide to sources cited or suggested in the corresponding lecture slides, not a claim that Stanford assigned those readings.",
+  "transcript_publication_authorization": {
+    "kind": "user_attestation",
+    "date": "2026-09-29",
+    "statement": "已获得",
+    "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
+    "license_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+  },
   "sessions": [
     {
       "id": "l01",
