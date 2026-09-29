@@ -1,0 +1,677 @@
+{
+  "title": "Stanford CME 295: Transformers & Large Language Models — Autumn 2025",
+  "short_title": "Stanford CME 295 · Autumn 2025",
+  "term_label": "Autumn 2025",
+  "tile_eyebrow": "STANFORD CME 295 / AUTUMN 2025",
+  "hero_eyebrow": "STANFORD CME 295 / AUTUMN 2025",
+  "hero_mark": "CME",
+  "hero_tagline": "TRANSFORMERS TO LLMS",
+  "description_zh": "Stanford Online 的 9 讲课程，从 Transformer、LLM 训练与 tuning，逐步进入 reasoning、agents、evaluation 与 diffusion。每讲预览结合官方 slides 和视频章节，保留技术术语与来源。",
+  "source_url": "https://cme295.stanford.edu/syllabus/2025/",
+  "current_course_url": "https://cme295.stanford.edu/syllabus/",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOCXd21gf0CF4xr35yINeOy",
+  "instructors": [
+    "Afshine Amidi",
+    "Shervine Amidi"
+  ],
+  "academic_term": "Autumn 2025",
+  "snapshot_date": "2026-09-29",
+  "schedule_access_note": "The requested 2025 schedule snapshot was indexed by the public search source; all nine linked slide PDFs and all nine Stanford Online playlist videos were independently checked and matched by lecture title.",
+  "course_description": "Course content and schedule are from the Stanford CME 295 Autumn 2025 syllabus. The 2025 archive is preserved as the requested version even though the live syllabus now defaults to 2026.",
+  "syllabus_readings_note": "The syllabus does not publish a separate per-lecture reading list. Each readings.md below is an optional guide to sources cited or suggested in the corresponding lecture slides, not a claim that Stanford assigned those readings.",
+  "sessions": [
+    {
+      "id": "l01",
+      "week": 1,
+      "date": "2025-09-26",
+      "title": "Transformer",
+      "topics": [
+        "NLP tasks",
+        "Tokenization",
+        "Word2vec",
+        "RNN and LSTM",
+        "Self-attention",
+        "Transformer encoder/decoder"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture1.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 135,
+      "slides_sha256": "5dc36dcac9399ed71025f2056d65a846a36eb5235b14ca2ede3625a3ecb9e234",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=Ub3GoFaUcds",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6119,
+      "video_chapters": [
+        [
+          "00:09:40",
+          "NLP overview"
+        ],
+        [
+          "00:22:57",
+          "Tokenization"
+        ],
+        [
+          "00:30:28",
+          "Word representation"
+        ],
+        [
+          "00:53:23",
+          "Recurrent neural networks"
+        ],
+        [
+          "01:06:47",
+          "Self-attention mechanism"
+        ],
+        [
+          "01:13:53",
+          "Transformer architecture"
+        ],
+        [
+          "01:29:53",
+          "Detailed example"
+        ]
+      ]
+    },
+    {
+      "id": "l02",
+      "week": 2,
+      "date": "2025-10-03",
+      "title": "Transformer-Based Models & Tricks",
+      "topics": [
+        "Positional information: sinusoidal, T5 bias, ALiBi and RoPE",
+        "Layer normalization",
+        "Sparse/local attention",
+        "Sharing attention heads: MHA, MQA and GQA",
+        "Encoder-only and encoder-decoder model families",
+        "BERT pretraining and fine-tuning"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture2.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 109,
+      "slides_sha256": "63cd3d5855567d9358bb34819eed711afe27e14a5de4ae424c9b1d73cfef7433",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=yT84Y5zCnaA",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6440,
+      "video_chapters": [
+        [
+          "00:10:37",
+          "Position embeddings"
+        ],
+        [
+          "00:25:56",
+          "T5 bias and ALiBi"
+        ],
+        [
+          "00:31:02",
+          "RoPE"
+        ],
+        [
+          "00:43:42",
+          "Layer normalization"
+        ],
+        [
+          "00:50:39",
+          "Sparse attention"
+        ],
+        [
+          "00:55:38",
+          "Sharing attention heads"
+        ],
+        [
+          "01:02:42",
+          "Transformer-based models"
+        ],
+        [
+          "01:11:38",
+          "BERT deep dive"
+        ],
+        [
+          "01:33:24",
+          "BERT finetuning"
+        ]
+      ]
+    },
+    {
+      "id": "l03",
+      "week": 3,
+      "date": "2025-10-10",
+      "title": "Large Language Models",
+      "topics": [
+        "LLM definition and autoregressive next-token prediction",
+        "Mixture of Experts",
+        "Decoding: greedy, beam search and sampling",
+        "Temperature and guided decoding",
+        "Prompting and in-context learning",
+        "Chain-of-thought and self-consistency",
+        "KV cache, PagedAttention and Multi-head Latent Attention",
+        "Speculative decoding and multi-token prediction"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture3.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 125,
+      "slides_sha256": "e4f3420e9d33e7f6e79ff38f460809f25a13d51e929d12c098587b9a33891c11",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=Q5baLehv5So",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6525,
+      "video_chapters": [
+        [
+          "00:03:43",
+          "LLM definition"
+        ],
+        [
+          "00:07:37",
+          "Mixture of Experts"
+        ],
+        [
+          "00:15:47",
+          "MoE in LLMs"
+        ],
+        [
+          "00:36:35",
+          "Response generation"
+        ],
+        [
+          "00:38:34",
+          "Greedy decoding and beam search"
+        ],
+        [
+          "00:46:36",
+          "Sampling-based methods"
+        ],
+        [
+          "00:52:24",
+          "Temperature"
+        ],
+        [
+          "01:04:53",
+          "Guided decoding"
+        ],
+        [
+          "01:07:07",
+          "Prompting"
+        ],
+        [
+          "01:14:09",
+          "In-context learning"
+        ],
+        [
+          "01:18:35",
+          "Chain-of-thought and self-consistency"
+        ],
+        [
+          "01:25:00",
+          "KV caching"
+        ],
+        [
+          "01:33:09",
+          "PagedAttention and MLA"
+        ]
+      ]
+    },
+    {
+      "id": "l04",
+      "week": 4,
+      "date": "2025-10-17",
+      "title": "LLM Training",
+      "topics": [
+        "Pretraining and next-token prediction",
+        "Compute, FLOPs and scaling laws",
+        "Data/model parallelism and ZeRO",
+        "FlashAttention and GPU memory",
+        "Mixed-precision training",
+        "Supervised/instruction fine-tuning",
+        "LoRA and QLoRA"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture4.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 128,
+      "slides_sha256": "7f3a8d20e703ba62f79baca79a75e65d006aee99c79f7549b447a49671610825",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=VlA_jt_3Qc4",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6447,
+      "video_chapters": [
+        [
+          "00:07:19",
+          "Pretraining"
+        ],
+        [
+          "00:13:26",
+          "FLOPs"
+        ],
+        [
+          "00:16:34",
+          "Scaling laws and Chinchilla"
+        ],
+        [
+          "00:24:49",
+          "Training optimizations"
+        ],
+        [
+          "00:31:09",
+          "Data parallelism with ZeRO"
+        ],
+        [
+          "00:35:51",
+          "Model parallelism"
+        ],
+        [
+          "00:38:26",
+          "FlashAttention"
+        ],
+        [
+          "00:52:37",
+          "Quantization"
+        ],
+        [
+          "00:56:00",
+          "Mixed precision"
+        ],
+        [
+          "01:02:31",
+          "SFT"
+        ],
+        [
+          "01:09:21",
+          "Instruction tuning"
+        ],
+        [
+          "01:37:53",
+          "LoRA"
+        ],
+        [
+          "01:45:16",
+          "QLoRA"
+        ]
+      ]
+    },
+    {
+      "id": "l05",
+      "week": 5,
+      "date": "2025-10-31",
+      "title": "LLM Tuning",
+      "topics": [
+        "Preference data and preference tuning",
+        "RLHF pipeline and Bradley-Terry reward modeling",
+        "PPO, advantages and KL control",
+        "On-policy versus off-policy trade-offs",
+        "Best-of-N",
+        "Direct Preference Optimization (DPO)"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture5.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 111,
+      "slides_sha256": "8e347d02a83706c92af4e9c122c28faa68534e099f5a467491cb03e37826411d",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=PmW_TMQ3l0I",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6462,
+      "video_chapters": [
+        [
+          "00:04:50",
+          "Preference tuning"
+        ],
+        [
+          "00:11:31",
+          "Data collection"
+        ],
+        [
+          "00:17:43",
+          "RLHF overview"
+        ],
+        [
+          "00:28:24",
+          "Reward model"
+        ],
+        [
+          "00:29:46",
+          "Bradley-Terry"
+        ],
+        [
+          "00:46:02",
+          "Reinforcement learning"
+        ],
+        [
+          "00:53:54",
+          "PPO"
+        ],
+        [
+          "01:03:39",
+          "PPO variants"
+        ],
+        [
+          "01:16:20",
+          "Challenges"
+        ],
+        [
+          "01:19:58",
+          "On-policy vs off-policy"
+        ],
+        [
+          "01:22:43",
+          "Best-of-N"
+        ],
+        [
+          "01:29:47",
+          "DPO"
+        ]
+      ]
+    },
+    {
+      "id": "l06",
+      "week": 6,
+      "date": "2025-11-07",
+      "title": "LLM Reasoning",
+      "topics": [
+        "Reasoning models and evaluation",
+        "Pass@k and test-time scaling",
+        "Reinforcement learning from verifiable rewards",
+        "GRPO compared with PPO",
+        "Length bias and reward design",
+        "DeepSeek R1-Zero and R1 training recipes",
+        "Distillation"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture6.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 148,
+      "slides_sha256": "e60fd83047d73f9d05b9bc1f23f57498849b276ca95b2e02d866260f3ca5b461",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=k5Fh-UgTuCo",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6430,
+      "video_chapters": [
+        [
+          "00:12:43",
+          "Reasoning models"
+        ],
+        [
+          "00:27:49",
+          "Benchmarks"
+        ],
+        [
+          "00:32:04",
+          "Pass@k"
+        ],
+        [
+          "00:48:07",
+          "Scaling with RL"
+        ],
+        [
+          "00:57:44",
+          "GRPO"
+        ],
+        [
+          "01:06:03",
+          "GRPO vs PPO"
+        ],
+        [
+          "01:16:14",
+          "Length bias"
+        ],
+        [
+          "01:25:00",
+          "DAPO and Dr. GRPO"
+        ],
+        [
+          "01:29:38",
+          "DeepSeek R1 recipe"
+        ]
+      ]
+    },
+    {
+      "id": "l07",
+      "week": 7,
+      "date": "2025-11-14",
+      "title": "Agentic LLMs",
+      "topics": [
+        "RAG pipeline and knowledge-base construction",
+        "Dense retrieval: embeddings and BM25",
+        "HyDE, contextual retrieval and prompt caching",
+        "Reranking and retrieval metrics",
+        "Function calling and tool selection",
+        "MCP and A2A protocols",
+        "ReAct agent loop, safety and hallucination"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture7.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 151,
+      "slides_sha256": "2772ba9a870a3b7e3666f47696e9af6794489ce169de4a0f3ea1b91ce13e7234",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=h-7S6HNq0Vg",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6563,
+      "video_chapters": [
+        [
+          "00:06:38",
+          "RAG overview"
+        ],
+        [
+          "00:27:39",
+          "SBERT and bi-encoders"
+        ],
+        [
+          "00:34:25",
+          "BM25"
+        ],
+        [
+          "00:37:54",
+          "HyDE and contextual retrieval"
+        ],
+        [
+          "00:41:00",
+          "Prompt caching"
+        ],
+        [
+          "00:45:24",
+          "Cross-encoder reranking"
+        ],
+        [
+          "00:47:49",
+          "Retrieval metrics"
+        ],
+        [
+          "00:59:28",
+          "Tool calling"
+        ],
+        [
+          "01:26:22",
+          "Tool selection"
+        ],
+        [
+          "01:29:17",
+          "MCP"
+        ],
+        [
+          "01:31:56",
+          "ReAct agents"
+        ],
+        [
+          "01:42:16",
+          "Safety and closing"
+        ]
+      ]
+    },
+    {
+      "id": "l08",
+      "week": 8,
+      "date": "2025-11-21",
+      "title": "LLM Evaluation",
+      "topics": [
+        "Human and rule-based metrics",
+        "LLM-as-a-Judge setup and output structuring",
+        "Position, verbosity and self-enhancement biases",
+        "Judge best practices and factuality",
+        "Agent evaluation failure modes",
+        "MMLU, AIME, PIQA, SWE-bench, HarmBench and τ-bench",
+        "Contamination, limitations and Pareto trade-offs"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture8.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 170,
+      "slides_sha256": "b63b2ea3734e2da370d4b89e840b53aea95c41acc273cdc167b665d2e40c5f6e",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=8fNP4N46RRo",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6565,
+      "video_chapters": [
+        [
+          "00:07:08",
+          "Inter-rater agreement"
+        ],
+        [
+          "00:18:24",
+          "Rule-based metrics"
+        ],
+        [
+          "00:28:00",
+          "LLM-as-a-Judge"
+        ],
+        [
+          "00:33:44",
+          "Structured outputs"
+        ],
+        [
+          "00:38:47",
+          "Judge biases"
+        ],
+        [
+          "00:47:22",
+          "Best practices"
+        ],
+        [
+          "00:54:06",
+          "Factuality"
+        ],
+        [
+          "01:00:15",
+          "Agent evaluation"
+        ],
+        [
+          "01:23:50",
+          "Benchmarks"
+        ],
+        [
+          "01:25:12",
+          "MMLU"
+        ],
+        [
+          "01:29:34",
+          "AIME and PIQA"
+        ],
+        [
+          "01:33:57",
+          "SWE-bench"
+        ],
+        [
+          "01:36:15",
+          "HarmBench"
+        ],
+        [
+          "01:40:51",
+          "τ-bench"
+        ]
+      ]
+    },
+    {
+      "id": "l09",
+      "week": 9,
+      "date": "2025-12-05",
+      "title": "Recap & Current Trends",
+      "topics": [
+        "Course recap: Transformers through agents and evaluation",
+        "Vision Transformers",
+        "Vision-language model architectures",
+        "Diffusion for images and text",
+        "Cross-modal transfer of ideas",
+        "Hardware optimization and research directions"
+      ],
+      "instructional": true,
+      "slides_url": "https://cme295.stanford.edu/slides/fall25-cme295-lecture9.pdf",
+      "slides_status": "acquired",
+      "slides_pages": 128,
+      "slides_sha256": "b6767a5c30fb0ea26c4ec86d2b6b95f212e8b40f46d065872c1b93fc910440ad",
+      "slides_local_only": true,
+      "video_url": "https://www.youtube.com/watch?v=Q86qzJ1K1Ss",
+      "video_source": "official_stanford_online_playlist",
+      "video_duration_seconds": 6691,
+      "video_chapters": [
+        [
+          "00:01:12",
+          "Transformers"
+        ],
+        [
+          "00:06:35",
+          "Transformer-based models and tricks"
+        ],
+        [
+          "00:11:17",
+          "LLMs"
+        ],
+        [
+          "00:15:05",
+          "LLM training"
+        ],
+        [
+          "00:24:09",
+          "LLM tuning"
+        ],
+        [
+          "00:29:41",
+          "LLM reasoning"
+        ],
+        [
+          "00:38:37",
+          "Agentic LLMs"
+        ],
+        [
+          "00:44:09",
+          "LLM evaluation"
+        ],
+        [
+          "00:48:57",
+          "Vision Transformer"
+        ],
+        [
+          "01:04:02",
+          "Diffusion-based LLMs"
+        ],
+        [
+          "01:23:38",
+          "Closing thoughts"
+        ]
+      ]
+    },
+    {
+      "id": "midterm",
+      "week": 5,
+      "date": "2025-10-24",
+      "title": "Midterm",
+      "topics": [
+        "Lectures 1–4"
+      ],
+      "instructional": false,
+      "exam_url": "https://cme295.stanford.edu/exams/midterm.pdf"
+    },
+    {
+      "id": "final",
+      "week": 11,
+      "date": "2025-12-10",
+      "title": "Final",
+      "topics": [
+        "Lectures 5–9"
+      ],
+      "instructional": false,
+      "exam_solutions_url": "https://cme295.stanford.edu/exams/final-solutions.pdf"
+    }
+  ]
+}

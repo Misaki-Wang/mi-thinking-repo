@@ -4,6 +4,8 @@
 
 ## 已归档
 
+- [Stanford CME 295 · Transformers & Large Language Models · Autumn 2025](stanford-cme295-2025/README.md)
+
 [MIT Modeling: MultiModal AI · Spring 2026](mit-mmai-2026/README.md)
 
 覆盖 multimodal representation、fusion、alignment、foundation models、generation、reasoning、agents 与真实世界应用。建议从 [课程 GUIDANCE](mit-mmai-2026/GUIDANCE.md) 开始，再进入逐讲预览。
