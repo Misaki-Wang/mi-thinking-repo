@@ -2,7 +2,14 @@
 (function (global) {
   "use strict";
 
-  const COURSE_ID = "mit-mmai-2026";
+  function readerCourseId() {
+    if (typeof location !== "undefined" && typeof location.pathname === "string") {
+      const match = location.pathname.match(/\/reader\/([a-z0-9]+(?:-[a-z0-9]+)*)\/index\.html$/i);
+      if (match) return match[1];
+    }
+    return "mit-mmai-2026";
+  }
+  const COURSE_ID = readerCourseId();
   const STORAGE_PREFIX = "mi-thinking:reader:" + COURSE_ID + ":v1:";
   const own = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
   const record = (value) => value !== null && typeof value === "object" && !Array.isArray(value);

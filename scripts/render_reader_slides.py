@@ -3,7 +3,7 @@
 
 Requires pypdfium2 and Pillow. Run with the bundled workspace Python runtime.
 Only the reader's rendered assets and provenance index are written; the original
-PDFs stay under .work/sources and are never copied into the public site.
+PDFs stay in ignored .work sources and are never copied into the public site.
 """
 
 from __future__ import annotations
@@ -21,13 +21,15 @@ import pypdfium2 as pdfium
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COURSE_ID = "mit-mmai-2026"
+DEFAULT_COURSE_ID = "mit-mmai-2026"
+COURSE_ID = DEFAULT_COURSE_ID
 CATALOG = ROOT / "course" / COURSE_ID / "catalog.json"
 SOURCES = ROOT / ".work" / "sources"
 OUTPUT = ROOT / "reader" / COURSE_ID
 INDEX = OUTPUT / "slides-index.json"
 SLIDES = OUTPUT / "slides"
-ID_RE = re.compile(r"w\d{2}-[12]\Z")
+ID_RE = re.compile(r"(?:w\d{2}-[12]|l0[1-9])\Z")
+PAGE_MARKER = re.compile(r"^=== PAGE (\d+) ===\s*$", re.M)
 
 
 def sha256(path: Path) -> str:
@@ -69,15 +71,35 @@ def page_is_current(page: dict, session_id: str) -> bool:
         return image.size == (page.get("width"), page.get("height")) and image.format == "WEBP"
 
 
-def render_deck(session: dict, previous: dict | None, config: dict, rebuild: bool) -> dict:
-    session_id = session["id"]
-    source_pdf = SOURCES / session_id / "slides.pdf"
-    source_text = SOURCES / session_id / "slides-pages.json"
+def slide_source(session: dict, course_id: str) -> tuple[Path, Path, dict[int, str]]:
+    if course_id == "mit-mmai-2026":
+        directory = ROOT / ".work" / "sources" / session["id"]
+        source_pdf, source_text = directory / "slides.pdf", directory / "slides-pages.json"
+        page_texts = {page["page"]: page.get("text", "") for page in load_json(source_text)["pages"]}
+    elif course_id == "stanford-cme295-2025":
+        directory = ROOT / ".work" / course_id / "slides"
+        source_pdf = directory / f"lecture{session['week']}.pdf"
+        source_text = directory / f"lecture{session['week']}.txt"
+        text = source_text.read_text(encoding="utf-8")
+        markers = list(PAGE_MARKER.finditer(text))
+        page_texts = {
+            int(marker.group(1)): text[marker.end():markers[index + 1].start() if index + 1 < len(markers) else len(text)].strip()
+            for index, marker in enumerate(markers)
+        }
+        if list(page_texts) != list(range(1, session["slides_pages"] + 1)):
+            raise ValueError(f"Extracted slide page markers do not match catalog: {session['id']}")
+    else:
+        raise ValueError(f"No local PDF source mapping is defined for {course_id}")
     if not source_pdf.is_file() or not source_text.is_file():
-        raise FileNotFoundError(f"Local PDF and page text are required for {session_id}")
+        raise FileNotFoundError(f"Local PDF and page text are required for {session['id']}")
+    return source_pdf, source_text, page_texts
+
+
+def render_deck(session: dict, previous: dict | None, config: dict, rebuild: bool, course_id: str) -> dict:
+    session_id = session["id"]
+    source_pdf, source_text, pages_text = slide_source(session, course_id)
     pdf_hash = sha256(source_pdf)
     text_hash = sha256(source_text)
-    pages_text = {page["page"]: page.get("text", "") for page in load_json(source_text)["pages"]}
     source_url = public_url(session.get("slides_resolved_url") or session["slides_url"])
     document = pdfium.PdfDocument(source_pdf)
     page_count = len(document)
@@ -157,7 +179,26 @@ def render_deck(session: dict, previous: dict | None, config: dict, rebuild: boo
     return deck
 
 
-def write_attribution(catalog: dict) -> None:
+def write_attribution(catalog: dict, course_id: str) -> None:
+    if course_id == "stanford-cme295-2025":
+        authorization = catalog.get("slide_render_publication_authorization", {})
+        (SLIDES / "ATTRIBUTION.md").write_text(
+            "# Stanford CME 295 slide page sources\n\n"
+            "These WebP files are faithful, uncropped page renderings of the nine official "
+            "Stanford CME 295 Autumn 2025 lecture PDFs. Page credits and marks remain "
+            "visible in the rendered images.\n\n"
+            f"- Official 2025 syllabus: [{catalog['source_url']}]({catalog['source_url']})\n"
+            f"- Official lecture playlist: [{catalog['playlist_url']}]({catalog['playlist_url']})\n"
+            "- Per-deck PDF URLs, page counts, source hashes, and image hashes: "
+            "[slides-index.json](../slides-index.json)\n\n"
+            f"Publication authorization: the user confirmed on {authorization.get('date', 'unknown date')} "
+            "that the rights holder authorized rendering and publishing these nine slide decks "
+            "on the requested study site. This attestation is not a claim that the material "
+            "has a Creative Commons or other blanket public license. Original PDFs remain "
+            "linked at Stanford and are not copied into the public reader assets.\n",
+            encoding="utf-8",
+        )
+        return
     upstream_license = SOURCES / "upstream-LICENSE"
     if not upstream_license.is_file():
         raise FileNotFoundError("Expected locally acquired upstream-LICENSE")
@@ -184,6 +225,7 @@ def write_attribution(catalog: dict) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--course", default=DEFAULT_COURSE_ID, help="course archive ID")
     parser.add_argument("--ids", nargs="+", help="Session IDs (space or comma separated); default: every PDF session with a video")
     parser.add_argument("--width", type=int, default=1280, help="Image width in pixels, default 1280")
     parser.add_argument("--quality", type=int, default=85, help="WebP quality, default 85")
@@ -191,15 +233,27 @@ def main() -> None:
     args = parser.parse_args()
     if not 320 <= args.width <= 2400 or not 1 <= args.quality <= 100:
         parser.error("width must be 320..2400 and quality must be 1..100")
+    global COURSE_ID, CATALOG, OUTPUT, INDEX, SLIDES
+    COURSE_ID = args.course
+    CATALOG = ROOT / "course" / COURSE_ID / "catalog.json"
+    OUTPUT = ROOT / "reader" / COURSE_ID
+    INDEX = OUTPUT / "slides-index.json"
+    SLIDES = OUTPUT / "slides"
     catalog = load_json(CATALOG)
     sessions = {session["id"]: session for session in catalog["sessions"]}
     requested = sorted(set(part for value in args.ids for part in value.split(","))) if args.ids else [
-        session["id"] for session in catalog["sessions"] if session.get("video_url") and session.get("slides_kind") == "pdf"
+        session["id"] for session in catalog["sessions"]
+        if session.get("video_url") and (
+            session.get("slides_kind") == "pdf"
+            or (COURSE_ID == "stanford-cme295-2025" and session.get("slides_url"))
+        )
     ]
     for session_id in requested:
         if not ID_RE.fullmatch(session_id) or session_id not in sessions:
             parser.error(f"Unknown session ID: {session_id}")
-        if sessions[session_id].get("slides_kind") != "pdf":
+        if sessions[session_id].get("slides_kind") != "pdf" and not (
+            COURSE_ID == "stanford-cme295-2025" and sessions[session_id].get("slides_url")
+        ):
             parser.error(f"Session does not have a PDF: {session_id}")
     config = {
         "format": "webp", "width": args.width, "quality": args.quality,
@@ -209,21 +263,22 @@ def main() -> None:
     previous = load_json(INDEX) if INDEX.is_file() else {}
     decks = {deck["id"]: deck for deck in previous.get("decks", [])}
     SLIDES.mkdir(parents=True, exist_ok=True)
-    write_attribution(catalog)
+    write_attribution(catalog, COURSE_ID)
     for session_id in requested:
-        decks[session_id] = render_deck(sessions[session_id], decks.get(session_id), config, args.rebuild)
+        decks[session_id] = render_deck(sessions[session_id], decks.get(session_id), config, args.rebuild, COURSE_ID)
         # Checkpoint after each deck so interrupted runs can resume safely.
         document = {
             "schema_version": 1,
             "course_id": COURSE_ID,
             "source_schedule_url": catalog["source_url"],
             "attribution": "slides/ATTRIBUTION.md",
-            "source_license": "slides/SOURCE-LICENSE.txt",
             "decks": [decks[key] for key in sorted(decks)],
             "total_decks": len(decks),
             "total_pages": sum(deck["page_count"] for deck in decks.values()),
             "total_bytes": sum(deck["total_bytes"] for deck in decks.values()),
         }
+        if COURSE_ID == "mit-mmai-2026":
+            document["source_license"] = "slides/SOURCE-LICENSE.txt"
         write_json(INDEX, document)
     print(f"TOTAL: {document['total_decks']} decks, {document['total_pages']} pages, {document['total_bytes']:,} bytes", flush=True)
 

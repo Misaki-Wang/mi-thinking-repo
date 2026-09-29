@@ -265,34 +265,53 @@ def video_id(url):
     return parsed.path.strip("/") if parsed.netloc == "youtu.be" else parse_qs(parsed.query)["v"][0]
 
 
-def run(root, only=None):
-    catalog_path = root / "course/mit-mmai-2026/catalog.json"
+def load_slide_pages(root, course_id, session):
+    sid = session["id"]
+    if course_id == "stanford-cme295-2025":
+        source = root / ".work" / course_id / "slides" / f"lecture{session['week']}.txt"
+        text = source.read_text(encoding="utf-8")
+        markers = list(re.finditer(r"^=== PAGE (\d+) ===\s*$", text, re.M))
+        pages = [{"page": int(marker.group(1)),
+                  "text": text[marker.end():markers[index + 1].start() if index + 1 < len(markers) else len(text)].strip()}
+                 for index, marker in enumerate(markers)]
+        expected = session.get("slides_pages")
+        if [page["page"] for page in pages] != list(range(1, expected + 1)):
+            raise ValueError(f"Slide text page markers do not match catalog for {sid}")
+        return source, pages, session.get("slides_resolved_url") or session["slides_url"]
+    source = root / ".work" / "sources" / sid / "slides-pages.json"
+    content = json.loads(source.read_text(encoding="utf-8"))
+    return source, content["pages"], content["source_url"]
+
+
+def run(root, only=None, course_id="mit-mmai-2026"):
+    catalog_path = root / "course" / course_id / "catalog.json"
     catalog = json.loads(catalog_path.read_text())
-    directory = root / "reader/mit-mmai-2026/alignments"
+    directory = root / "reader" / course_id / "alignments"
     directory.mkdir(parents=True, exist_ok=True)
     report = []
     for session in catalog["sessions"]:
         sid = session["id"]
         if not session.get("video_url") or (only and sid not in only):
             continue
-        block_path = root / ".work/transcripts" / video_id(session["video_url"]) / "data/blocks.en.json"
+        work_root = ".work/transcripts" if course_id == "mit-mmai-2026" else f".work/{course_id}/ytlearn"
+        block_path = root / work_root / video_id(session["video_url"]) / "data/blocks.en.json"
         if not block_path.exists():
             raise FileNotFoundError(block_path)
         blocks = json.loads(block_path.read_text())
-        decks = RECAP_DECKS.get(sid, []) + [sid]
+        decks = (RECAP_DECKS.get(sid, []) if course_id == "mit-mmai-2026" else []) + [sid]
         pages, sources = [], []
         for deck in decks:
-            source = root / ".work/sources" / deck / "slides-pages.json"
-            content = json.loads(source.read_text())
+            deck_session = session if deck == sid else next(item for item in catalog["sessions"] if item["id"] == deck)
+            source, source_pages, source_url = load_slide_pages(root, course_id, deck_session)
             sources.append({"deck_id": deck, "path": str(source.relative_to(root)),
-                            "sha256": sha256(source), "source_url": content["source_url"]})
-            for page in content["pages"]:
+                            "sha256": sha256(source), "source_url": source_url})
+            for page in source_pages:
                 pages.append({**page, "deck_id": deck,
                               "slide_id": f"{deck}-p{page['page']:03}",
                               "slide_only": deck == sid and page["page"] > SLIDE_ONLY_AFTER.get(sid, math.inf)})
         hints = TOPIC_HINTS.get(sid, [])
         aligned, slide_info = align(blocks, pages, sid, hints)
-        preview = root / "course/mit-mmai-2026" / sid / "preview.md"
+        preview = root / "course" / course_id / sid / "preview.md"
         summary = dict(Counter(item["confidence"] for item in aligned))
         summary.update({"total_blocks": len(blocks), "total_slides": len(pages),
                         "associated_slides": len({item["slide_id"] for item in aligned if item["slide_id"]}),
@@ -306,8 +325,8 @@ def run(root, only=None):
                              "limits": ["A paragraph may span multiple slides.", "Image-only, duplicate builds, questions, and unlectured pages can be unmatched.", "Monotonic content order may leave revisited pages unmatched."]},
                   "provenance": {"transcript_path": str(block_path.relative_to(root)),
                                  "transcript_sha256": sha256(block_path), "video_url": session["video_url"],
-                                 "english_markdown_path": f"course/mit-mmai-2026/{sid}/transcript.en.md",
-                                 "english_markdown_sha256": sha256(root / "course/mit-mmai-2026" / sid / "transcript.en.md"),
+                                 "english_markdown_path": f"course/{course_id}/{sid}/transcript.en.md",
+                                 "english_markdown_sha256": sha256(root / "course" / course_id / sid / "transcript.en.md"),
                                  "catalog_sha256": sha256(catalog_path), "slides": sources,
                                  "preview_path": str(preview.relative_to(root)), "preview_sha256": sha256(preview),
                                  "script_sha256": sha256(Path(__file__))},
@@ -321,13 +340,14 @@ def run(root, only=None):
                                        for block, item in zip(blocks, aligned)
                                        if int(block["block_id"][1:]) % 12 == 1]})
         print(sid, json.dumps(summary))
-    (root / ".work/alignment-qa.json").write_text(json.dumps({"method": VERSION, "sessions": report}, ensure_ascii=False, indent=2) + "\n")
+    (root / ".work" / f"alignment-qa-{course_id}.json").write_text(json.dumps({"method": VERSION, "sessions": report}, ensure_ascii=False, indent=2) + "\n")
     return report
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--course", default="mit-mmai-2026")
     parser.add_argument("--session", action="append")
     args = parser.parse_args()
-    run(args.root.resolve(), args.session)
+    run(args.root.resolve(), args.session, args.course)

@@ -1,5 +1,11 @@
 # 讲稿 × Slides · 独立同步阅读器
 
+## Stanford CME 295 · Autumn 2025
+
+[打开 Stanford CME 295 同步阅读页](https://misaki-wang.github.io/mi-thinking-repo/reader/stanford-cme295-2025/index.html)。覆盖 9 讲和 1,205 页 slides；原 PDF 由 Stanford 托管，网站发布的是经用户确认授权的逐页 WebP 渲染。文本检索建立的 slide 关联仅为估计值，不等同逐帧校验；使用者可在浏览器本地校对并导出关联。
+
+## MIT MMAI · Spring 2026
+
 [打开同步阅读页](https://misaki-wang.github.io/mi-thinking-repo/reader/mit-mmai-2026/index.html)
 
 这是新增的实验阅读页，使用独立 HTML、CSS、JavaScript 与数据目录。原有课程预览、讲稿、Readings、Blog 和 Paper 页面没有改动。
@@ -32,8 +38,10 @@ python3 -m unittest discover -s tests -v
 node --test tests/test_reader_js.mjs
 ```
 
-`build_sync_reader.py` 只向 `docs/reader/mit-mmai-2026/` 添加页面、分讲 JSON 与图片，不写入其他网站文件。线上构建只需要 Python 标准库和已提交的 Markdown、关联数据及 WebP，无需下载模型或访问本地 `.work`。
+`build_sync_reader.py` 默认构建 MIT MMAI；Stanford CME 295 使用 `--course stanford-cme295-2025`。两者只向各自的 `docs/reader/<course-id>/` 添加页面、分讲 JSON 与图片，不改写其他课程页。线上构建只需要 Python 标准库和已提交的 Markdown、关联数据及 WebP，无需访问本地 `.work`。
 
 重新生成关联可运行 `scripts/align_slides.py`；重新渲染 slides 使用 `scripts/render_reader_slides.py`，其离线预处理需已有 pypdfium2 与 Pillow。原始 PDF 与字幕缓存保存在本地 `.work`；关联 JSON 记录输入哈希，以发现过期的内容对应关系。
+
+Stanford CME 295 Autumn 2025 的同步页面将每段字幕与 slide 文本作顺序约束匹配。当前有 606/1,885 个段落建议自动关联；其余段落明确显示暂无可靠对应或候选页，避免把无证据的页码当成精确同步。读者可在页面上校正并导出 JSON；纠正数据默认保存在当前浏览器，不会自动回传仓库。
 
 关联数据位于 `reader/mit-mmai-2026/alignments/`，有证据的图文修订位于 `alignment-review.json`。修改建议数据后重新打包即可；无需修改原始译稿。

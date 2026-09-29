@@ -6,6 +6,8 @@
   "hero_eyebrow": "STANFORD CME 295 / AUTUMN 2025",
   "hero_mark": "CME",
   "hero_tagline": "TRANSFORMERS TO LLMS",
+  "reader_short_title": "Stanford CME 295 · Autumn 2025",
+  "reader_eyebrow": "STANFORD CME 295 · AUTUMN 2025",
   "description_zh": "Stanford Online 的 9 讲课程，从 Transformer、LLM 训练与 tuning，逐步进入 reasoning、agents、evaluation 与 diffusion。每讲预览结合官方 slides 和视频章节，保留技术术语与来源。",
   "source_url": "https://cme295.stanford.edu/syllabus/2025/",
   "current_course_url": "https://cme295.stanford.edu/syllabus/",
@@ -25,6 +27,13 @@
     "statement": "已获得",
     "scope": "User confirms authorization for full transcript creation and public publication for all nine official Stanford Online CME 295 Autumn 2025 lecture videos.",
     "license_note": "This user attestation is not a claim that the videos use a Creative Commons license; YouTube license metadata remains as provided by the rights holder."
+  },
+  "slide_render_publication_authorization": {
+    "kind": "user_attestation",
+    "date": "2026-09-30",
+    "statement": "已获授权，可以公开发布 slides 渲染图",
+    "scope": "User confirms authorization to render and publicly publish unmodified page images from the nine official Stanford CME 295 Autumn 2025 slide PDFs in this course reader.",
+    "license_note": "This user attestation is not a claim that the PDFs or third-party material within them have a Creative Commons or blanket public license."
   },
   "sessions": [
     {

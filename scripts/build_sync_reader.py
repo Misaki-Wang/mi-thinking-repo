@@ -15,8 +15,8 @@ import re
 import shutil
 from urllib.parse import parse_qs, urlsplit
 
-COURSE = "mit-mmai-2026"
-SESSION = re.compile(r"w\d{2}-\d+\Z")
+DEFAULT_COURSE = "mit-mmai-2026"
+SESSION = re.compile(r"(?:w\d{2}-[1-9]|l0[1-9])\Z")
 HEADINGS = re.compile(r"^### \[[^\]]+\]\(([^)]+)\) · (b\d+)\s*$", re.M)
 CONFIDENCE = {"estimated", "weak", "unmatched"}
 
@@ -83,13 +83,15 @@ def load_overrides(path: Path) -> dict[tuple[str, str], dict]:
     return overrides
 
 
-def build(root: Path, output: Path) -> dict:
+def build(root: Path, output: Path, course_id: str = DEFAULT_COURSE) -> dict:
     root, output = root.resolve(), output.resolve()
     if output == root or root.is_relative_to(output):
         raise ValueError("Build output cannot be the source root or an ancestor")
-    source = root / "reader" / COURSE
-    course = root / "course" / COURSE
-    destination = output / "reader" / COURSE
+    if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", course_id):
+        raise ValueError("Invalid course ID")
+    source = root / "reader" / course_id
+    course = root / "course" / course_id
+    destination = output / "reader" / course_id
     if not destination.resolve().is_relative_to(output):
         raise ValueError("Reader destination escapes build output")
     catalog = read_json(course / "catalog.json")
@@ -102,9 +104,9 @@ def build(root: Path, output: Path) -> dict:
     copied_images = set()
     manifest = {
         "schema_version": 1,
-        "course_id": COURSE,
+        "course_id": course_id,
         "course_title": catalog["title"],
-        "default_session": "w01-1",
+        "default_session": None,
         "sessions": [],
         "note": "对应关系依据讲稿与幻灯片文本估计，并非逐帧视频识别。可在本机校正。",
         "attribution_url": "./slides/ATTRIBUTION.md",
@@ -116,6 +118,14 @@ def build(root: Path, output: Path) -> dict:
             raise ValueError("Generated path escapes reader destination")
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+        generated[relative] = digest(path)
+
+    def write_text(relative: str, value: str) -> None:
+        path = destination / relative
+        if not path.resolve().is_relative_to(destination.resolve()):
+            raise ValueError("Generated path escapes reader destination")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(value, encoding="utf-8")
         generated[relative] = digest(path)
 
     def copy(path: Path, relative: str) -> None:
@@ -210,10 +220,27 @@ def build(root: Path, output: Path) -> dict:
         }
         write(f"data/{sid}.json", lesson)
         manifest["sessions"].append({"id": sid, "title": session["title"], "data_url": f"./data/{sid}.json", "blocks_count": len(blocks), "slide_count": len(slides)})
+        if manifest["default_session"] is None:
+            manifest["default_session"] = sid
     if set(overrides) != used_overrides:
         raise ValueError("Editorial correction refers to an unknown session/block")
     for filename in ("index.html", "reader.css", "reader.js"):
-        copy(safe_file(root / "reader" / "app", filename), filename)
+        source_path = safe_file(root / "reader" / "app", filename)
+        if filename == "index.html":
+            reader_title = catalog.get("reader_short_title", "MIT MMAI 2026" if course_id == DEFAULT_COURSE else catalog["title"])
+            reader_eyebrow = catalog.get("reader_eyebrow", "MIT · MODELING: MULTIMODAL AI · SPRING 2026" if course_id == DEFAULT_COURSE else catalog["title"])
+            template = source_path.read_text(encoding="utf-8")
+            for marker, value in {
+                "{{COURSE_ID}}": course_id,
+                "{{COURSE_TITLE}}": html.escape(reader_title),
+                "{{COURSE_EYEBROW}}": html.escape(reader_eyebrow),
+            }.items():
+                template = template.replace(marker, value)
+            if re.search(r"\{\{[A-Z_]+\}\}", template):
+                raise ValueError("Unresolved reader template marker")
+            write_text(filename, template)
+        else:
+            copy(source_path, filename)
     copy(safe_file(source, "slides-index.json"), "slides-index.json")
     for relative in (slide_index.get("attribution"), slide_index.get("source_license")):
         if relative:
@@ -228,8 +255,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--course", default=DEFAULT_COURSE, help="course archive ID")
     args = parser.parse_args()
-    print(json.dumps(build(args.root, args.output or args.root / "docs"), ensure_ascii=False))
+    print(json.dumps(build(args.root, args.output or args.root / "docs", args.course), ensure_ascii=False))
 
 
 if __name__ == "__main__":
